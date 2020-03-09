@@ -1,0 +1,3287 @@
+
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="en" id="top" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" id="top" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" id="top" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" id="top" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" id="top" class="no-js"> <!--<![endif]-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1123.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script>
+<title>ASUS Gaming Laptops - Custom ASUS Laptops &amp; Notebooks | XoticPC</title>
+<meta name="description" content="Shop our selection of customizable ASUS gaming laptops and notebooks. With top of the line upgrade options, you'll have the pc to win any game. Financing available!" />
+<meta name="keywords" content="asus laptops asus custom laptops asus gaming laptops" />
+<meta name="robots" content="INDEX,FOLLOW" />
+<link rel="icon" href="https://www.xoticpc.com/media/favicon/default/LOGO_WHTBGEMBLEM175.png" type="image/x-icon" />
+<link rel="shortcut icon" href="https://www.xoticpc.com/media/favicon/default/LOGO_WHTBGEMBLEM175.png" type="image/x-icon" />
+<!--[if lt IE 7]>
+<script type="text/javascript">
+//<![CDATA[
+    var BLANK_URL = 'https://www.xoticpc.com/js/blank.html';
+    var BLANK_IMG = 'https://www.xoticpc.com/js/spacer.gif';
+//]]>
+</script>
+<![endif]-->
+<link rel="stylesheet" type="text/css" href="https://www.xoticpc.com/media/css_secure/70236b958def9c5288a851ac8ad90874.css?v=114" media="all" />
+<script type="text/javascript" src="https://www.xoticpc.com/media/js/0922dd58947aae6e4ee3d7b15a83f189.js?v=114"></script>
+<script type="text/javascript" src="https://www.xoticpc.com/media/js/7126eecdeeadb187d28b1090b45419e0.js?v=114" name="zzz_sales_notifiaction_lib"></script>
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:400,400italic,300,600,700,800" />
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Play:400,700" />
+<link href="https://www.xoticpc.com/blog/rss/index/store_id/1/" title="XOTIC PC Blog" rel="alternate" type="application/rss+xml" />
+<link rel="canonical" href="https://www.xoticpc.com/custom-gaming-laptops-notebooks-gaming-laptops-ct-118-96-98/custom-gaming-laptops-notebooks-asus-laptops-ct-95-51-163.html" />
+<!--[if  (lte IE 8) & (!IEMobile)]>
+<link rel="stylesheet" type="text/css" href="https://www.xoticpc.com/media/css_secure/9b62657479e39306a839cfb53c141d37.css?v=114" media="all" />
+<![endif]-->
+<!--[if (gte IE 9) | (IEMobile)]><!-->
+<link rel="stylesheet" type="text/css" href="https://www.xoticpc.com/media/css_secure/350f35e506ede6a1c9b3757745cb2c91.css?v=114" media="all" />
+<!--<![endif]-->
+<script type="text/javascript">
+//<![CDATA[
+Mage.Cookies.path     = '/';
+Mage.Cookies.domain   = '.www.xoticpc.com';
+//]]>
+</script>
+<meta name="viewport" content="initial-scale=1.0, width=device-width" />
+<script type="text/javascript">
+//<![CDATA[
+optionalZipCountries = ["HK","IE","MO","PA"];
+//]]>
+</script>
+
+<script type="text/javascript">
+        //<![CDATA[
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+            
+ga('create', 'UA-937628-1', 'auto');
+
+ga('send', 'pageview');
+            
+        //]]>
+        </script>
+
+<script type="text/javascript" src="https://chimpstatic.com/mcjs-connected/js/users/396a825d5cda0e0d6e144430b/25844f99754408afb9649432e.js"></script>
+<script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+        n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+        document,'script','//connect.facebook.net/en_US/fbevents.js');
+
+    fbq('init', '543065445898359');
+    fbq('track', "PageView");
+</script>
+<script src="https://apis.google.com/js/platform.js?onload=renderOptIn" async defer></script>
+<script>
+	</script>
+<script src="https://apis.google.com/js/platform.js?onload=renderBadge" async defer>
+</script>
+<script>
+  window.renderBadge = function() {
+    var ratingBadgeContainer = document.createElement("div");
+      document.body.appendChild(ratingBadgeContainer);
+      window.gapi.load('ratingbadge', function() {
+        window.gapi.ratingbadge.render(
+          ratingBadgeContainer, {
+            // REQUIRED
+            "merchant_id": 3035172,
+            // OPTIONAL
+            "position": "BOTTOM_LEFT"
+          });
+     });
+  }
+</script>
+ <script type="text/javascript">
+        //<![CDATA[
+            try {
+                Prototype && Prototype.Version && Event && Event.observe && Event.observe(window, 'load', function()
+                {
+                    if ($$('input#search').length) {
+                        $$('input#search')[0].stopObserving('keydown');
+                    }
+                });
+            } catch (e) {}
+        //]]>
+        </script>
+<script type="text/javascript">
+            //<![CDATA[
+                Searchanise = {};
+                Searchanise.host        = 'https://www.searchanise.com';
+                Searchanise.api_key     = '1s3H0G0G5a';
+                Searchanise.SearchInput = '#search';
+                
+                Searchanise.AutoCmpParams = {};
+                Searchanise.AutoCmpParams.union = {}; Searchanise.AutoCmpParams.union.price = {}; Searchanise.AutoCmpParams.union.price.min = 'se_price_0';
+                Searchanise.AutoCmpParams.restrictBy = {};
+                Searchanise.AutoCmpParams.restrictBy.status = '1';
+                Searchanise.AutoCmpParams.restrictBy.visibility = '3|4';
+                
+                
+                Searchanise.options = {};
+                Searchanise.AdditionalSearchInputs = '#name,#description,#sku';
+
+                Searchanise.options.ResultsDiv = '#snize_results';
+                Searchanise.options.ResultsFormPath = 'https://www.xoticpc.com/searchanise/result';
+                Searchanise.options.ResultsFallbackUrl = 'https://www.xoticpc.com/catalogsearch/result/?q=';
+                Searchanise.ResultsParams = {};
+                Searchanise.ResultsParams.facetBy = {};
+                Searchanise.ResultsParams.facetBy.price = {};
+                Searchanise.ResultsParams.facetBy.price.type = 'slider';
+
+                Searchanise.options.PriceFormat = {
+                    decimals_separator:  '.',
+                    thousands_separator: ',',
+                    symbol:              '$',
+
+                    decimals: '2',
+                    rate:     '1',
+                    after:     false
+                };
+                
+                (function() {
+                    var __se = document.createElement('script');
+                    __se.src = 'https://www.searchanise.com/widgets/v1.0/init.js';
+                    __se.setAttribute('async', 'true');
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(__se, s);
+                })();
+            //]]>
+        </script>
+<script type="text/javascript">//<![CDATA[
+        var Translator = new Translate([]);
+        //]]></script>
+<script id="mcjs">!function(c,h,i,m,p)
+{m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}
+(document,"script","https://chimpstatic.com/mcjs-connected/js/users/396a825d5cda0e0d6e144430b/daf14bd88ed0359b675693541.js");</script>
+<style>
+.page-mobile-content {
+display: none;
+}
+@media only screen and (max-width: 700px) {
+.page-mobile-content {
+display: block;
+}
+.page-desktop-content {
+display: none;
+}
+}
+.cms-home .header-section{min-height:64px;}
+.cms-home .main-section .main-container{padding:0;}
+</style></head>
+<body class=" catalog-category-view categorypath-custom-gaming-laptops-notebooks-gaming-laptops-ct-118-96-98-custom-gaming-laptops-notebooks-asus-laptops-ct-95-51-163-html category-custom-gaming-laptops-notebooks-asus-laptops-ct-95-51-163">
+
+<script type="text/javascript">
+(function(){"use strict";var e=null,b="4.0.0",n='22132',additional='',t,r,i;try{t=top.document.referer!==""?encodeURIComponent(top.document.referrer.substring(0,2048)):""}catch(o){t=document.referrer!==null?document.referrer.toString().substring(0,2048):""}try{r=window&&window.top&&document.location&&window.top.location===document.location?document.location:window&&window.top&&window.top.location&&""!==window.top.location?window.top.location:document.location}catch(u){r=document.location}try{i=parent.location.href!==""?encodeURIComponent(parent.location.href.toString().substring(0,2048)):""}catch(a){try{i=r!==null?encodeURIComponent(r.toString().substring(0,2048)):""}catch(f){i=""}}var l,c=document.createElement("script"),h=null,p=document.getElementsByTagName("script"),d=Number(p.length)-1,v=document.getElementsByTagName("script")[d];if(typeof l==="undefined"){l=Math.floor(Math.random()*1e17)}h="dx.steelhousemedia.com/spx?"+"dxver="+b+"&shaid="+n+"&tdr="+t+"&plh="+i+"&cb="+l+additional;c.type="text/javascript";c.src=("https:"===document.location.protocol?"https://":"http://")+h;v.parentNode.insertBefore(c,v)})()
+</script>
+<div class="wrapper">
+<noscript>
+        <div class="global-site-notice noscript">
+            <div class="notice-inner">
+                <p>
+                    <strong>JavaScript seems to be disabled in your browser.</strong><br />
+                    You must have JavaScript enabled in your browser to utilize the functionality of this website.                </p>
+            </div>
+        </div>
+    </noscript>
+<div class="page">
+<div class="header-section">
+
+
+<header id="header">
+<div class="header-holder">
+<a class="logo" href="https://www.xoticpc.com/">
+<img src="https://www.xoticpc.com/skin/frontend/rwd/xoticpc/../../../../media/wysiwyg/logo/xotic-pc-logo_1.png" alt="XOTIC PC" class="large" />
+<img src="https://www.xoticpc.com/skin/frontend/rwd/xoticpc/../../../../media/wysiwyg/logo/xotic-pc-logo_1.png" alt="XOTIC PC" class="small" />
+</a>
+<div class="nav-holder">
+<a href="#header-nav" class="skip-link skip-nav">
+<span class="icon"></span>
+<span class="label">Menu</span>
+</a>
+<div id="header-nav" class="skip-content">
+<nav id="navigation" class="drop-holder-box">
+<ul class="nav-primary">
+<li class="top-level large-drop"><a class="drop-opener-mobile" href="javascript:;"><span>Products</span></a>
+<div class="drop-box">
+<div class="drop-holder">
+<div class="columns-wrapper">
+<div class="column"><strong class="column-title"> <span><a href="https://www.xoticpc.com/desktops">Desktop computers</a></span> <span class="link-view-all">(View all)</span> </strong>
+<div class="slide-mobile">
+<div class="link-view-all"><a href="https://www.xoticpc.com/desktops">View all</a></div>
+<div class="category-holder"><strong class="category-title">Gaming desktops</strong>
+<ul class="drop-links">
+<li><a href="https://www.xoticpc.com/optimal-series">Optimal Series <em>Starting at $549</em></a></li>
+<li><a href="https://www.xoticpc.com/advanced-series">Advanced Series </a></li>
+<li><a href="https://www.xoticpc.com/extreme-series">Extreme Series </a></li>
+<li><a href="https://www.xoticpc.com/ultimate-series">Ultimate Series  </a></li>
+</ul>
+</div>
+<div class="category-holder"><strong class="category-title">Speciality Desktops</strong>
+<ul class="drop-links">
+<li><a href="https://www.xoticpc.com/black-label-series">Black Label Series <em>Exclusive One Off Models</em></a></li>
+<li><a href="https://www.xoticpc.com/silent-series">Silent Series </a></li>
+<li><a href="https://www.xoticpc.com/compact-series">Compact Series </a></li>
+<li><a href="https://www.xoticpc.com/silent-series">
+<li><a href="https://www.xoticpc.com/streamer-series">Streamer Series </a></li></a></li>
+</ul>
+</div>
+<div class="category-holder"><strong class="category-title">Workstations</strong>
+<ul class="drop-links">
+<li><a href="https://www.xoticpc.com/pro-series">Professional Series <em>(Featuring Quadro Graphics)</em></a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="column"><strong class="column-title"> <span><a href="https://www.xoticpc.com/custom-gaming-laptops-notebooks-gaming-laptops-ct-118-96-98.html">Laptop computers</a></span> <span class="link-view-all">(View all)</span> </strong>
+<div class="slide-mobile">
+<div class="link-view-all"><a href="https://www.xoticpc.com/custom-gaming-laptops-notebooks-gaming-laptops-ct-118-96-98.html">View all</a></div>
+<div class="category-holder"><strong class="category-title">Gaming laptops</strong>
+<ul class="drop-links">
+<li><a href="https://www.xoticpc.com/custom-gaming-laptops-notebooks-gaming-laptops-ct-118-96-98/optimal-laptop-series.html">Optimal Laptop Series <em>(NVIDIA 1050TI or Less)</em></a></li>
+<li><a href="https://www.xoticpc.com/custom-gaming-laptops-notebooks-gaming-laptops-ct-118-96-98/advanced-laptop-series.html">Advanced Laptop Series <em>(NVIDIA 2060)</em></a></li>
+<li><a href="https://www.xoticpc.com/custom-gaming-laptops-notebooks-gaming-laptops-ct-118-96-98/extreme-laptop-series.html">Extreme Laptop Series <em>(NVIDIA 2070)</em></a></li>
+<li><a href="https://www.xoticpc.com/custom-gaming-laptops-notebooks-gaming-laptops-ct-118-96-98/ultimate-laptop-series.html">Ultimate Laptop Series <em>(NVIDIA 2080 or Greater)</em></a></li>
+</ul>
+</div>
+<div class="category-holder"><strong class="category-title">Speciality laptops</strong>
+<ul class="drop-links">
+<li><a href="https://www.xoticpc.com/closeout">Closeout Store </a></li>
+
+<li><a href="https://www.xoticpc.com/custom-gaming-laptops-notebooks-gaming-laptops-ct-118-96-98/ultra-slim-series.html">Ultra Slim Laptop Series <em>(Ultra Portable Laptops)</em></a></li>
+</ul>
+</div>
+<div class="category-holder"><strong class="category-title">Workstations</strong>
+<ul class="drop-links">
+<li><a href="https://www.xoticpc.com/custom-gaming-laptops-notebooks-gaming-laptops-ct-118-96-98/professional-design-graphics-cad-laptop-series.html">Professional Laptop Series <em>(Featuring Quadro Graphics)</em></a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="column column-small"><strong class="column-title"><span>Popular Brands</span></strong>
+<div class="slide-mobile">
+<ul class="drop-links">
+<li><a href="https://www.xoticpc.com/custom-gaming-laptops-notebooks-asus-laptops-ct-95-51-163">ASUS Laptops</a></li>
+<li><a href="https://www.xoticpc.com/custom-gaming-laptops-notebooks-gaming-laptops-ct-118-96-98/msi-laptops.html">MSI Laptops</a></li>
+<li><a href="https://www.xoticpc.com/custom-gaming-laptops-notebooks-clevo-sager-notebooks-ct-95-51-162">Sager/Clevo Laptops</a></li>
+   </ul>
+</div>
+</div>
+</div>
+<div class="banner-container three-columns-banner">
+<div class="banner"><a href="https://www.xoticpc.com/outlet"><img alt="Save BIG" src="https://www.xoticpc.com/media/wysiwyg/xpc/Menu/cobanner1.png" /></a></div>
+<div class="banner"><a href="https://www.xoticpc.com/game-promotions"><img alt="GAME DEALS" src="https://www.xoticpc.com/media/wysiwyg/xpc/Menu/cobanner2.png" /></a></div>
+<div class="banner"><a href="https://www.xoticpc.com/custom-mods"><img alt="MOD SHOP" src="https://www.xoticpc.com/media/wysiwyg/xpc/Menu/cobanner3.png" /></a></div>
+</div></div>
+</div>
+</li>
+<li class="top-level"><a href="https://www.xoticpc.com/accessories.html">Accessories</a></li>
+<li class="top-level"><a href="https://www.xoticpc.com/financing">Financing</a></li>
+<li class="top-level"><a class="drop-opener-mobile" href="javascript:;"><span>Support</span></a>
+<div class="drop-box">
+<div class="drop-holder">
+<ul class="list">
+<li><a href="https://www.xoticpc.com/support">Support</a></li>
+<li><a href="https://www.xoticpc.com/warranty">Warranty</a></li>
+<li><a href="https://www.xoticpc.com/lifetime-platinum-upgrade-policy">Lifetime Upgrade</a></li>
+<li><a href="https://www.xoticpc.com/contact-us">Contact</a></li>
+</ul>
+</div>
+</div>
+</li>
+<li class="top-level"><a class="drop-opener-mobile" href="javascript:;"><span>Company</span></a>
+<div class="drop-box">
+<div class="drop-holder">
+<ul class="list">
+<li><a href="https://www.xoticpc.com/why-xotic-pc">About Us</a></li>
+<li><a href="https://www.xoticpc.com/influencers">Sponsorships</a></li>
+<li><a href="https://www.xoticpc.com/blog" target="_blank">Blog</a></li>
+<li><a href="https://www.xoticpcforums.com/" target="_blank">Forums</a></li>
+<li><a href="https://www.xoticpc.com/careers">Careers</a></li>
+ </ul>
+</div>
+</div>
+</li>
+</ul>
+</nav> </div>
+</div>
+<div class="skip-links skip-links-header">
+<div class="header-phone">
+<a href="tel:1-877-289-9684">
+<span class="icon"></span>
+<span class="label">1-877-289-9684</span>
+</a>
+</div>
+<div class="header-minicart">
+<a href="#header-cart" class="skip-link skip-cart with-drop  no-count">
+<span class="icon"></span>
+<span class="label">Shopping Cart</span>
+<span class="count">0</span>
+</a>
+<div id="header-cart" class="block block-cart skip-content">
+<div id="minicart-error-message" class="minicart-message"></div>
+<div id="minicart-success-message" class="minicart-message"></div>
+<div class="minicart-wrapper drop-holder-box">
+<p class="block-subtitle">
+Recently added items <a class="close skip-link-close" href="#" title="Close">&times;</a>
+</p>
+<p class="empty">You have no items in your shopping cart.</p>
+</div>
+</div>
+</div>
+<div class="account-holder">
+<a href="#header-account" class="skip-link with-drop skip-account">
+<span class="icon"></span>
+<span class="label">Account</span>
+</a>
+<div id="header-account" class="skip-content">
+<div class="drop-holder-box">
+<div class="links">
+<ul>
+<li class="first"><a href="https://www.xoticpc.com/customer/account/" title="My Account">My Account</a></li>
+<li><a href="https://www.xoticpc.com/wishlist/" title="My Wishlist">My Wishlist</a></li>
+<li><a href="https://www.xoticpc.com/shared_product/index/form/" title="My Configured Products">My Configured Products</a></li>
+<li><a href="https://www.xoticpc.com/checkout/cart/" title="My Cart" class="top-link-cart">My Cart</a></li>
+<li><a href="https://www.xoticpc.com/firecheckout/" title="Checkout" class="top-link-checkout">Checkout</a></li>
+<li><a href="https://www.xoticpc.com/customer/account/create/" title="Register">Register</a></li>
+<li><a href="https://www.xoticpc.com/customer/account/login/" title="Log In">Log In</a></li>
+<li class=" last"><a href="https://www.xoticpc.com/blog/" title="XOTIC PC Blog">XOTIC PC Blog</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="header-search">
+<a href="#header-search" class="skip-link with-drop skip-search">
+<span class="icon"></span>
+<span class="label">Search</span>
+</a>
+<div id="header-search" class="skip-content">
+<div class="drop-holder-box">
+<form id="search_mini_form" action="https://www.xoticpc.com/catalogsearch/result/" method="get">
+<div class="input-box">
+<label for="search">Search:</label>
+<input id="search" type="search" name="q" value="" class="input-text required-entry" maxlength="128" placeholder="" />
+<button type="submit" title="Search" class="button search-button"><span><span>Search</span></span></button>
+</div>
+<div id="search_autocomplete" class="search-autocomplete"></div>
+<script type="text/javascript">
+    //<![CDATA[
+        var searchForm = new Varien.searchForm('search_mini_form', 'search', '');
+        searchForm.initAutocomplete('https://www.xoticpc.com/catalogsearch/ajax/suggest/', 'search_autocomplete');
+    //]]>
+    </script>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+
+</div>
+<div class="main-section">
+<div class="main-container col1-layout">
+<div class="main">
+<div class="col-main">
+
+
+
+
+
+
+<section class="category-banner">
+</section>
+<div class="category-description std">
+ <div class="block-title">
+<strong>
+ASUS LAPTOPS </strong>
+</div>
+</div>
+<div class="category-title">
+<h1> </h1>
+</div>
+<div id="adj-nav-container"> <div class="category-products ">
+<div class="left-nav">
+<div id="adj-nav-navigation"> <script type="text/javascript" src="https://www.xoticpc.com/skin/frontend/rwd/xoticpc/js/adjnav-14.js"></script>
+<input type="hidden" id="adjnav-attr-expand" value="Show More Attributes" />
+<input type="hidden" id="adjnav-attr-collapse" value="Show Less Attributes" />
+<input type="hidden" id="adjnav-attr-val-expand" value="Show More" />
+<input type="hidden" id="adjnav-attr-val-collapse" value="Show Less" />
+<input type="hidden" id="adj-nav-url" value="https://www.xoticpc.com/custom-gaming-laptops-notebooks-gaming-laptops-ct-118-96-98/custom-gaming-laptops-notebooks-asus-laptops-ct-95-51-163.html" />
+<input type="hidden" id="adj-nav-params" value="" />
+<input type="hidden" id="adj-nav-ajax" value="https://www.xoticpc.com/adjnav/ajax/category/id/221/" />
+<div class="mobile-opener">
+<span>Filters</span>
+</div>
+<div class="filter-buttons">
+<div style="display:none;" class="adj-nav-apply"><span class="button">Apply</span></div>
+<span class="open-filters button"><span class="text-see">Show</span><span class="text-collapse">Hide</span> filters</span>
+</div>
+<div class="block block-layered-nav adj-nav block-layered-nav--no-filters">
+<div class="block-content toggle-content">
+<p class="block-subtitle block-subtitle--filter">Filter</p>
+<div class="narrow-by">
+<dl id="narrow-by-list">
+<dt class="adj-nav-dt adj-nav-dt-selected selected-item  ">
+<span>Graphics Card</span>
+</dt>
+<dd id="adj-nav-filter-graphicscard" class=""><ol>
+<li class="attr-val-featured"><a onclick="return false;" id="graphicscard-209" href="https://www.xoticpc.com/custom-gaming-laptops-notebooks-asus-laptops-ct-95-51-163?graphicscard=209" class="adj-nav-attribute ">Integrated</a>(1)</li>
+<li class="attr-val-featured"><a onclick="return false;" id="graphicscard-191" href="https://www.xoticpc.com/custom-gaming-laptops-notebooks-asus-laptops-ct-95-51-163?graphicscard=191" class="adj-nav-attribute ">NVIDIA MX150 2GB</a>(2)</li>
+<li class="attr-val-featured"><a onclick="return false;" id="graphicscard-172" href="https://www.xoticpc.com/custom-gaming-laptops-notebooks-asus-laptops-ct-95-51-163?graphicscard=172" class="adj-nav-attribute ">NVIDIA GTX 1050 2GB</a>(1)</li>
+<li class="attr-val-featured"><a onclick="return false;" id="graphicscard-220" href="https://www.xoticpc.com/custom-gaming-laptops-notebooks-asus-laptops-ct-95-51-163?graphicscard=220" class="adj-nav-attribute ">NVIDIA GTX 1050 2GB MAX-Q</a>(1)</li>
+<li class="attr-val-featured"><a onclick="return false;" id="graphicscard-170" href="https://www.xoticpc.com/custom-gaming-laptops-notebooks-asus-laptops-ct-95-51-163?graphicscard=170" class="adj-nav-attribute ">NVIDIA GTX 1050Ti 4GB</a>(5)</li>
+<li class="attr-val-featured"><a onclick="return false;" id="graphicscard-162" href="https://www.xoticpc.com/custom-gaming-laptops-notebooks-asus-laptops-ct-95-51-163?graphicscard=162" class="adj-nav-attribute ">NVIDIA GTX 1060 6GB</a>(2)</li>
+<li class="attr-val-featured"><a onclick="return false;" id="graphicscard-252" href="https://www.xoticpc.com/custom-gaming-laptops-notebooks-asus-laptops-ct-95-51-163?graphicscard=252" class="adj-nav-attribute ">NVIDIA GTX 1650</a>(1)</li>
+<li class="attr-val-featured"><a onclick="return false;" id="graphicscard-250" href="https://www.xoticpc.com/custom-gaming-laptops-notebooks-asus-laptops-ct-95-51-163?graphicscard=250" class="adj-nav-attribute ">NVIDIA GTX 1660 Ti Max-Q</a>(1)</li>
+<li class="attr-val-featured"><a onclick="return false;" id="graphicscard-251" href="https://www.xoticpc.com/custom-gaming-laptops-notebooks-asus-laptops-ct-95-51-163?graphicscard=251" class="adj-nav-attribute ">NVIDIA GTX 1660 Ti</a>(4)</li>
+<li class="attr-val-featured"><a onclick="return false;" id="graphicscard-161" href="https://www.xoticpc.com/custom-gaming-laptops-notebooks-asus-laptops-ct-95-51-163?graphicscard=161" class="adj-nav-attribute ">NVIDIA GTX 1070 8GB</a>(2)</li>
+<li class="attr-val-featured"><a onclick="return false;" id="graphicscard-189" href="https://www.xoticpc.com/custom-gaming-laptops-notebooks-asus-laptops-ct-95-51-163?graphicscard=189" class="adj-nav-attribute ">NVIDIA GTX 1080 8GB MAX-Q</a>(3)</li>
+<li class="attr-val-featured"><a onclick="return false;" id="graphicscard-160" href="https://www.xoticpc.com/custom-gaming-laptops-notebooks-asus-laptops-ct-95-51-163?graphicscard=160" class="adj-nav-attribute ">NVIDIA GTX 1080 8GB</a>(2)</li>
+<li class="attr-val-featured"><a onclick="return false;" id="graphicscard-222" href="https://www.xoticpc.com/custom-gaming-laptops-notebooks-asus-laptops-ct-95-51-163?graphicscard=222" class="adj-nav-attribute ">NVIDIA RTX 2060 6GB</a>(9)</li>
+<li class="attr-val-featured"><a onclick="return false;" id="graphicscard-223" href="https://www.xoticpc.com/custom-gaming-laptops-notebooks-asus-laptops-ct-95-51-163?graphicscard=223" class="adj-nav-attribute ">NVIDIA RTX 2070 8GB</a>(10)</li>
+<li class="attr-val-featured"><a onclick="return false;" id="graphicscard-228" href="https://www.xoticpc.com/custom-gaming-laptops-notebooks-asus-laptops-ct-95-51-163?graphicscard=228" class="adj-nav-attribute ">NVIDIA RTX 2080 8GB Max Q</a>(5)</li>
+<li class="attr-val-featured"><a onclick="return false;" id="graphicscard-224" href="https://www.xoticpc.com/custom-gaming-laptops-notebooks-asus-laptops-ct-95-51-163?graphicscard=224" class="adj-nav-attribute ">NVIDIA RTX 2080 8GB</a>(3)</li>
+</ol></dd>
+<dt class="adj-nav-dt adj-nav-dt-selected selected-item  ">
+<span>Screen Size</span>
+</dt>
+<dd id="adj-nav-filter-size" class=""><ol>
+<li class="attr-val-featured"><a onclick="return false;" id="size-16" href="https://www.xoticpc.com/custom-gaming-laptops-notebooks-asus-laptops-ct-95-51-163?size=16" class="adj-nav-attribute ">14” & Smaller</a>(2)</li>
+<li class="attr-val-featured"><a onclick="return false;" id="size-14" href="https://www.xoticpc.com/custom-gaming-laptops-notebooks-asus-laptops-ct-95-51-163?size=14" class="adj-nav-attribute ">15.6”</a>(29)</li>
+<li class="attr-val-featured"><a onclick="return false;" id="size-13" href="https://www.xoticpc.com/custom-gaming-laptops-notebooks-asus-laptops-ct-95-51-163?size=13" class="adj-nav-attribute ">17.3”</a>(21)</li>
+</ol></dd>
+<dt class="adj-nav-dt adj-nav-dt-selected selected-item  ">
+<span>Manufacturer</span>
+</dt>
+<dd id="adj-nav-filter-manufacturer" class=""><ol>
+<li class="attr-val-featured"><a onclick="return false;" id="manufacturer-22" href="https://www.xoticpc.com/custom-gaming-laptops-notebooks-asus-laptops-ct-95-51-163?manufacturer=22" class="adj-nav-attribute ">ASUS</a>(52)</li>
+</ol></dd>
+<dt class="adj-nav-dt adj-nav-dt-selected selected-item  ">
+<span>Processor Series</span>
+</dt>
+<dd id="adj-nav-filter-processorseries" class=""><ol>
+<li class="attr-val-featured"><a onclick="return false;" id="processorseries-176" href="https://www.xoticpc.com/custom-gaming-laptops-notebooks-asus-laptops-ct-95-51-163?processorseries=176" class="adj-nav-attribute ">AMD Ryzen</a>(5)</li>
+<li class="attr-val-featured"><a onclick="return false;" id="processorseries-124" href="https://www.xoticpc.com/custom-gaming-laptops-notebooks-asus-laptops-ct-95-51-163?processorseries=124" class="adj-nav-attribute ">Intel Core i5</a>(2)</li>
+<li class="attr-val-featured"><a onclick="return false;" id="processorseries-123" href="https://www.xoticpc.com/custom-gaming-laptops-notebooks-asus-laptops-ct-95-51-163?processorseries=123" class="adj-nav-attribute ">Intel Core i7</a>(42)</li>
+<li class="attr-val-featured"><a onclick="return false;" id="processorseries-207" href="https://www.xoticpc.com/custom-gaming-laptops-notebooks-asus-laptops-ct-95-51-163?processorseries=207" class="adj-nav-attribute ">Intel Core i9</a>(3)</li>
+</ol></dd>
+<dt class="adj-nav-dt   ">
+<span>Battery Life</span>
+</dt>
+<dd style="display:none" id="adj-nav-filter-batterylife" class=""><ol>
+<li class="attr-val-featured"><a onclick="return false;" id="batterylife-108" href="https://www.xoticpc.com/custom-gaming-laptops-notebooks-asus-laptops-ct-95-51-163?batterylife=108" class="adj-nav-attribute ">1-2 Hour</a>(13)</li>
+<li class="attr-val-featured"><a onclick="return false;" id="batterylife-107" href="https://www.xoticpc.com/custom-gaming-laptops-notebooks-asus-laptops-ct-95-51-163?batterylife=107" class="adj-nav-attribute ">2-3 Hour</a>(21)</li>
+<li class="attr-val-featured"><a onclick="return false;" id="batterylife-106" href="https://www.xoticpc.com/custom-gaming-laptops-notebooks-asus-laptops-ct-95-51-163?batterylife=106" class="adj-nav-attribute ">3-4 Hour</a>(7)</li>
+<li class="attr-val-featured"><a onclick="return false;" id="batterylife-100" href="https://www.xoticpc.com/custom-gaming-laptops-notebooks-asus-laptops-ct-95-51-163?batterylife=100" class="adj-nav-attribute ">9-10 Hour</a>(1)</li>
+<li class="attr-val-featured"><a onclick="return false;" id="batterylife-99" href="https://www.xoticpc.com/custom-gaming-laptops-notebooks-asus-laptops-ct-95-51-163?batterylife=99" class="adj-nav-attribute ">10 Hour +</a>(3)</li>
+</ol></dd>
+<dt class="adj-nav-dt   ">
+<span>Screen Type & Resolution</span>
+</dt>
+<dd style="display:none" id="adj-nav-filter-screentyperes" class=""><ol>
+<li class="attr-val-featured"><a onclick="return false;" id="screentyperes-236" href="https://www.xoticpc.com/custom-gaming-laptops-notebooks-asus-laptops-ct-95-51-163?screentyperes=236" class="adj-nav-attribute ">FHD IPS (1920x1080)</a>(1)</li>
+<li class="attr-val-featured"><a onclick="return false;" id="screentyperes-240" href="https://www.xoticpc.com/custom-gaming-laptops-notebooks-asus-laptops-ct-95-51-163?screentyperes=240" class="adj-nav-attribute ">FHD 120Hz IPS (1920x1080)</a>(6)</li>
+<li class="attr-val-featured"><a onclick="return false;" id="screentyperes-244" href="https://www.xoticpc.com/custom-gaming-laptops-notebooks-asus-laptops-ct-95-51-163?screentyperes=244" class="adj-nav-attribute ">FHD 144Hz IPS (1920x1080)</a>(11)</li>
+<li class="attr-val-featured"><a onclick="return false;" id="screentyperes-245" href="https://www.xoticpc.com/custom-gaming-laptops-notebooks-asus-laptops-ct-95-51-163?screentyperes=245" class="adj-nav-attribute ">FHD 144Hz IPS G-SYNC (1920x1080)</a>(2)</li>
+<li class="attr-val-featured"><a onclick="return false;" id="screentyperes-248" href="https://www.xoticpc.com/custom-gaming-laptops-notebooks-asus-laptops-ct-95-51-163?screentyperes=248" class="adj-nav-attribute ">FHD 240Hz IGZO IPS (1920x1080)</a>(6)</li>
+</ol></dd>
+<dt class="adj-nav-dt   ">
+<span>Use</span>
+</dt>
+<dd style="display:none" id="adj-nav-filter-use2" class=""><ol>
+<li class="attr-val-featured"><a onclick="return false;" id="use2-60" href="https://www.xoticpc.com/custom-gaming-laptops-notebooks-asus-laptops-ct-95-51-163?use2=60" class="adj-nav-attribute ">Gaming / High Performance</a>(42)</li>
+<li class="attr-val-featured"><a onclick="return false;" id="use2-59" href="https://www.xoticpc.com/custom-gaming-laptops-notebooks-asus-laptops-ct-95-51-163?use2=59" class="adj-nav-attribute ">Home / Home Office</a>(51)</li>
+<li class="attr-val-featured"><a onclick="return false;" id="use2-63" href="https://www.xoticpc.com/custom-gaming-laptops-notebooks-asus-laptops-ct-95-51-163?use2=63" class="adj-nav-attribute ">Creative</a>(47)</li>
+</ol></dd>
+<dt class="adj-nav-dt   ">
+<span>Core Name</span>
+</dt>
+<dd style="display:none" id="adj-nav-filter-corename" class=""><ol>
+<li class="attr-val-featured"><a onclick="return false;" id="corename-230" href="https://www.xoticpc.com/custom-gaming-laptops-notebooks-asus-laptops-ct-95-51-163?corename=230" class="adj-nav-attribute ">Intel 9th Gen Coffee Lake HR</a>(21)</li>
+<li class="attr-val-featured"><a onclick="return false;" id="corename-196" href="https://www.xoticpc.com/custom-gaming-laptops-notebooks-asus-laptops-ct-95-51-163?corename=196" class="adj-nav-attribute ">Intel 8th Gen Coffee Lake</a>(22)</li>
+<li class="attr-val-featured"><a onclick="return false;" id="corename-221" href="https://www.xoticpc.com/custom-gaming-laptops-notebooks-asus-laptops-ct-95-51-163?corename=221" class="adj-nav-attribute ">Intel 8th Gen Whiskey Lake</a>(4)</li>
+</ol></dd>
+<dt class="adj-nav-dt   ">
+<span>Max Ram Support</span>
+</dt>
+<dd style="display:none" id="adj-nav-filter-maxram" class=""><ol>
+<li class="attr-val-featured"><a onclick="return false;" id="maxram-118" href="https://www.xoticpc.com/custom-gaming-laptops-notebooks-asus-laptops-ct-95-51-163?maxram=118" class="adj-nav-attribute ">8GB</a>(1)</li>
+<li class="attr-val-featured"><a onclick="return false;" id="maxram-116" href="https://www.xoticpc.com/custom-gaming-laptops-notebooks-asus-laptops-ct-95-51-163?maxram=116" class="adj-nav-attribute ">16GB</a>(4)</li>
+<li class="attr-val-featured"><a onclick="return false;" id="maxram-184" href="https://www.xoticpc.com/custom-gaming-laptops-notebooks-asus-laptops-ct-95-51-163?maxram=184" class="adj-nav-attribute ">24GB</a>(6)</li>
+<li class="attr-val-featured"><a onclick="return false;" id="maxram-115" href="https://www.xoticpc.com/custom-gaming-laptops-notebooks-asus-laptops-ct-95-51-163?maxram=115" class="adj-nav-attribute ">32GB</a>(31)</li>
+<li class="attr-val-featured"><a onclick="return false;" id="maxram-114" href="https://www.xoticpc.com/custom-gaming-laptops-notebooks-asus-laptops-ct-95-51-163?maxram=114" class="adj-nav-attribute ">64GB</a>(9)</li>
+<li class="attr-val-featured"><a onclick="return false;" id="maxram-225" href="https://www.xoticpc.com/custom-gaming-laptops-notebooks-asus-laptops-ct-95-51-163?maxram=225" class="adj-nav-attribute ">128GB</a>(1)</li>
+</ol></dd>
+<dt class="adj-nav-dt   ">
+<span>HDD Support</span>
+</dt>
+<dd style="display:none" id="adj-nav-filter-hddsupport" class=""><ol>
+<li class="attr-val-featured"><a onclick="return false;" id="hddsupport-113" href="https://www.xoticpc.com/custom-gaming-laptops-notebooks-asus-laptops-ct-95-51-163?hddsupport=113" class="adj-nav-attribute ">NVMe</a>(52)</li>
+<li class="attr-val-featured"><a onclick="return false;" id="hddsupport-109" href="https://www.xoticpc.com/custom-gaming-laptops-notebooks-asus-laptops-ct-95-51-163?hddsupport=109" class="adj-nav-attribute ">Single PCIe</a>(46)</li>
+<li class="attr-val-featured"><a onclick="return false;" id="hddsupport-110" href="https://www.xoticpc.com/custom-gaming-laptops-notebooks-asus-laptops-ct-95-51-163?hddsupport=110" class="adj-nav-attribute ">Multiple PCIe</a>(12)</li>
+<li class="attr-val-featured"><a onclick="return false;" id="hddsupport-111" href="https://www.xoticpc.com/custom-gaming-laptops-notebooks-asus-laptops-ct-95-51-163?hddsupport=111" class="adj-nav-attribute ">Single M.2 / mSATA</a>(40)</li>
+<li class="attr-val-featured"><a onclick="return false;" id="hddsupport-112" href="https://www.xoticpc.com/custom-gaming-laptops-notebooks-asus-laptops-ct-95-51-163?hddsupport=112" class="adj-nav-attribute ">Multiple M.2 / mSATA</a>(12)</li>
+</ol></dd>
+<dt class="adj-nav-dt   ">
+<span>Weight</span>
+</dt>
+<dd style="display:none" id="adj-nav-filter-weightlbs" class=""><ol>
+<li class="attr-val-featured"><a onclick="return false;" id="weightlbs-52" href="https://www.xoticpc.com/custom-gaming-laptops-notebooks-asus-laptops-ct-95-51-163?weightlbs=52" class="adj-nav-attribute ">2 - 3.9lbs</a>(4)</li>
+<li class="attr-val-featured"><a onclick="return false;" id="weightlbs-53" href="https://www.xoticpc.com/custom-gaming-laptops-notebooks-asus-laptops-ct-95-51-163?weightlbs=53" class="adj-nav-attribute ">4 - 5.9lbs</a>(35)</li>
+<li class="attr-val-featured"><a onclick="return false;" id="weightlbs-54" href="https://www.xoticpc.com/custom-gaming-laptops-notebooks-asus-laptops-ct-95-51-163?weightlbs=54" class="adj-nav-attribute ">6 - 7.9lbs</a>(6)</li>
+<li class="attr-val-featured"><a onclick="return false;" id="weightlbs-50" href="https://www.xoticpc.com/custom-gaming-laptops-notebooks-asus-laptops-ct-95-51-163?weightlbs=50" class="adj-nav-attribute ">10lbs +</a>(5)</li>
+</ol></dd>
+<dt class="adj-nav-dt   ">
+<span>Backlight Keyboard</span>
+</dt>
+<dd style="display:none" id="adj-nav-filter-backlightkeyboard" class=""><ol>
+<li class="attr-val-featured"><a onclick="return false;" id="backlightkeyboard-127" href="https://www.xoticpc.com/custom-gaming-laptops-notebooks-asus-laptops-ct-95-51-163?backlightkeyboard=127" class="adj-nav-attribute ">Multi Color</a>(44)</li>
+<li class="attr-val-featured"><a onclick="return false;" id="backlightkeyboard-128" href="https://www.xoticpc.com/custom-gaming-laptops-notebooks-asus-laptops-ct-95-51-163?backlightkeyboard=128" class="adj-nav-attribute ">Single Color</a>(6)</li>
+</ol></dd>
+<dt class="adj-nav-dt   ">
+<span>On Sale</span>
+</dt>
+<dd style="display:none" id="adj-nav-filter-onsale" class=""><ol>
+<li class="attr-val-featured"><a onclick="return false;" id="onsale-97" href="https://www.xoticpc.com/custom-gaming-laptops-notebooks-asus-laptops-ct-95-51-163?onsale=97" class="adj-nav-attribute ">Yes</a>(2)</li>
+<li class="attr-val-featured"><a onclick="return false;" id="onsale-98" href="https://www.xoticpc.com/custom-gaming-laptops-notebooks-asus-laptops-ct-95-51-163?onsale=98" class="adj-nav-attribute ">No</a>(38)</li>
+</ol></dd>
+<dt class="adj-nav-dt   ">
+<span>Optical Drive</span>
+</dt>
+<dd style="display:none" id="adj-nav-filter-optical" class=""><ol>
+<li class="attr-val-featured"><a onclick="return false;" id="optical-178" href="https://www.xoticpc.com/custom-gaming-laptops-notebooks-asus-laptops-ct-95-51-163?optical=178" class="adj-nav-attribute ">No</a>(52)</li>
+</ol></dd>
+<dt class="adj-nav-dt   ">
+<span>Color</span>
+</dt>
+<dd style="display:none" id="adj-nav-filter-color" class=""><ol>
+<li class="attr-val-featured"><a onclick="return false;" id="color-183" href="https://www.xoticpc.com/custom-gaming-laptops-notebooks-asus-laptops-ct-95-51-163?color=183" class="adj-nav-attribute ">Black</a>(52)</li>
+<li class="attr-val-featured"><a onclick="return false;" id="color-182" href="https://www.xoticpc.com/custom-gaming-laptops-notebooks-asus-laptops-ct-95-51-163?color=182" class="adj-nav-attribute ">Silver</a>(6)</li>
+<li class="attr-val-featured"><a onclick="return false;" id="color-180" href="https://www.xoticpc.com/custom-gaming-laptops-notebooks-asus-laptops-ct-95-51-163?color=180" class="adj-nav-attribute ">Blue</a>(4)</li>
+</ol></dd>
+</dl>
+<dl>
+</dl>
+<script type="text/javascript">
+                        decorateDataList('narrow-by-list');
+                    </script>
+</div>
+</div>
+<div class="adj-nav-progress" style="display:none"></div>
+</div>
+<script>
+    var filtersSelectionMobile = function(){
+        var filtersOpener = $j('.open-filters'),
+            filtersTitle = $j('#narrow-by-list > dt'),
+            filtersPreselected = $j('#narrow-by-list .selected-item'),
+            filtersDrop = $j('#narrow-by-list > dd');
+
+        if($j(window).width() < 771){
+            filtersTitle.removeClass('adj-nav-dt-selected');
+            filtersDrop.css({'display' : 'none'});
+
+            filtersOpener.off('click').on('click', function () {
+                if ($j(this).hasClass('active-selection')){
+                    $j(this).removeClass('active-selection');
+                    filtersTitle.removeClass('adj-nav-dt-selected');
+                    filtersDrop.css({'display' : 'none'});
+                } else {
+                    $j(this).toggleClass('active-selection');
+                    filtersTitle.addClass('adj-nav-dt-selected');
+                    filtersDrop.css({'display' : 'block'});
+                }
+            });
+        } else {
+            filtersTitle.removeClass('adj-nav-dt-selected');
+            filtersDrop.css({'display' : 'none'});
+            filtersPreselected.addClass('adj-nav-dt-selected');
+            filtersPreselected.next('dd').css({'display' : 'block'});
+        }
+    };
+
+    var mobileFilters = function (init) {
+        var filtersOpener = $j('div.left-nav div.mobile-opener'),
+            filtersSlider = $j('div.left-nav div.block-layered-nav');
+
+        if($j(window).width() < 771) {
+            if (init === true) {
+                filtersOpener.removeClass('filters-active');
+                filtersSlider.hide();
+            }
+            filtersOpener.on('click', function () {
+                if ($j(this).hasClass('filters-active')) {
+                    filtersSlider.hide();
+                    $j(this).removeClass('filters-active');
+                    $j('.open-filters').removeClass('visible-button');
+                } else {
+                    filtersSlider.show();
+                    $j(this).addClass('filters-active');
+                    $j('.open-filters').addClass('visible-button');
+                    filtersSelectionMobile();
+                }
+            });
+        } else {
+            filtersSlider.removeAttr('style');
+            filtersOpener.addClass('filters-active');
+        }
+    };
+
+    $j(window).ready(function () {
+        mobileFilters(true);
+        filtersSelectionMobile();
+    });
+
+    $j(window).resize(function () {
+        mobileFilters(false);
+        filtersSelectionMobile();
+    });
+</script>
+</div> </div>
+<div class="main-col">
+<div class="toolbar">
+<div class="sorter">
+<p class="view-mode">
+</p>
+<div class="sort-by">
+<label>Sort By</label>
+<select onchange="adj_nav_toolbar_make_request(this.value)" title="Sort By">
+<option value="https://www.xoticpc.com/custom-gaming-laptops-notebooks-asus-laptops-ct-95-51-163?dir=asc&amp;order=name">
+Name </option>
+<option value="https://www.xoticpc.com/custom-gaming-laptops-notebooks-asus-laptops-ct-95-51-163?dir=asc&amp;order=price" selected="selected">
+Price  </option>
+</select>
+<a href="https://www.xoticpc.com/custom-gaming-laptops-notebooks-asus-laptops-ct-95-51-163?dir=desc&amp;order=price" class="sort-by-switcher sort-by-switcher--asc" title="Set Descending Direction">Set Descending Direction</a>
+</div>
+</div>
+<div id="adj-nav-navigation">
+<dl id="price-filter">
+<dt class="adj-nav-dt price-filter ">
+Price </dt>
+<dd id="adj-nav-filter-price" class=""><ol>
+<li>
+<div id="adj-nav-price-sliderprice" class="adj-nav-slider">
+<div class="handle selected" style="left:0px"></div>
+<div class="handle" style="left:170px"></div>
+</div>
+Range:
+$<span id="adj-nav-range-fromprice">849</span>-$<span id="adj-nav-range-toprice">3700</span>
+<script type="text/javascript">
+    var adj_slider = adj_nav_create_slider(170, 0, 170, 849, 3700,"price");
+</script>
+</li>
+</ol>
+</dd>
+</dl>
+<script type="text/javascript">
+            adj_nav_init();
+            document.observe("dom:loaded", function() {
+                adjnavMenuEnquireRegister(true);
+            });
+        </script>
+<script type="text/javascript">
+    if ('function' == typeof(sns_layer_add_attr))
+    {
+        sns_layer_add_attr();
+    }
+    adj_nav_toolbar_init();
+
+    adjnavInitFeaturedValues();
+    adjnavInitFeaturedAttributes();
+</script>
+</div> <div class="pager">
+<div class="count-container">
+<div class="limiter">
+<label>Show</label>
+<select onchange="adj_nav_toolbar_make_request(this.value)" title="Results per page">
+<option value="https://www.xoticpc.com/custom-gaming-laptops-notebooks-asus-laptops-ct-95-51-163?limit=10">
+10 </option>
+<option value="https://www.xoticpc.com/custom-gaming-laptops-notebooks-asus-laptops-ct-95-51-163?limit=15">
+15 </option>
+<option value="https://www.xoticpc.com/custom-gaming-laptops-notebooks-asus-laptops-ct-95-51-163?limit=30">
+30 </option>
+<option value="https://www.xoticpc.com/custom-gaming-laptops-notebooks-asus-laptops-ct-95-51-163?limit=60" selected="selected">
+60 </option>
+<option value="https://www.xoticpc.com/custom-gaming-laptops-notebooks-asus-laptops-ct-95-51-163?limit=100">
+100 </option>
+</select>
+<span>per page</span>
+</div>
+</div>
+</div>
+</div>
+
+<ul class="products-grid products-grid--max-4-col">
+<li class="item last">
+<div class="item-inner">
+<a href="https://www.xoticpc.com/asus-fx504gd-rs51.html" title="Asus FX504GD-RS51" class="product-image">
+<img id="product-collection-image-11571" src="https://www.xoticpc.com/media/catalog/product/cache/1/small_image/210x/9df78eab33525d08d6e5fb8d27136e95/f/x/fx504-1.png" alt="Asus FX504GD-RS51" />
+</a>
+<div class="product-info">
+<div class="block-title">
+<strong>
+<h2 class="product-name"><a href="https://www.xoticpc.com/asus-fx504gd-rs51.html" title="Asus FX504GD-RS51">Asus FX504GD-RS51</a></h2>
+</strong>
+</div>
+<div class="short-description">
+<div style="max-width:350px; max-height: 100px;">
+<ul>
+<li>15.6" FHD WVA <font size="1">60Hz</font></li>
+<li>Intel&reg; Coffee Lake i5-8300H</li>
+<li>NVIDIA&reg; GTX 1050</li>
+<li>Up to 32GB RAM</li>
+<li>1TB SSHD</li>
+<li>3+ Hours / 5.1 lbs</li>
+</ul>
+</div> </div>
+<div class="holder-product-info">
+<div class="list-links">
+<a href="https://www.xoticpc.com/asus-fx504gd-rs51.html?startcustomization=1">Customize</a>
+<a href="https://www.xoticpc.com/asus-fx504gd-rs51.html">More info</a>
+</div>
+<div class="price-box">
+<span class="price">$849.00</span> </div>
+<div>
+<a class="affirm-as-low-as" id="affirm-promo-11571" data-promo-id="promo_set_default" data-page-type="category" data-amount="84900" href="#"></a>
+</div>
+<script type="text/javascript">
+_affirm_config={public_api_key:"MXQQAR27OCA7XKHB",script:"https://cdn1.affirm.com/js/v2/affirm.js"};
+(function(l,g,m,e,a,f,b){var d,c=l[m]||{},h=document.createElement(f),n=document.getElementsByTagName(f)[0],k=function(a,b,c){return function(){a[b]._.push([c,arguments])}};c[e]=k(c,e,"set");d=c[e];c[a]={};c[a]._=[];d._=[];c[a][b]=k(c,a,b);a=0;for(b="set add save post open empty reset on off trigger ready setProduct".split(" ");a<b.length;a++)d[b[a]]=k(c,e,b[a]);a=0;for(b=["get","token","url","items"];a<b.length;a++)d[b[a]]=function(){};h.async=!0;h.src=g[f];n.parentNode.insertBefore(h,n);delete g[f];d(g);l[m]=c})(window,_affirm_config,"affirm","checkout","ui","script","ready");
+</script>
+</div>
+<div class="actions">
+<a title="View Details" class="button btn-details" href="https://www.xoticpc.com/asus-fx504gd-rs51.html">View Details</a>
+<ul class="add-to-links">
+<li><a href="https://www.xoticpc.com/wishlist/index/add/product/11571/form_key/P7nYOgdPEncXvonk/" class="link-wishlist"><span>Add to Wishlist</span></a></li>
+<li><span class="separator">|</span> <a href="https://www.xoticpc.com/catalog/product_compare/add/product/11571/uenc/aHR0cHM6Ly93d3cueG90aWNwYy5jb20vY3VzdG9tLWdhbWluZy1sYXB0b3BzLW5vdGVib29rcy1hc3VzLWxhcHRvcHMtY3QtOTUtNTEtMTYz/form_key/P7nYOgdPEncXvonk/" class="link-compare"><span>Add to Compare</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+</li>
+<li class="item last">
+<div class="item-inner">
+<a href="https://www.xoticpc.com/asus-tuf-gaming-fx-fx505dt-eb73.html" title="ASUS TUF Gaming (FX) FX505DT-EB73" class="product-image">
+<img id="product-collection-image-12714" src="https://www.xoticpc.com/media/catalog/product/cache/1/small_image/210x/9df78eab33525d08d6e5fb8d27136e95/f/x/fx505dt-eb732.png" alt="ASUS TUF Gaming (FX) FX505DT-EB73" />
+</a>
+<div class="product-info">
+<div class="block-title">
+<strong>
+<h2 class="product-name"><a href="https://www.xoticpc.com/asus-tuf-gaming-fx-fx505dt-eb73.html" title="ASUS TUF Gaming (FX) FX505DT-EB73">ASUS TUF Gaming (FX) FX505DT-EB73</a></h2>
+</strong>
+</div>
+<div class="short-description">
+<div style="max-width:350px;">
+<ul>
+<li>15.6" FHD 120Hz <font size="1">IPS-level</font></li>
+<li>AMD® Ryzen 7-3750H</li>
+<li>NVIDIA® GTX 1650</li>
+<li>Up to 32GB RAM</li>
+<li>512GB NVMe SSD</li>
+<li>3+ Hours / 4.9 lbs</li>
+</ul>
+</div> </div>
+<div class="holder-product-info">
+<div class="list-links">
+<a href="https://www.xoticpc.com/asus-tuf-gaming-fx-fx505dt-eb73.html?startcustomization=1">Customize</a>
+<a href="https://www.xoticpc.com/asus-tuf-gaming-fx-fx505dt-eb73.html">More info</a>
+</div>
+<div class="price-box">
+<span class="price">$899.99</span> </div>
+<div>
+<a class="affirm-as-low-as" id="affirm-promo-12714" data-promo-id="promo_set_default" data-page-type="category" data-amount="89999" href="#"></a>
+</div>
+</div>
+<div class="actions">
+<a title="View Details" class="button btn-details" href="https://www.xoticpc.com/asus-tuf-gaming-fx-fx505dt-eb73.html">View Details</a>
+<ul class="add-to-links">
+<li><a href="https://www.xoticpc.com/wishlist/index/add/product/12714/form_key/P7nYOgdPEncXvonk/" class="link-wishlist"><span>Add to Wishlist</span></a></li>
+ <li><span class="separator">|</span> <a href="https://www.xoticpc.com/catalog/product_compare/add/product/12714/uenc/aHR0cHM6Ly93d3cueG90aWNwYy5jb20vY3VzdG9tLWdhbWluZy1sYXB0b3BzLW5vdGVib29rcy1hc3VzLWxhcHRvcHMtY3QtOTUtNTEtMTYz/form_key/P7nYOgdPEncXvonk/" class="link-compare"><span>Add to Compare</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+</li>
+<li class="item last">
+<div class="item-inner">
+<a href="https://www.xoticpc.com/asus-strix-scar-gl503ge-rs71.html" title="Asus Strix Scar GL503GE-RS71" class="product-image">
+<img id="product-collection-image-11626" src="https://www.xoticpc.com/media/catalog/product/cache/1/small_image/210x/9df78eab33525d08d6e5fb8d27136e95/g/l/gl503ge-1_2.png" alt="Asus Strix Scar GL503GE-RS71" />
+</a>
+<div class="product-info">
+<div class="block-title">
+<strong>
+<h2 class="product-name"><a href="https://www.xoticpc.com/asus-strix-scar-gl503ge-rs71.html" title="Asus Strix Scar GL503GE-RS71">Asus Strix Scar GL503GE-RS71</a></h2>
+</strong>
+</div>
+<div class="short-description">
+<div style="max-width:350px;">
+<ul>
+<li style="color: #C32026"><strong>$100 OFF</strong></li>
+<li>15.6" FHD 120Hz</li>
+<li>Intel&reg; Coffee Lake i7-8750H</li>
+<li>NVIDIA&reg; GTX 1050Ti</li>
+<li>Up to 32GB RAM</li>
+<li>1TB SSHD</li>
+<li>3+ Hours / 5.7 lbs</li>
+</ul>
+</div> </div>
+<div class="holder-product-info">
+<div class="list-links">
+<a href="https://www.xoticpc.com/asus-strix-scar-gl503ge-rs71.html?startcustomization=1">Customize</a>
+<a href="https://www.xoticpc.com/asus-strix-scar-gl503ge-rs71.html">More info</a>
+</div>
+<div class="price-box">
+<span class="price">$999.00</span> </div>
+<div>
+<a class="affirm-as-low-as" id="affirm-promo-11626" data-promo-id="promo_set_default" data-page-type="category" data-amount="99900" href="#"></a>
+</div>
+</div>
+<div class="actions">
+<a title="View Details" class="button btn-details" href="https://www.xoticpc.com/asus-strix-scar-gl503ge-rs71.html">View Details</a>
+<ul class="add-to-links">
+ <li><a href="https://www.xoticpc.com/wishlist/index/add/product/11626/form_key/P7nYOgdPEncXvonk/" class="link-wishlist"><span>Add to Wishlist</span></a></li>
+<li><span class="separator">|</span> <a href="https://www.xoticpc.com/catalog/product_compare/add/product/11626/uenc/aHR0cHM6Ly93d3cueG90aWNwYy5jb20vY3VzdG9tLWdhbWluZy1sYXB0b3BzLW5vdGVib29rcy1hc3VzLWxhcHRvcHMtY3QtOTUtNTEtMTYz/form_key/P7nYOgdPEncXvonk/" class="link-compare"><span>Add to Compare</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+</li>
+<li class="item last">
+<div class="item-inner">
+<a href="https://www.xoticpc.com/asus-rog-strix-scar-gl703ge-ps71.html" title="Asus ROG Strix Scar GL703GE-PS71  " class="product-image">
+<img id="product-collection-image-12541" src="https://www.xoticpc.com/media/catalog/product/cache/1/small_image/210x/9df78eab33525d08d6e5fb8d27136e95/g/l/gl503ge-1_1_1_1.png" alt="Asus ROG Strix Scar GL703GE-PS71  " />
+</a>
+<div class="product-info">
+<div class="block-title">
+<strong>
+<h2 class="product-name"><a href="https://www.xoticpc.com/asus-rog-strix-scar-gl703ge-ps71.html" title="Asus ROG Strix Scar GL703GE-PS71  ">Asus ROG Strix Scar GL703GE-PS71 </a></h2>
+</strong>
+</div>
+<div class="short-description">
+<div style="max-width:350px;">
+<ul>
+<li style="color: #C32026"><strong>$150 OFF</strong></li>
+<li>17.3" FHD 120Hz</li>
+<li>Intel&reg; Coffee Lake i7-8750H</li>
+<li>NVIDIA&reg; GTX 1050Ti</li>
+<li>Up to 32GB RAM</li>
+<li>256G NVMe SSD</li>
+<li>3+ Hours / 6.7 lbs</li>
+</ul>
+</div> </div>
+<div class="holder-product-info">
+<div class="list-links">
+<a href="https://www.xoticpc.com/asus-rog-strix-scar-gl703ge-ps71.html?startcustomization=1">Customize</a>
+<a href="https://www.xoticpc.com/asus-rog-strix-scar-gl703ge-ps71.html">More info</a>
+</div>
+<div class="price-box">
+<span class="price">$999.00</span> </div>
+<div>
+<a class="affirm-as-low-as" id="affirm-promo-12541" data-promo-id="promo_set_default" data-page-type="category" data-amount="99900" href="#"></a>
+</div>
+</div>
+<div class="actions">
+ <a title="View Details" class="button btn-details" href="https://www.xoticpc.com/asus-rog-strix-scar-gl703ge-ps71.html">View Details</a>
+<ul class="add-to-links">
+<li><a href="https://www.xoticpc.com/wishlist/index/add/product/12541/form_key/P7nYOgdPEncXvonk/" class="link-wishlist"><span>Add to Wishlist</span></a></li>
+<li><span class="separator">|</span> <a href="https://www.xoticpc.com/catalog/product_compare/add/product/12541/uenc/aHR0cHM6Ly93d3cueG90aWNwYy5jb20vY3VzdG9tLWdhbWluZy1sYXB0b3BzLW5vdGVib29rcy1hc3VzLWxhcHRvcHMtY3QtOTUtNTEtMTYz/form_key/P7nYOgdPEncXvonk/" class="link-compare"><span>Add to Compare</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+</li>
+<li class="item last">
+<div class="item-inner">
+<a href="https://www.xoticpc.com/asus-tuf-gaming-fx-tuf505du-kb71.html" title="ASUS TUF Gaming (FX) TUF505DU-KB71" class="product-image">
+<img id="product-collection-image-12712" src="https://www.xoticpc.com/media/catalog/product/cache/1/small_image/210x/9df78eab33525d08d6e5fb8d27136e95/t/u/tuf505du1.png" alt="ASUS TUF Gaming (FX) TUF505DU-KB71" />
+</a>
+<div class="product-info">
+<div class="block-title">
+<strong>
+<h2 class="product-name"><a href="https://www.xoticpc.com/asus-tuf-gaming-fx-tuf505du-kb71.html" title="ASUS TUF Gaming (FX) TUF505DU-KB71">ASUS TUF Gaming (FX) TUF505DU-KB71</a></h2>
+</strong>
+</div>
+<div class="short-description">
+<div style="max-width:350px;">
+<ul>
+<li>15.6" FHD 120Hz <font size="1">IPS-level</font></li>
+<li>AMD® Ryzen 7-3750H</li>
+<li>NVIDIA® GTX 1660 Ti</li>
+<li>Up to 32GB RAM</li>
+<li>1TB SSHD</li>
+<li>3+ Hours / 4.9 lbs</li>
+</ul>
+</div> </div>
+<div class="holder-product-info">
+<div class="list-links">
+<a href="https://www.xoticpc.com/asus-tuf-gaming-fx-tuf505du-kb71.html?startcustomization=1">Customize</a>
+<a href="https://www.xoticpc.com/asus-tuf-gaming-fx-tuf505du-kb71.html">More info</a>
+</div>
+<div class="price-box">
+<span class="price">$999.99</span> </div>
+<div>
+<a class="affirm-as-low-as" id="affirm-promo-12712" data-promo-id="promo_set_default" data-page-type="category" data-amount="99999" href="#"></a>
+</div>
+</div>
+<div class="actions">
+<a title="View Details" class="button btn-details" href="https://www.xoticpc.com/asus-tuf-gaming-fx-tuf505du-kb71.html">View Details</a>
+<ul class="add-to-links">
+<li><a href="https://www.xoticpc.com/wishlist/index/add/product/12712/form_key/P7nYOgdPEncXvonk/" class="link-wishlist"><span>Add to Wishlist</span></a></li>
+<li><span class="separator">|</span> <a href="https://www.xoticpc.com/catalog/product_compare/add/product/12712/uenc/aHR0cHM6Ly93d3cueG90aWNwYy5jb20vY3VzdG9tLWdhbWluZy1sYXB0b3BzLW5vdGVib29rcy1hc3VzLWxhcHRvcHMtY3QtOTUtNTEtMTYz/form_key/P7nYOgdPEncXvonk/" class="link-compare"><span>Add to Compare</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+</li>
+<li class="item last">
+<div class="item-inner">
+<a href="https://www.xoticpc.com/asus-tuf-gaming-fx-tuf505du-eb74.html" title="ASUS TUF Gaming (FX) TUF505DU-EB74" class="product-image">
+<img id="product-collection-image-12710" src="https://www.xoticpc.com/media/catalog/product/cache/1/small_image/210x/9df78eab33525d08d6e5fb8d27136e95/t/u/tuf505du1_2.png" alt="ASUS TUF Gaming (FX) TUF505DU-EB74" />
+</a>
+<div class="product-info">
+<div class="block-title">
+<strong>
+<h2 class="product-name"><a href="https://www.xoticpc.com/asus-tuf-gaming-fx-tuf505du-eb74.html" title="ASUS TUF Gaming (FX) TUF505DU-EB74">ASUS TUF Gaming (FX) TUF505DU-EB74</a></h2>
+</strong>
+</div>
+<div class="short-description">
+<div style="max-width:350px;">
+<ul>
+<li>15.6" FHD 120Hz <font size="1">IPS-level</font></li>
+<li>AMD® Ryzen 7-3750H</li>
+<li>NVIDIA® GTX 1660 Ti</li>
+<li>Up to 32GB RAM</li>
+<li>256GB NVMe SSD + 1TB HDD</li>
+<li>3+ Hours / 4.9 lbs</li>
+</ul>
+</div> </div>
+<div class="holder-product-info">
+<div class="list-links">
+<a href="https://www.xoticpc.com/asus-tuf-gaming-fx-tuf505du-eb74.html?startcustomization=1">Customize</a>
+<a href="https://www.xoticpc.com/asus-tuf-gaming-fx-tuf505du-eb74.html">More info</a>
+</div>
+<div class="price-box">
+ <span class="price">$1,099.99</span> </div>
+<div>
+<a class="affirm-as-low-as" id="affirm-promo-12710" data-promo-id="promo_set_default" data-page-type="category" data-amount="109999" href="#"></a>
+</div>
+</div>
+<div class="actions">
+<a title="View Details" class="button btn-details" href="https://www.xoticpc.com/asus-tuf-gaming-fx-tuf505du-eb74.html">View Details</a>
+<ul class="add-to-links">
+<li><a href="https://www.xoticpc.com/wishlist/index/add/product/12710/form_key/P7nYOgdPEncXvonk/" class="link-wishlist"><span>Add to Wishlist</span></a></li>
+<li><span class="separator">|</span> <a href="https://www.xoticpc.com/catalog/product_compare/add/product/12710/uenc/aHR0cHM6Ly93d3cueG90aWNwYy5jb20vY3VzdG9tLWdhbWluZy1sYXB0b3BzLW5vdGVib29rcy1hc3VzLWxhcHRvcHMtY3QtOTUtNTEtMTYz/form_key/P7nYOgdPEncXvonk/" class="link-compare"><span>Add to Compare</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+</li>
+<li class="item last">
+<div class="item-inner">
+<a href="https://www.xoticpc.com/asus-strix-hero-gl503ge-es73.html" title="Asus Strix Hero GL503GE-ES73" class="product-image">
+<img id="product-collection-image-11598" src="https://www.xoticpc.com/media/catalog/product/cache/1/small_image/210x/9df78eab33525d08d6e5fb8d27136e95/g/l/gl503ge-1_1_1.png" alt="Asus Strix Hero GL503GE-ES73" />
+</a>
+<div class="product-info">
+<div class="block-title">
+<strong>
+<h2 class="product-name"><a href="https://www.xoticpc.com/asus-strix-hero-gl503ge-es73.html" title="Asus Strix Hero GL503GE-ES73">Asus Strix Hero GL503GE-ES73</a></h2>
+</strong>
+</div>
+<div class="short-description">
+<div style="max-width:350px;">
+<ul>
+<li>15.6" FHD 120Hz</li>
+<li>Intel&reg; Coffee Lake i7-8750H</li>
+<li>NVIDIA&reg; GTX 1050Ti</li>
+<li>Up to 32GB RAM</li>
+<li>128GB NVMe + 1TB SSHD</li>
+<li>3+ Hours / 5.7 lbs</li>
+</ul>
+</div> </div>
+<div class="holder-product-info">
+<div class="list-links">
+<a href="https://www.xoticpc.com/asus-strix-hero-gl503ge-es73.html?startcustomization=1">Customize</a>
+<a href="https://www.xoticpc.com/asus-strix-hero-gl503ge-es73.html">More info</a>
+</div>
+<div class="price-box">
+<span class="price">$1,199.00</span> </div>
+<div>
+<a class="affirm-as-low-as" id="affirm-promo-11598" data-promo-id="promo_set_default" data-page-type="category" data-amount="119900" href="#"></a>
+</div>
+</div>
+<div class="actions">
+<a title="View Details" class="button btn-details" href="https://www.xoticpc.com/asus-strix-hero-gl503ge-es73.html">View Details</a>
+<ul class="add-to-links">
+<li><a href="https://www.xoticpc.com/wishlist/index/add/product/11598/form_key/P7nYOgdPEncXvonk/" class="link-wishlist"><span>Add to Wishlist</span></a></li>
+<li><span class="separator">|</span> <a href="https://www.xoticpc.com/catalog/product_compare/add/product/11598/uenc/aHR0cHM6Ly93d3cueG90aWNwYy5jb20vY3VzdG9tLWdhbWluZy1sYXB0b3BzLW5vdGVib29rcy1hc3VzLWxhcHRvcHMtY3QtOTUtNTEtMTYz/form_key/P7nYOgdPEncXvonk/" class="link-compare"><span>Add to Compare</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+</li>
+<li class="item last">
+<div class="item-inner">
+<a href="https://www.xoticpc.com/asus-zenbook-14-ux433fa-dh74.html" title="ASUS ZenBook 14 UX433FA-DH74" class="product-image">
+<img id="product-collection-image-12202" src="https://www.xoticpc.com/media/catalog/product/cache/1/small_image/210x/9df78eab33525d08d6e5fb8d27136e95/z/e/zenbook_15_ux533_product_photo__2b_royal_blue_17_glass_display_1_1.png" alt="ASUS ZenBook 14 UX433FA-DH74" />
+</a>
+<div class="product-info">
+<div class="block-title">
+<strong>
+<h2 class="product-name"><a href="https://www.xoticpc.com/asus-zenbook-14-ux433fa-dh74.html" title="ASUS ZenBook 14 UX433FA-DH74">ASUS ZenBook 14 UX433FA-DH74</a></h2>
+</strong>
+</div>
+<div class="short-description">
+<div style="max-width:350px; max-height: 100px;">
+<ul>
+<li>14.0" Full HD</li>
+<li>Intel&reg; Whiskey Lake i7-8565U</li>
+<li>Intel® UHD 620 Graphics</li>
+<li>Up to 16GB RAM</li>
+<li>512GB NVMe SSD</li>
+<li>~13+ Hours / 2.6 lbs</li>
+</ul>
+</div> </div>
+<div class="holder-product-info">
+<div class="list-links">
+ <a href="https://www.xoticpc.com/asus-zenbook-14-ux433fa-dh74.html?startcustomization=1">Customize</a>
+<a href="https://www.xoticpc.com/asus-zenbook-14-ux433fa-dh74.html">More info</a>
+</div>
+<div class="price-box">
+<span class="price">$1,199.00</span> </div>
+<div>
+<a class="affirm-as-low-as" id="affirm-promo-12202" data-promo-id="promo_set_default" data-page-type="category" data-amount="119900" href="#"></a>
+</div>
+</div>
+<div class="actions">
+<a title="View Details" class="button btn-details" href="https://www.xoticpc.com/asus-zenbook-14-ux433fa-dh74.html">View Details</a>
+<ul class="add-to-links">
+<li><a href="https://www.xoticpc.com/wishlist/index/add/product/12202/form_key/P7nYOgdPEncXvonk/" class="link-wishlist"><span>Add to Wishlist</span></a></li>
+<li><span class="separator">|</span> <a href="https://www.xoticpc.com/catalog/product_compare/add/product/12202/uenc/aHR0cHM6Ly93d3cueG90aWNwYy5jb20vY3VzdG9tLWdhbWluZy1sYXB0b3BzLW5vdGVib29rcy1hc3VzLWxhcHRvcHMtY3QtOTUtNTEtMTYz/form_key/P7nYOgdPEncXvonk/" class="link-compare"><span>Add to Compare</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+</li>
+<li class="item last">
+<div class="item-inner">
+<a href="https://www.xoticpc.com/asus-strix-scar-gl703ge-es73.html" title="Asus Strix Scar GL703GE-ES73" class="product-image">
+<img id="product-collection-image-11584" src="https://www.xoticpc.com/media/catalog/product/cache/1/small_image/210x/9df78eab33525d08d6e5fb8d27136e95/g/l/gl503ge-1.png" alt="Asus Strix Scar GL703GE-ES73" />
+</a>
+<div class="product-info">
+<div class="block-title">
+<strong>
+<h2 class="product-name"><a href="https://www.xoticpc.com/asus-strix-scar-gl703ge-es73.html" title="Asus Strix Scar GL703GE-ES73">Asus Strix Scar GL703GE-ES73</a></h2>
+</strong>
+</div>
+<div class="short-description">
+<div style="max-width:350px;">
+<ul>
+<li style="color: #C32026"><strong>$100 OFF</strong></li>
+<li>17.3" FHD 120Hz</li>
+<li>Intel&reg; Coffee Lake i7-8750H</li>
+<li>NVIDIA&reg; GTX 1050Ti</li>
+<li>Up to 32GB RAM</li>
+<li>128GB NVMe + 1TB SSHD</li>
+<li>3+ Hours / 6.7 lbs</li>
+</ul>
+</div> </div>
+<div class="holder-product-info">
+<div class="list-links">
+<a href="https://www.xoticpc.com/asus-strix-scar-gl703ge-es73.html?startcustomization=1">Customize</a>
+<a href="https://www.xoticpc.com/asus-strix-scar-gl703ge-es73.html">More info</a>
+</div>
+<div class="price-box">
+<span class="price">$1,199.00</span> </div>
+<div>
+<a class="affirm-as-low-as" id="affirm-promo-11584" data-promo-id="promo_set_default" data-page-type="category" data-amount="119900" href="#"></a>
+</div>
+</div>
+<div class="actions">
+<a title="View Details" class="button btn-details" href="https://www.xoticpc.com/asus-strix-scar-gl703ge-es73.html">View Details</a>
+<ul class="add-to-links">
+<li><a href="https://www.xoticpc.com/wishlist/index/add/product/11584/form_key/P7nYOgdPEncXvonk/" class="link-wishlist"><span>Add to Wishlist</span></a></li>
+<li><span class="separator">|</span> <a href="https://www.xoticpc.com/catalog/product_compare/add/product/11584/uenc/aHR0cHM6Ly93d3cueG90aWNwYy5jb20vY3VzdG9tLWdhbWluZy1sYXB0b3BzLW5vdGVib29rcy1hc3VzLWxhcHRvcHMtY3QtOTUtNTEtMTYz/form_key/P7nYOgdPEncXvonk/" class="link-compare"><span>Add to Compare</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+</li>
+<li class="item last">
+<div class="item-inner">
+<a href="https://www.xoticpc.com/asus-zenbook-flip-14-ux461fn-dh74t.html" title="ASUS ZenBook Flip 14 UX461FN-DH74T" class="product-image">
+<img id="product-collection-image-12589" src="https://www.xoticpc.com/media/catalog/product/cache/1/small_image/210x/9df78eab33525d08d6e5fb8d27136e95/u/x/ux461fn-dh74t6.png" alt="ASUS ZenBook Flip 14 UX461FN-DH74T" />
+</a>
+<div class="product-info">
+<div class="block-title">
+<strong>
+<h2 class="product-name"><a href="https://www.xoticpc.com/asus-zenbook-flip-14-ux461fn-dh74t.html" title="ASUS ZenBook Flip 14 UX461FN-DH74T">ASUS ZenBook Flip 14 UX461FN-DH74T</a></h2>
+</strong>
+</div>
+ <div class="short-description">
+<div style="max-width:350px;">
+<ul>
+<li>14" FHD Touchscreen</li>
+<li>Intel&reg; i7-8565U</li>
+<li>NVIDIA® GeForce® MX150</li>
+<li>Up to 16GB RAM</li>
+<li>512GB NVMe SSD</li>
+<li>12+ Hours / 3.3 lbs</li>
+</ul>
+</div> </div>
+<div class="holder-product-info">
+<div class="list-links">
+<a href="https://www.xoticpc.com/asus-zenbook-flip-14-ux461fn-dh74t.html?startcustomization=1">Customize</a>
+<a href="https://www.xoticpc.com/asus-zenbook-flip-14-ux461fn-dh74t.html">More info</a>
+</div>
+<div class="price-box">
+<span class="price">$1,299.00</span> </div>
+<div>
+<a class="affirm-as-low-as" id="affirm-promo-12589" data-promo-id="promo_set_default" data-page-type="category" data-amount="129900" href="#"></a>
+</div>
+</div>
+<div class="actions">
+<a title="View Details" class="button btn-details" href="https://www.xoticpc.com/asus-zenbook-flip-14-ux461fn-dh74t.html">View Details</a>
+<ul class="add-to-links">
+<li><a href="https://www.xoticpc.com/wishlist/index/add/product/12589/form_key/P7nYOgdPEncXvonk/" class="link-wishlist"><span>Add to Wishlist</span></a></li>
+<li><span class="separator">|</span> <a href="https://www.xoticpc.com/catalog/product_compare/add/product/12589/uenc/aHR0cHM6Ly93d3cueG90aWNwYy5jb20vY3VzdG9tLWdhbWluZy1sYXB0b3BzLW5vdGVib29rcy1hc3VzLWxhcHRvcHMtY3QtOTUtNTEtMTYz/form_key/P7nYOgdPEncXvonk/" class="link-compare"><span>Add to Compare</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+</li>
+<li class="item last">
+<div class="item-inner">
+<a href="https://www.xoticpc.com/asus-tuf-gaming-fx-tuf705du-pb74.html" title="ASUS TUF Gaming (FX) TUF705DU-PB74" class="product-image">
+<img id="product-collection-image-12876" src="https://www.xoticpc.com/media/catalog/product/cache/1/small_image/210x/9df78eab33525d08d6e5fb8d27136e95/t/u/tuf505du1_2_2.png" alt="ASUS TUF Gaming (FX) TUF705DU-PB74" />
+</a>
+<div class="product-info">
+<div class="block-title">
+<strong>
+<h2 class="product-name"><a href="https://www.xoticpc.com/asus-tuf-gaming-fx-tuf705du-pb74.html" title="ASUS TUF Gaming (FX) TUF705DU-PB74">ASUS TUF Gaming (FX) TUF705DU-PB74</a></h2>
+</strong>
+</div>
+<div class="short-description">
+<div style="max-width:350px;">
+<ul>
+<li>17.3" FHD <font size="1">IPS-level</font></li>
+<li>AMD® Ryzen 7-3750H</li>
+<li>NVIDIA® GTX 1660 Ti</li>
+<li>Up to 32GB RAM</li>
+<li>512GB NVMe SSD</li>
+<li>3+ Hours / 6.0 lbs</li>
+</ul>
+</div> </div>
+<div class="holder-product-info">
+<div class="list-links">
+<a href="https://www.xoticpc.com/asus-tuf-gaming-fx-tuf705du-pb74.html?startcustomization=1">Customize</a>
+<a href="https://www.xoticpc.com/asus-tuf-gaming-fx-tuf705du-pb74.html">More info</a>
+</div>
+<div class="price-box">
+<span class="price">$1,299.99</span> </div>
+<div>
+<a class="affirm-as-low-as" id="affirm-promo-12876" data-promo-id="promo_set_default" data-page-type="category" data-amount="129999" href="#"></a>
+</div>
+</div>
+<div class="actions">
+<a title="View Details" class="button btn-details" href="https://www.xoticpc.com/asus-tuf-gaming-fx-tuf705du-pb74.html">View Details</a>
+<ul class="add-to-links">
+<li><a href="https://www.xoticpc.com/wishlist/index/add/product/12876/form_key/P7nYOgdPEncXvonk/" class="link-wishlist"><span>Add to Wishlist</span></a></li>
+<li><span class="separator">|</span> <a href="https://www.xoticpc.com/catalog/product_compare/add/product/12876/uenc/aHR0cHM6Ly93d3cueG90aWNwYy5jb20vY3VzdG9tLWdhbWluZy1sYXB0b3BzLW5vdGVib29rcy1hc3VzLWxhcHRvcHMtY3QtOTUtNTEtMTYz/form_key/P7nYOgdPEncXvonk/" class="link-compare"><span>Add to Compare</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+</li>
+<li class="item last">
+<div class="item-inner">
+<a href="https://www.xoticpc.com/asus-tuf-gaming-fx-fx505dv-pb74.html" title="ASUS TUF Gaming (FX) FX505DV-PB74" class="product-image">
+<img id="product-collection-image-12713" src="https://www.xoticpc.com/media/catalog/product/cache/1/small_image/210x/9df78eab33525d08d6e5fb8d27136e95/f/x/fx505dt-eb732_1.png" alt="ASUS TUF Gaming (FX) FX505DV-PB74" />
+</a>
+<div class="product-info">
+<div class="block-title">
+<strong>
+<h2 class="product-name"><a href="https://www.xoticpc.com/asus-tuf-gaming-fx-fx505dv-pb74.html" title="ASUS TUF Gaming (FX) FX505DV-PB74">ASUS TUF Gaming (FX) FX505DV-PB74</a></h2>
+</strong>
+</div>
+<div class="short-description">
+<div style="max-width:350px;">
+<ul>
+<li>15.6" FHD 120Hz <font size="1">IPS-level</font></li>
+<li>AMD® Ryzen 7-3750H</li>
+<li>NVIDIA® RTX 2060 <font color="#30B800"><strong>VR Ready</strong></font></li>
+<li>Up to 32GB RAM</li>
+<li>512GB NVMe SSD</li>
+<li>TBD Hours / TBD lbs</li>
+</ul>
+</div> </div>
+<div class="holder-product-info">
+<div class="list-links">
+<a href="https://www.xoticpc.com/asus-tuf-gaming-fx-fx505dv-pb74.html?startcustomization=1">Customize</a>
+<a href="https://www.xoticpc.com/asus-tuf-gaming-fx-fx505dv-pb74.html">More info</a>
+</div>
+<div class="price-box">
+<span class="price">$1,399.99</span> </div>
+<div>
+<a class="affirm-as-low-as" id="affirm-promo-12713" data-promo-id="promo_set_default" data-page-type="category" data-amount="139999" href="#"></a>
+</div>
+</div>
+<div class="actions">
+<a title="View Details" class="button btn-details" href="https://www.xoticpc.com/asus-tuf-gaming-fx-fx505dv-pb74.html">View Details</a>
+<ul class="add-to-links">
+<li><a href="https://www.xoticpc.com/wishlist/index/add/product/12713/form_key/P7nYOgdPEncXvonk/" class="link-wishlist"><span>Add to Wishlist</span></a></li>
+<li><span class="separator">|</span> <a href="https://www.xoticpc.com/catalog/product_compare/add/product/12713/uenc/aHR0cHM6Ly93d3cueG90aWNwYy5jb20vY3VzdG9tLWdhbWluZy1sYXB0b3BzLW5vdGVib29rcy1hc3VzLWxhcHRvcHMtY3QtOTUtNTEtMTYz/form_key/P7nYOgdPEncXvonk/" class="link-compare"><span>Add to Compare</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+</li>
+<li class="item last">
+<div class="item-inner">
+<a href="https://www.xoticpc.com/asus-rog-strix-g-gl531gu-wb74.html" title="ASUS ROG Strix G GL531GU-WB74" class="product-image">
+<img id="product-collection-image-12906" src="https://www.xoticpc.com/media/catalog/product/cache/1/small_image/210x/9df78eab33525d08d6e5fb8d27136e95/g/l/gl531_2_1.png" alt="ASUS ROG Strix G GL531GU-WB74" />
+</a>
+<div class="product-info">
+<div class="block-title">
+<strong>
+<h2 class="product-name"><a href="https://www.xoticpc.com/asus-rog-strix-g-gl531gu-wb74.html" title="ASUS ROG Strix G GL531GU-WB74">ASUS ROG Strix G GL531GU-WB74</a></h2>
+</strong>
+</div>
+<div class="short-description">
+<div style="max-width:350px;">
+<ul>
+<li>15.6" FHD 120Hz <font size="1">IPS-level</font></li>
+<li>Intel® i7-9750H</li>
+<li>NVIDIA® GTX 1660Ti<font color="#30B800"><strong> VR Ready</strong></font></li>
+<li>Up to 64GB RAM</li>
+<li>512GB NVMe SSD</li>
+<li>2+ Hours / 5.3 lbs</li>
+</ul>
+</div> </div>
+<div class="holder-product-info">
+<div class="list-links">
+<a href="https://www.xoticpc.com/asus-rog-strix-g-gl531gu-wb74.html?startcustomization=1">Customize</a>
+<a href="https://www.xoticpc.com/asus-rog-strix-g-gl531gu-wb74.html">More info</a>
+</div>
+<div class="price-box">
+<span class="price">$1,399.99</span> </div>
+<div>
+<a class="affirm-as-low-as" id="affirm-promo-12906" data-promo-id="promo_set_default" data-page-type="category" data-amount="139999" href="#"></a>
+</div>
+</div>
+<div class="actions">
+<a title="View Details" class="button btn-details" href="https://www.xoticpc.com/asus-rog-strix-g-gl531gu-wb74.html">View Details</a>
+<ul class="add-to-links">
+<li><a href="https://www.xoticpc.com/wishlist/index/add/product/12906/form_key/P7nYOgdPEncXvonk/" class="link-wishlist"><span>Add to Wishlist</span></a></li>
+<li><span class="separator">|</span> <a href="https://www.xoticpc.com/catalog/product_compare/add/product/12906/uenc/aHR0cHM6Ly93d3cueG90aWNwYy5jb20vY3VzdG9tLWdhbWluZy1sYXB0b3BzLW5vdGVib29rcy1hc3VzLWxhcHRvcHMtY3QtOTUtNTEtMTYz/form_key/P7nYOgdPEncXvonk/" class="link-compare"><span>Add to Compare</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+</li>
+<li class="item last">
+ <div class="item-inner">
+<a href="https://www.xoticpc.com/asus-zenbook-15-ux533fd-dh74.html" title="ASUS ZenBook 15 UX533FD-DH74" class="product-image">
+<img id="product-collection-image-12198" src="https://www.xoticpc.com/media/catalog/product/cache/1/small_image/210x/9df78eab33525d08d6e5fb8d27136e95/z/e/zenbook_15_ux533_product_photo__2b_royal_blue_17_glass_display_1.png" alt="ASUS ZenBook 15 UX533FD-DH74" />
+</a>
+<div class="product-info">
+<div class="block-title">
+<strong>
+<h2 class="product-name"><a href="https://www.xoticpc.com/asus-zenbook-15-ux533fd-dh74.html" title="ASUS ZenBook 15 UX533FD-DH74">ASUS ZenBook 15 UX533FD-DH74</a></h2>
+</strong>
+</div>
+<div class="short-description">
+<div style="max-width:350px; max-height: 100px;">
+<ul>
+<li>15.6" IPS Full HD</li>
+<li>Intel&reg; Whiskey Lake i7-8565U</li>
+<li>NVIDIA&reg; 1050 Max-Q</li>
+<li>Up to 16GB RAM</li>
+<li>512GB NVMe SSD</li>
+<li>~16+ Hours / 3.7 lbs</li>
+</ul>
+</div> </div>
+<div class="holder-product-info">
+<div class="list-links">
+<a href="https://www.xoticpc.com/asus-zenbook-15-ux533fd-dh74.html?startcustomization=1">Customize</a>
+<a href="https://www.xoticpc.com/asus-zenbook-15-ux533fd-dh74.html">More info</a>
+</div>
+<div class="price-box">
+<span class="price">$1,399.99</span> </div>
+<div>
+<a class="affirm-as-low-as" id="affirm-promo-12198" data-promo-id="promo_set_default" data-page-type="category" data-amount="139999" href="#"></a>
+</div>
+</div>
+<div class="actions">
+<a title="View Details" class="button btn-details" href="https://www.xoticpc.com/asus-zenbook-15-ux533fd-dh74.html">View Details</a>
+<ul class="add-to-links">
+<li><a href="https://www.xoticpc.com/wishlist/index/add/product/12198/form_key/P7nYOgdPEncXvonk/" class="link-wishlist"><span>Add to Wishlist</span></a></li>
+<li><span class="separator">|</span> <a href="https://www.xoticpc.com/catalog/product_compare/add/product/12198/uenc/aHR0cHM6Ly93d3cueG90aWNwYy5jb20vY3VzdG9tLWdhbWluZy1sYXB0b3BzLW5vdGVib29rcy1hc3VzLWxhcHRvcHMtY3QtOTUtNTEtMTYz/form_key/P7nYOgdPEncXvonk/" class="link-compare"><span>Add to Compare</span></a></li>
+ </ul>
+</div>
+</div>
+</div>
+</li>
+<li class="item last">
+<div class="item-inner">
+<a href="https://www.xoticpc.com/asus-zenbook-s13-ux392fn-xs71.html" title="ASUS ZenBook S13 UX392FN-XS71" class="product-image">
+<img id="product-collection-image-12627" src="https://www.xoticpc.com/media/catalog/product/cache/1/small_image/210x/9df78eab33525d08d6e5fb8d27136e95/u/x/ux392fn-xs716.png" alt="ASUS ZenBook S13 UX392FN-XS71" />
+</a>
+<div class="product-info">
+<div class="block-title">
+<strong>
+<h2 class="product-name"><a href="https://www.xoticpc.com/asus-zenbook-s13-ux392fn-xs71.html" title="ASUS ZenBook S13 UX392FN-XS71">ASUS ZenBook S13 UX392FN-XS71</a></h2>
+</strong>
+</div>
+<div class="short-description">
+<div style="max-width:350px; max-height: 100px;">
+<ul>
+<li>13.9" Full HD</li>
+<li>Intel&reg; Whiskey Lake i7-8565U</li>
+<li>NVIDIA® GeForce® MX150</li>
+<li>8GB RAM</li>
+<li>512GB NVMe SSD</li>
+<li>~4+ Hours / 2.4 lbs</li>
+</ul>
+</div> </div>
+<div class="holder-product-info">
+<div class="list-links">
+<a href="https://www.xoticpc.com/asus-zenbook-s13-ux392fn-xs71.html?startcustomization=1">Customize</a>
+<a href="https://www.xoticpc.com/asus-zenbook-s13-ux392fn-xs71.html">More info</a>
+</div>
+<div class="price-box">
+<span class="price">$1,399.99</span> </div>
+<div>
+<a class="affirm-as-low-as" id="affirm-promo-12627" data-promo-id="promo_set_default" data-page-type="category" data-amount="139999" href="#"></a>
+</div>
+</div>
+<div class="actions">
+<a title="View Details" class="button btn-details" href="https://www.xoticpc.com/asus-zenbook-s13-ux392fn-xs71.html">View Details</a>
+<ul class="add-to-links">
+<li><a href="https://www.xoticpc.com/wishlist/index/add/product/12627/form_key/P7nYOgdPEncXvonk/" class="link-wishlist"><span>Add to Wishlist</span></a></li>
+<li><span class="separator">|</span> <a href="https://www.xoticpc.com/catalog/product_compare/add/product/12627/uenc/aHR0cHM6Ly93d3cueG90aWNwYy5jb20vY3VzdG9tLWdhbWluZy1sYXB0b3BzLW5vdGVib29rcy1hc3VzLWxhcHRvcHMtY3QtOTUtNTEtMTYz/form_key/P7nYOgdPEncXvonk/" class="link-compare"><span>Add to Compare</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+</li>
+<li class="item last">
+<div class="item-inner">
+<a href="https://www.xoticpc.com/asus-rog-strix-g-gl731gu-rb74.html" title="ASUS ROG STRIX G GL731GU-RB74" class="product-image">
+<img id="product-collection-image-12904" src="https://www.xoticpc.com/media/catalog/product/cache/1/small_image/210x/9df78eab33525d08d6e5fb8d27136e95/g/l/gl731gu-rb74_7.png" alt="ASUS ROG STRIX G GL731GU-RB74" />
+</a>
+<div class="product-info">
+<div class="block-title">
+<strong>
+<h2 class="product-name"><a href="https://www.xoticpc.com/asus-rog-strix-g-gl731gu-rb74.html" title="ASUS ROG STRIX G GL731GU-RB74">ASUS ROG STRIX G GL731GU-RB74</a></h2>
+</strong>
+</div>
+<div class="short-description">
+<div style="max-width:350px;">
+<ul>
+<li>17.3" FHD 144Hz <font size="1">IPS-level</font></li>
+<li>Intel® i7-9750H</li>
+<li>NVIDIA® GTX 1660Ti <font color="#30B800"><strong> VR Ready</strong></font> </li>
+<li>Up to 32GB RAM</li>
+<li>512GB NVMe SSD</li>
+<li>2+ Hours / 6.3 lbs</li>
+</ul>
+</div> </div>
+<div class="holder-product-info">
+<div class="list-links">
+<a href="https://www.xoticpc.com/asus-rog-strix-g-gl731gu-rb74.html?startcustomization=1">Customize</a>
+<a href="https://www.xoticpc.com/asus-rog-strix-g-gl731gu-rb74.html">More info</a>
+</div>
+<div class="price-box">
+<span class="price">$1,499.99</span> </div>
+<div>
+<a class="affirm-as-low-as" id="affirm-promo-12904" data-promo-id="promo_set_default" data-page-type="category" data-amount="149999" href="#"></a>
+</div>
+</div>
+<div class="actions">
+<a title="View Details" class="button btn-details" href="https://www.xoticpc.com/asus-rog-strix-g-gl731gu-rb74.html">View Details</a>
+<ul class="add-to-links">
+<li><a href="https://www.xoticpc.com/wishlist/index/add/product/12904/form_key/P7nYOgdPEncXvonk/" class="link-wishlist"><span>Add to Wishlist</span></a></li>
+<li><span class="separator">|</span> <a href="https://www.xoticpc.com/catalog/product_compare/add/product/12904/uenc/aHR0cHM6Ly93d3cueG90aWNwYy5jb20vY3VzdG9tLWdhbWluZy1sYXB0b3BzLW5vdGVib29rcy1hc3VzLWxhcHRvcHMtY3QtOTUtNTEtMTYz/form_key/P7nYOgdPEncXvonk/" class="link-compare"><span>Add to Compare</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+</li>
+<li class="item last">
+<div class="item-inner">
+<a href="https://www.xoticpc.com/asus-rog-strix-scar-ii-gl704gm-dh74.html" title="ASUS ROG Strix SCAR II GL704GM-DH74" class="product-image">
+<img id="product-collection-image-12028" src="https://www.xoticpc.com/media/catalog/product/cache/1/small_image/210x/9df78eab33525d08d6e5fb8d27136e95/g/l/gl504gs-1_1.png" alt="ASUS ROG Strix SCAR II GL704GM-DH74" />
+</a>
+<div class="product-info">
+<div class="block-title">
+<strong>
+<h2 class="product-name"><a href="https://www.xoticpc.com/asus-rog-strix-scar-ii-gl704gm-dh74.html" title="ASUS ROG Strix SCAR II GL704GM-DH74">ASUS ROG Strix SCAR II GL704GM-DH74</a></h2>
+</strong>
+</div>
+<div class="short-description">
+<div style="max-width:350px;">
+<ul>
+<li style="color: #C32026"><strong>$100 OFF</strong></li>
+<li>17.3" 144Hz FHD <font size="1">IPS-Level</font></li>
+<li>Intel&reg; Coffee Lake i7-8750H</li>
+<li>NVIDIA&reg; GTX 1060 <font color="#30B800"><strong>VR Ready</strong></font> </li>
+<li>Up to 32GB RAM</li>
+<li>256GB NVMe + 1TB HDD</li>
+<li>2+ Hours / 6.5 lbs</li>
+</ul>
+</center>
+</div> </div>
+<div class="holder-product-info">
+<div class="list-links">
+<a href="https://www.xoticpc.com/asus-rog-strix-scar-ii-gl704gm-dh74.html?startcustomization=1">Customize</a>
+<a href="https://www.xoticpc.com/asus-rog-strix-scar-ii-gl704gm-dh74.html">More info</a>
+</div>
+<div class="price-box">
+<span class="price">$1,599.99</span> </div>
+<div>
+<a class="affirm-as-low-as" id="affirm-promo-12028" data-promo-id="promo_set_default" data-page-type="category" data-amount="159999" href="#"></a>
+</div>
+</div>
+<div class="actions">
+<a title="View Details" class="button btn-details" href="https://www.xoticpc.com/asus-rog-strix-scar-ii-gl704gm-dh74.html">View Details</a>
+<ul class="add-to-links">
+<li><a href="https://www.xoticpc.com/wishlist/index/add/product/12028/form_key/P7nYOgdPEncXvonk/" class="link-wishlist"><span>Add to Wishlist</span></a></li>
+<li><span class="separator">|</span> <a href="https://www.xoticpc.com/catalog/product_compare/add/product/12028/uenc/aHR0cHM6Ly93d3cueG90aWNwYy5jb20vY3VzdG9tLWdhbWluZy1sYXB0b3BzLW5vdGVib29rcy1hc3VzLWxhcHRvcHMtY3QtOTUtNTEtMTYz/form_key/P7nYOgdPEncXvonk/" class="link-compare"><span>Add to Compare</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+</li>
+<li class="item last">
+<div class="item-inner">
+<a href="https://www.xoticpc.com/asus-rog-strix-g-gl531gv-pb74.html" title="ASUS ROG Strix G GL531GV-PB74" class="product-image">
+<img id="product-collection-image-12905" src="https://www.xoticpc.com/media/catalog/product/cache/1/small_image/210x/9df78eab33525d08d6e5fb8d27136e95/_/5/_5.png" alt="ASUS ROG Strix G GL531GV-PB74" />
+</a>
+<div class="product-info">
+<div class="block-title">
+<strong>
+<h2 class="product-name"><a href="https://www.xoticpc.com/asus-rog-strix-g-gl531gv-pb74.html" title="ASUS ROG Strix G GL531GV-PB74">ASUS ROG Strix G GL531GV-PB74</a></h2>
+</strong>
+</div>
+<div class="short-description">
+<div style="max-width:350px;">
+<ul>
+<li>15.6" FHD 120Hz <font size="1">IPS-level</font></li>
+<li>Intel® i7-9750H</li>
+<li>NVIDIA® RTX 2060<font color="#30B800"><strong> VR Ready</strong></font></li>
+<li>Up to 64GB RAM</li>
+<li>512GB NVMe SSD</li>
+<li>2+ Hours / 5.3 lbs</li>
+</ul>
+</div> </div>
+<div class="holder-product-info">
+<div class="list-links">
+<a href="https://www.xoticpc.com/asus-rog-strix-g-gl531gv-pb74.html?startcustomization=1">Customize</a>
+<a href="https://www.xoticpc.com/asus-rog-strix-g-gl531gv-pb74.html">More info</a>
+</div>
+<div class="price-box">
+<span class="price">$1,649.99</span> </div>
+<div>
+<a class="affirm-as-low-as" id="affirm-promo-12905" data-promo-id="promo_set_default" data-page-type="category" data-amount="164999" href="#"></a>
+</div>
+</div>
+<div class="actions">
+<a title="View Details" class="button btn-details" href="https://www.xoticpc.com/asus-rog-strix-g-gl531gv-pb74.html">View Details</a>
+<ul class="add-to-links">
+<li><a href="https://www.xoticpc.com/wishlist/index/add/product/12905/form_key/P7nYOgdPEncXvonk/" class="link-wishlist"><span>Add to Wishlist</span></a></li>
+ <li><span class="separator">|</span> <a href="https://www.xoticpc.com/catalog/product_compare/add/product/12905/uenc/aHR0cHM6Ly93d3cueG90aWNwYy5jb20vY3VzdG9tLWdhbWluZy1sYXB0b3BzLW5vdGVib29rcy1hc3VzLWxhcHRvcHMtY3QtOTUtNTEtMTYz/form_key/P7nYOgdPEncXvonk/" class="link-compare"><span>Add to Compare</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+</li>
+<li class="item last">
+<div class="item-inner">
+<a href="https://www.xoticpc.com/asus-ux490ua-xs74-bl.html" title="ASUS UX490UA-XS74-BL" class="product-image">
+<img id="product-collection-image-10046" src="https://www.xoticpc.com/media/catalog/product/cache/1/small_image/210x/9df78eab33525d08d6e5fb8d27136e95/u/x/ux490-s.png" alt="ASUS UX490UA-XS74-BL" />
+</a>
+<div class="product-info">
+<div class="block-title">
+<strong>
+<h2 class="product-name"><a href="https://www.xoticpc.com/asus-ux490ua-xs74-bl.html" title="ASUS UX490UA-XS74-BL">ASUS UX490UA-XS74-BL</a></h2>
+</strong>
+</div>
+<div class="short-description">
+<ul>
+<li style="color: #C32026"><strong>FREE Asus Bundles</strong></li>
+<li>14" FHD Glossy Screen</li>
+<li>Intel® Kaby Lake i7-7500U</li>
+<li>Intel® HD Graphics 620</li>
+<li>512GB M.2 NVMe SSD</li>
+<li>Up to 16GB RAM</li>
+<li>9 Hours / 2.4 lbs</li>
+</ul> </div>
+<div class="holder-product-info">
+<div class="list-links">
+<a href="https://www.xoticpc.com/asus-ux490ua-xs74-bl.html?startcustomization=1">Customize</a>
+<a href="https://www.xoticpc.com/asus-ux490ua-xs74-bl.html">More info</a>
+</div>
+<div class="price-box">
+<span class="price">$1,699.00</span> </div>
+<div>
+<a class="affirm-as-low-as" id="affirm-promo-10046" data-promo-id="promo_set_default" data-page-type="category" data-amount="169900" href="#"></a>
+</div>
+</div>
+<div class="actions">
+<p class="availability out-of-stock"><span>Out of stock</span></p>
+<ul class="add-to-links">
+<li><a href="https://www.xoticpc.com/wishlist/index/add/product/10046/form_key/P7nYOgdPEncXvonk/" class="link-wishlist"><span>Add to Wishlist</span></a></li>
+<li><span class="separator">|</span> <a href="https://www.xoticpc.com/catalog/product_compare/add/product/10046/uenc/aHR0cHM6Ly93d3cueG90aWNwYy5jb20vY3VzdG9tLWdhbWluZy1sYXB0b3BzLW5vdGVib29rcy1hc3VzLWxhcHRvcHMtY3QtOTUtNTEtMTYz/form_key/P7nYOgdPEncXvonk/" class="link-compare"><span>Add to Compare</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+</li>
+<li class="item last">
+<div class="item-inner">
+<a href="https://www.xoticpc.com/asus-zephyrus-m-gm501gm-ws74.html" title="Asus Zephyrus M GM501GM-WS74" class="product-image">
+<img id="product-collection-image-11595" src="https://www.xoticpc.com/media/catalog/product/cache/1/small_image/210x/9df78eab33525d08d6e5fb8d27136e95/g/m/gm501-1.png" alt="Asus Zephyrus M GM501GM-WS74" />
+</a>
+<div class="product-info">
+<div class="block-title">
+<strong>
+<h2 class="product-name"><a href="https://www.xoticpc.com/asus-zephyrus-m-gm501gm-ws74.html" title="Asus Zephyrus M GM501GM-WS74">Asus Zephyrus M GM501GM-WS74</a></h2>
+</strong>
+</div>
+<div class="short-description">
+<div style="max-width:350px;">
+<ul>
+<li style="color: #C32026"><strong>$200 OFF</strong></li>
+<li>15.6" 144Hz FHD <font size="1">w/G-SYNC</font></li>
+<li>Intel&reg; Coffee Lake i7-8750H</li>
+<li>NVIDIA&reg; GTX 1060 <font color="#30B800"><strong>VR Ready</strong></font> </li>
+<li>Up to 32GB RAM</li>
+<li>256GB NVMe + 1TB SSHD</li>
+<li>3+ Hours / 5.4 lbs</li>
+</ul>
+</div> </div>
+<div class="holder-product-info">
+<div class="list-links">
+<a href="https://www.xoticpc.com/asus-zephyrus-m-gm501gm-ws74.html?startcustomization=1">Customize</a>
+<a href="https://www.xoticpc.com/asus-zephyrus-m-gm501gm-ws74.html">More info</a>
+</div>
+<div class="price-box">
+<span class="price">$1,699.00</span> </div>
+<div>
+<a class="affirm-as-low-as" id="affirm-promo-11595" data-promo-id="promo_set_default" data-page-type="category" data-amount="169900" href="#"></a>
+</div>
+</div>
+<div class="actions">
+<a title="View Details" class="button btn-details" href="https://www.xoticpc.com/asus-zephyrus-m-gm501gm-ws74.html">View Details</a>
+<ul class="add-to-links">
+<li><a href="https://www.xoticpc.com/wishlist/index/add/product/11595/form_key/P7nYOgdPEncXvonk/" class="link-wishlist"><span>Add to Wishlist</span></a></li>
+<li><span class="separator">|</span> <a href="https://www.xoticpc.com/catalog/product_compare/add/product/11595/uenc/aHR0cHM6Ly93d3cueG90aWNwYy5jb20vY3VzdG9tLWdhbWluZy1sYXB0b3BzLW5vdGVib29rcy1hc3VzLWxhcHRvcHMtY3QtOTUtNTEtMTYz/form_key/P7nYOgdPEncXvonk/" class="link-compare"><span>Add to Compare</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+</li>
+<li class="item last">
+<div class="item-inner">
+<a href="https://www.xoticpc.com/asus-strix-scar-gl703gs-ds74.html" title="Asus Strix Scar GL703GS-DS74" class="product-image">
+<img id="product-collection-image-11581" src="https://www.xoticpc.com/media/catalog/product/cache/1/small_image/210x/9df78eab33525d08d6e5fb8d27136e95/g/l/gl703gm-1.png" alt="Asus Strix Scar GL703GS-DS74" />
+</a>
+<div class="product-info">
+<div class="block-title">
+<strong>
+<h2 class="product-name"><a href="https://www.xoticpc.com/asus-strix-scar-gl703gs-ds74.html" title="Asus Strix Scar GL703GS-DS74">Asus Strix Scar GL703GS-DS74</a></h2>
+</strong>
+</div>
+<div class="short-description">
+<div style="max-width:350px;">
+<ul>
+<li style="color: #C32026"><strong>$100 OFF</strong></li>
+<li>17.3" 144Hz FHD <font size="1">w/G-SYNC</font></li>
+<li>Intel&reg; Coffee Lake i7-8750H</li>
+<li>NVIDIA&reg; GTX 1070 <font color="#30B800"><strong>VR Ready</strong></font> </li>
+<li>Up to 32GB RAM</li>
+<li>256GB NVMe + 1TB SSHD</li>
+<li>2+ Hours / 6.5 lbs</li>
+</ul>
+</div> </div>
+<div class="holder-product-info">
+<div class="list-links">
+<a href="https://www.xoticpc.com/asus-strix-scar-gl703gs-ds74.html?startcustomization=1">Customize</a>
+<a href="https://www.xoticpc.com/asus-strix-scar-gl703gs-ds74.html">More info</a>
+</div>
+<div class="price-box">
+<span class="price">$1,699.00</span> </div>
+<div>
+<a class="affirm-as-low-as" id="affirm-promo-11581" data-promo-id="promo_set_default" data-page-type="category" data-amount="169900" href="#"></a>
+</div>
+</div>
+<div class="actions">
+<a title="View Details" class="button btn-details" href="https://www.xoticpc.com/asus-strix-scar-gl703gs-ds74.html">View Details</a>
+<ul class="add-to-links">
+<li><a href="https://www.xoticpc.com/wishlist/index/add/product/11581/form_key/P7nYOgdPEncXvonk/" class="link-wishlist"><span>Add to Wishlist</span></a></li>
+<li><span class="separator">|</span> <a href="https://www.xoticpc.com/catalog/product_compare/add/product/11581/uenc/aHR0cHM6Ly93d3cueG90aWNwYy5jb20vY3VzdG9tLWdhbWluZy1sYXB0b3BzLW5vdGVib29rcy1hc3VzLWxhcHRvcHMtY3QtOTUtNTEtMTYz/form_key/P7nYOgdPEncXvonk/" class="link-compare"><span>Add to Compare</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+</li>
+<li class="item last">
+<div class="item-inner">
+<a href="https://www.xoticpc.com/asus-rog-hero-iii-g731gv-db74.html" title="Asus ROG Hero III G731GV-DB74" class="product-image">
+<img id="product-collection-image-12701" src="https://www.xoticpc.com/media/catalog/product/cache/1/small_image/210x/9df78eab33525d08d6e5fb8d27136e95/g/7/g731gw_1_2.png" alt="Asus ROG Hero III G731GV-DB74" />
+</a>
+<div class="product-info">
+<div class="block-title">
+<strong>
+<h2 class="product-name"><a href="https://www.xoticpc.com/asus-rog-hero-iii-g731gv-db74.html" title="Asus ROG Hero III G731GV-DB74">Asus ROG Hero III G731GV-DB74</a></h2>
+</strong>
+</div>
+<div class="short-description">
+<div style="max-width:350px;">
+<ul>
+<li>17.3" FHD 144Hz <font size="1">IPS-level</font></li>
+<li>Intel® i7-9750H</li>
+<li>NVIDIA® RTX 2060 <font color="#30B800"><strong>VR Ready</strong></font></li>
+<li>Up to 32GB RAM</li>
+<li>512GB NVMe SSD</li>
+<li>TBD Hours / 6.3 lbs</li>
+</ul>
+</div> </div>
+<div class="holder-product-info">
+<div class="list-links">
+<a href="https://www.xoticpc.com/asus-rog-hero-iii-g731gv-db74.html?startcustomization=1">Customize</a>
+<a href="https://www.xoticpc.com/asus-rog-hero-iii-g731gv-db74.html">More info</a>
+</div>
+<div class="price-box">
+ <span class="price">$1,699.99</span> </div>
+<div>
+<a class="affirm-as-low-as" id="affirm-promo-12701" data-promo-id="promo_set_default" data-page-type="category" data-amount="169999" href="#"></a>
+</div>
+</div>
+<div class="actions">
+<a title="View Details" class="button btn-details" href="https://www.xoticpc.com/asus-rog-hero-iii-g731gv-db74.html">View Details</a>
+<ul class="add-to-links">
+<li><a href="https://www.xoticpc.com/wishlist/index/add/product/12701/form_key/P7nYOgdPEncXvonk/" class="link-wishlist"><span>Add to Wishlist</span></a></li>
+<li><span class="separator">|</span> <a href="https://www.xoticpc.com/catalog/product_compare/add/product/12701/uenc/aHR0cHM6Ly93d3cueG90aWNwYy5jb20vY3VzdG9tLWdhbWluZy1sYXB0b3BzLW5vdGVib29rcy1hc3VzLWxhcHRvcHMtY3QtOTUtNTEtMTYz/form_key/P7nYOgdPEncXvonk/" class="link-compare"><span>Add to Compare</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+</li>
+<li class="item last">
+<div class="item-inner">
+<a href="https://www.xoticpc.com/asus-zenbook-pro-15-ux550ge-xb71t.html" title="ASUS ZenBook Pro 15 UX550GE-XB71T" class="product-image">
+<img id="product-collection-image-12091" src="https://www.xoticpc.com/media/catalog/product/cache/1/small_image/210x/9df78eab33525d08d6e5fb8d27136e95/u/x/ux550ge-xb71t_1.png" alt="ASUS ZenBook Pro 15 UX550GE-XB71T" />
+</a>
+<div class="product-info">
+<div class="block-title">
+<strong>
+<h2 class="product-name"><a href="https://www.xoticpc.com/asus-zenbook-pro-15-ux550ge-xb71t.html" title="ASUS ZenBook Pro 15 UX550GE-XB71T">ASUS ZenBook Pro 15 UX550GE-XB71T</a></h2>
+</strong>
+</div>
+<div class="short-description">
+<ul>
+<li>15.6" 4K UHD Touchscreen</li>
+<li>Intel® Coffee Lake i7-8750H</li>
+<li>NVIDIA® GeForce 1050Ti</li>
+<li>512GB NVMe SSD</li>
+<li>16GB RAM</li>
+<li>9+ Hours / 4.1 lbs</li>
+</ul> </div>
+<div class="holder-product-info">
+<div class="list-links">
+<a href="https://www.xoticpc.com/asus-zenbook-pro-15-ux550ge-xb71t.html?startcustomization=1">Customize</a>
+<a href="https://www.xoticpc.com/asus-zenbook-pro-15-ux550ge-xb71t.html">More info</a>
+</div>
+<div class="price-box">
+<span class="price">$1,799.00</span> </div>
+<div>
+<a class="affirm-as-low-as" id="affirm-promo-12091" data-promo-id="promo_set_default" data-page-type="category" data-amount="179900" href="#"></a>
+</div>
+</div>
+<div class="actions">
+<a title="View Details" class="button btn-details" href="https://www.xoticpc.com/asus-zenbook-pro-15-ux550ge-xb71t.html">View Details</a>
+<ul class="add-to-links">
+<li><a href="https://www.xoticpc.com/wishlist/index/add/product/12091/form_key/P7nYOgdPEncXvonk/" class="link-wishlist"><span>Add to Wishlist</span></a></li>
+<li><span class="separator">|</span> <a href="https://www.xoticpc.com/catalog/product_compare/add/product/12091/uenc/aHR0cHM6Ly93d3cueG90aWNwYy5jb20vY3VzdG9tLWdhbWluZy1sYXB0b3BzLW5vdGVib29rcy1hc3VzLWxhcHRvcHMtY3QtOTUtNTEtMTYz/form_key/P7nYOgdPEncXvonk/" class="link-compare"><span>Add to Compare</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+</li>
+<li class="item last">
+<div class="item-inner">
+<a href="https://www.xoticpc.com/asus-rog-strix-hero-ii-gl504gv-ds74.html" title="ASUS ROG Strix HERO II GL504GV-DS74" class="product-image">
+<img id="product-collection-image-12368" src="https://www.xoticpc.com/media/catalog/product/cache/1/small_image/210x/9df78eab33525d08d6e5fb8d27136e95/g/l/gl504_3.png" alt="ASUS ROG Strix HERO II GL504GV-DS74" />
+</a>
+<div class="product-info">
+<div class="block-title">
+<strong>
+<h2 class="product-name"><a href="https://www.xoticpc.com/asus-rog-strix-hero-ii-gl504gv-ds74.html" title="ASUS ROG Strix HERO II GL504GV-DS74">ASUS ROG Strix HERO II GL504GV-DS74</a></h2>
+</strong>
+</div>
+<div class="short-description">
+<div style="max-width:350px;">
+<ul>
+<li>15.6" 144Hz FHD <font size="1">IPS-Level</font></li>
+<li>Intel&reg; Coffee Lake i7-8750H</li>
+<li>NVIDIA&reg; RTX 2060 <font color="#30B800"><strong>VR Ready</strong></font> </li>
+<li>Up to 32GB RAM</li>
+<li>512GB NVMe SSD</li>
+<li>2+ Hours / 5.29 lbs</li>
+</ul>
+</center>
+</div> </div>
+<div class="holder-product-info">
+<div class="list-links">
+<a href="https://www.xoticpc.com/asus-rog-strix-hero-ii-gl504gv-ds74.html?startcustomization=1">Customize</a>
+<a href="https://www.xoticpc.com/asus-rog-strix-hero-ii-gl504gv-ds74.html">More info</a>
+</div>
+<div class="price-box">
+<span class="price">$1,799.99</span> </div>
+<div>
+<a class="affirm-as-low-as" id="affirm-promo-12368" data-promo-id="promo_set_default" data-page-type="category" data-amount="179999" href="#"></a>
+</div>
+</div>
+<div class="actions">
+<a title="View Details" class="button btn-details" href="https://www.xoticpc.com/asus-rog-strix-hero-ii-gl504gv-ds74.html">View Details</a>
+<ul class="add-to-links">
+<li><a href="https://www.xoticpc.com/wishlist/index/add/product/12368/form_key/P7nYOgdPEncXvonk/" class="link-wishlist"><span>Add to Wishlist</span></a></li>
+<li><span class="separator">|</span> <a href="https://www.xoticpc.com/catalog/product_compare/add/product/12368/uenc/aHR0cHM6Ly93d3cueG90aWNwYy5jb20vY3VzdG9tLWdhbWluZy1sYXB0b3BzLW5vdGVib29rcy1hc3VzLWxhcHRvcHMtY3QtOTUtNTEtMTYz/form_key/P7nYOgdPEncXvonk/" class="link-compare"><span>Add to Compare</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+</li>
+<li class="item last">
+<div class="item-inner">
+<a href="https://www.xoticpc.com/asus-rog-strix-scar-ii-gl704gv-ds74.html" title="ASUS ROG Strix SCAR II GL704GV-DS74" class="product-image">
+<img id="product-collection-image-12369" src="https://www.xoticpc.com/media/catalog/product/cache/1/small_image/210x/9df78eab33525d08d6e5fb8d27136e95/2/0/2019-01-09_1_1_1.png" alt="ASUS ROG Strix SCAR II GL704GV-DS74" />
+</a>
+<div class="product-info">
+<div class="block-title">
+<strong>
+<h2 class="product-name"><a href="https://www.xoticpc.com/asus-rog-strix-scar-ii-gl704gv-ds74.html" title="ASUS ROG Strix SCAR II GL704GV-DS74">ASUS ROG Strix SCAR II GL704GV-DS74</a></h2>
+</strong>
+</div>
+<div class="short-description">
+<div style="max-width:350px;">
+<ul>
+<li>17.3" 144Hz FHD <font size="1">IPS-Level</font></li>
+<li>Intel&reg; Coffee Lake i7-8750H</li>
+<li>NVIDIA&reg; RTX 2060 <font color="#30B800"><strong>VR Ready</strong></font> </li>
+<li>Up to 32GB RAM</li>
+<li>512GB NVMe SSD</li>
+<li>2+ Hours / 6.5 lbs</li>
+</ul>
+</center>
+</div> </div>
+<div class="holder-product-info">
+<div class="list-links">
+<a href="https://www.xoticpc.com/asus-rog-strix-scar-ii-gl704gv-ds74.html?startcustomization=1">Customize</a>
+<a href="https://www.xoticpc.com/asus-rog-strix-scar-ii-gl704gv-ds74.html">More info</a>
+</div>
+<div class="price-box">
+<span class="price">$1,799.99</span> </div>
+<div>
+<a class="affirm-as-low-as" id="affirm-promo-12369" data-promo-id="promo_set_default" data-page-type="category" data-amount="179999" href="#"></a>
+</div>
+</div>
+<div class="actions">
+<a title="View Details" class="button btn-details" href="https://www.xoticpc.com/asus-rog-strix-scar-ii-gl704gv-ds74.html">View Details</a>
+<ul class="add-to-links">
+<li><a href="https://www.xoticpc.com/wishlist/index/add/product/12369/form_key/P7nYOgdPEncXvonk/" class="link-wishlist"><span>Add to Wishlist</span></a></li>
+<li><span class="separator">|</span> <a href="https://www.xoticpc.com/catalog/product_compare/add/product/12369/uenc/aHR0cHM6Ly93d3cueG90aWNwYy5jb20vY3VzdG9tLWdhbWluZy1sYXB0b3BzLW5vdGVib29rcy1hc3VzLWxhcHRvcHMtY3QtOTUtNTEtMTYz/form_key/P7nYOgdPEncXvonk/" class="link-compare"><span>Add to Compare</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+</li>
+<li class="item last">
+<div class="item-inner">
+<a href="https://www.xoticpc.com/asus-rog-zephyrus-s-gu502gu-xb74.html" title="Asus ROG Zephyrus S GU502GU-XB74" class="product-image">
+<img id="product-collection-image-12695" src="https://www.xoticpc.com/media/catalog/product/cache/1/small_image/210x/9df78eab33525d08d6e5fb8d27136e95/g/u/gu502gu_9.png" alt="Asus ROG Zephyrus S GU502GU-XB74" />
+</a>
+<div class="product-info">
+<div class="block-title">
+<strong>
+<h2 class="product-name"><a href="https://www.xoticpc.com/asus-rog-zephyrus-s-gu502gu-xb74.html" title="Asus ROG Zephyrus S GU502GU-XB74">Asus ROG Zephyrus S GU502GU-XB74</a></h2>
+</strong>
+ </div>
+<div class="short-description">
+<div style="max-width:350px;">
+<ul>
+<li>15.6" FHD 144Hz <font size="1">IPS-level</font></li>
+<li>Intel® Coffee Lake HR i7-9750H</li>
+<li>NVIDIA® GTX 1660 Ti MAX-Q</li>
+<li>Up to 32GB RAM</li>
+<li>512GB NVMe SSD</li>
+<li>TBD Hours / 4.2 lbs</li>
+</ul>
+</div> </div>
+<div class="holder-product-info">
+<div class="list-links">
+<a href="https://www.xoticpc.com/asus-rog-zephyrus-s-gu502gu-xb74.html?startcustomization=1">Customize</a>
+<a href="https://www.xoticpc.com/asus-rog-zephyrus-s-gu502gu-xb74.html">More info</a>
+</div>
+<div class="price-box">
+<span class="price">$1,799.99</span> </div>
+<div>
+<a class="affirm-as-low-as" id="affirm-promo-12695" data-promo-id="promo_set_default" data-page-type="category" data-amount="179999" href="#"></a>
+</div>
+</div>
+<div class="actions">
+<a title="View Details" class="button btn-details" href="https://www.xoticpc.com/asus-rog-zephyrus-s-gu502gu-xb74.html">View Details</a>
+<ul class="add-to-links">
+<li><a href="https://www.xoticpc.com/wishlist/index/add/product/12695/form_key/P7nYOgdPEncXvonk/" class="link-wishlist"><span>Add to Wishlist</span></a></li>
+<li><span class="separator">|</span> <a href="https://www.xoticpc.com/catalog/product_compare/add/product/12695/uenc/aHR0cHM6Ly93d3cueG90aWNwYy5jb20vY3VzdG9tLWdhbWluZy1sYXB0b3BzLW5vdGVib29rcy1hc3VzLWxhcHRvcHMtY3QtOTUtNTEtMTYz/form_key/P7nYOgdPEncXvonk/" class="link-compare"><span>Add to Compare</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+</li>
+<li class="item last">
+<div class="item-inner">
+<a href="https://www.xoticpc.com/asus-rog-scar-iii-g531gv-db76.html" title="Asus ROG Scar III G531GV-DB76" class="product-image">
+<img id="product-collection-image-12707" src="https://www.xoticpc.com/media/catalog/product/cache/1/small_image/210x/9df78eab33525d08d6e5fb8d27136e95/1/_/1_1_4_2.png" alt="Asus ROG Scar III G531GV-DB76" />
+</a>
+<div class="product-info">
+<div class="block-title">
+ <strong>
+<h2 class="product-name"><a href="https://www.xoticpc.com/asus-rog-scar-iii-g531gv-db76.html" title="Asus ROG Scar III G531GV-DB76">Asus ROG Scar III G531GV-DB76</a></h2>
+</strong>
+</div>
+<div class="short-description">
+<div style="max-width:350px;">
+<ul>
+<li>15.6" FHD 240Hz <font size="1">IPS-level</font></li>
+<li>Intel® i7-9750H</li>
+<li>NVIDIA® RTX 2060 <font color="#30B800"><strong>VR Ready</strong></font></li>
+<li>Up to 32GB RAM</li>
+<li>1TB NVMe SSD</li>
+<li>2+ Hours / 5.7 lbs</li>
+</ul>
+</div> </div>
+<div class="holder-product-info">
+<div class="list-links">
+<a href="https://www.xoticpc.com/asus-rog-scar-iii-g531gv-db76.html?startcustomization=1">Customize</a>
+<a href="https://www.xoticpc.com/asus-rog-scar-iii-g531gv-db76.html">More info</a>
+</div>
+<div class="price-box">
+<span class="price">$1,799.99</span> </div>
+<div>
+<a class="affirm-as-low-as" id="affirm-promo-12707" data-promo-id="promo_set_default" data-page-type="category" data-amount="179999" href="#"></a>
+</div>
+</div>
+<div class="actions">
+<a title="View Details" class="button btn-details" href="https://www.xoticpc.com/asus-rog-scar-iii-g531gv-db76.html">View Details</a>
+<ul class="add-to-links">
+<li><a href="https://www.xoticpc.com/wishlist/index/add/product/12707/form_key/P7nYOgdPEncXvonk/" class="link-wishlist"><span>Add to Wishlist</span></a></li>
+<li><span class="separator">|</span> <a href="https://www.xoticpc.com/catalog/product_compare/add/product/12707/uenc/aHR0cHM6Ly93d3cueG90aWNwYy5jb20vY3VzdG9tLWdhbWluZy1sYXB0b3BzLW5vdGVib29rcy1hc3VzLWxhcHRvcHMtY3QtOTUtNTEtMTYz/form_key/P7nYOgdPEncXvonk/" class="link-compare"><span>Add to Compare</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+</li>
+<li class="item last">
+<div class="item-inner">
+<a href="https://www.xoticpc.com/asus-rog-zephyrus-gx501gi-us74.html" title="Asus ROG Zephyrus GX501GI-US74" class="product-image">
+<img id="product-collection-image-12560" src="https://www.xoticpc.com/media/catalog/product/cache/1/small_image/210x/9df78eab33525d08d6e5fb8d27136e95/g/x/gx501gi-1_3.png" alt="Asus ROG Zephyrus GX501GI-US74" />
+</a>
+<div class="product-info">
+<div class="block-title">
+<strong>
+<h2 class="product-name"><a href="https://www.xoticpc.com/asus-rog-zephyrus-gx501gi-us74.html" title="Asus ROG Zephyrus GX501GI-US74">Asus ROG Zephyrus GX501GI-US74</a></h2>
+</strong>
+</div>
+<div class="short-description">
+<div style="max-width:350px;">
+<ul>
+<li style="color: #C32026"><strong>$900 OFF!</strong></li>
+<li style="color: #C32026"><strong>FREE ASUS Voyager backpack!</strong></li>
+<li>15.6" 144Hz FHD <font size="1">w/G-SYNC</font></li>
+<li>Intel&reg; Coffee Lake i7-8750H</li>
+<li>NVIDIA&reg; 1080 Max Q <font color="#30B800"><strong>VR Ready</strong></font> </li>
+<li>Up to 24GB RAM</li>
+<li>512GB NVMe</li>
+<li>2+ Hours / 5 lbs</li>
+</ul>
+</div> </div>
+<div class="holder-product-info">
+<div class="list-links">
+<a href="https://www.xoticpc.com/asus-rog-zephyrus-gx501gi-us74.html?startcustomization=1">Customize</a>
+<a href="https://www.xoticpc.com/asus-rog-zephyrus-gx501gi-us74.html">More info</a>
+</div>
+<div class="price-box">
+<span class="price">$1,899.00</span> </div>
+<div>
+<a class="affirm-as-low-as" id="affirm-promo-12560" data-promo-id="promo_set_default" data-page-type="category" data-amount="189900" href="#"></a>
+</div>
+</div>
+<div class="actions">
+<a title="View Details" class="button btn-details" href="https://www.xoticpc.com/asus-rog-zephyrus-gx501gi-us74.html">View Details</a>
+<ul class="add-to-links">
+<li><a href="https://www.xoticpc.com/wishlist/index/add/product/12560/form_key/P7nYOgdPEncXvonk/" class="link-wishlist"><span>Add to Wishlist</span></a></li>
+<li><span class="separator">|</span> <a href="https://www.xoticpc.com/catalog/product_compare/add/product/12560/uenc/aHR0cHM6Ly93d3cueG90aWNwYy5jb20vY3VzdG9tLWdhbWluZy1sYXB0b3BzLW5vdGVib29rcy1hc3VzLWxhcHRvcHMtY3QtOTUtNTEtMTYz/form_key/P7nYOgdPEncXvonk/" class="link-compare"><span>Add to Compare</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+</li>
+<li class="item last">
+ <div class="item-inner">
+<a href="https://www.xoticpc.com/asus-rog-zephyrus-s-gx502gv-pb74.html" title="Asus ROG Zephyrus S GX502GV-PB74" class="product-image">
+<img id="product-collection-image-12694" src="https://www.xoticpc.com/media/catalog/product/cache/1/small_image/210x/9df78eab33525d08d6e5fb8d27136e95/g/u/gu502gu_9_1.png" alt="Asus ROG Zephyrus S GX502GV-PB74" />
+</a>
+<div class="product-info">
+<div class="block-title">
+<strong>
+<h2 class="product-name"><a href="https://www.xoticpc.com/asus-rog-zephyrus-s-gx502gv-pb74.html" title="Asus ROG Zephyrus S GX502GV-PB74">Asus ROG Zephyrus S GX502GV-PB74</a></h2>
+</strong>
+</div>
+<div class="short-description">
+<div style="max-width:350px;">
+<ul>
+<li>15.6" FHD 144Hz<font size="1"> IPS-level</font></li>
+<li>Intel® Coffee Lake HR i7-9750H</li>
+<li>NVIDIA® RTX 2060 <font color="#30B800"><strong>VR Ready</strong></font> </li>
+<li>Up to 32GB RAM</li>
+<li>512GB NVMe SSD</li>
+<li>TBD Hours / TBD lbs</li>
+</ul>
+</div> </div>
+<div class="holder-product-info">
+<div class="list-links">
+<a href="https://www.xoticpc.com/asus-rog-zephyrus-s-gx502gv-pb74.html?startcustomization=1">Customize</a>
+<a href="https://www.xoticpc.com/asus-rog-zephyrus-s-gx502gv-pb74.html">More info</a>
+</div>
+<div class="price-box">
+<span class="price">$1,899.99</span> </div>
+<div>
+<a class="affirm-as-low-as" id="affirm-promo-12694" data-promo-id="promo_set_default" data-page-type="category" data-amount="189999" href="#"></a>
+</div>
+</div>
+<div class="actions">
+<a title="View Details" class="button btn-details" href="https://www.xoticpc.com/asus-rog-zephyrus-s-gx502gv-pb74.html">View Details</a>
+<ul class="add-to-links">
+<li><a href="https://www.xoticpc.com/wishlist/index/add/product/12694/form_key/P7nYOgdPEncXvonk/" class="link-wishlist"><span>Add to Wishlist</span></a></li>
+<li><span class="separator">|</span> <a href="https://www.xoticpc.com/catalog/product_compare/add/product/12694/uenc/aHR0cHM6Ly93d3cueG90aWNwYy5jb20vY3VzdG9tLWdhbWluZy1sYXB0b3BzLW5vdGVib29rcy1hc3VzLWxhcHRvcHMtY3QtOTUtNTEtMTYz/form_key/P7nYOgdPEncXvonk/" class="link-compare"><span>Add to Compare</span></a></li>
+ </ul>
+</div>
+</div>
+</div>
+</li>
+<li class="item last">
+<div class="item-inner">
+<a href="https://www.xoticpc.com/asus-zephyrus-m-gm501gs-xs74.html" title="Asus Zephyrus M GM501GS-XS74" class="product-image">
+<img id="product-collection-image-11580" src="https://www.xoticpc.com/media/catalog/product/cache/1/small_image/210x/9df78eab33525d08d6e5fb8d27136e95/e/d/editor-award-zephyrus-gm501-fixed.png" alt="Asus Zephyrus M GM501GS-XS74" />
+</a>
+<div class="product-info">
+<div class="block-title">
+<strong>
+<h2 class="product-name"><a href="https://www.xoticpc.com/asus-zephyrus-m-gm501gs-xs74.html" title="Asus Zephyrus M GM501GS-XS74">Asus Zephyrus M GM501GS-XS74</a></h2>
+</strong>
+</div>
+<div class="short-description">
+<div style="max-width:350px;">
+<ul>
+<li style="color: #C32026"><strong>$200 OFF</strong></li>
+<li>15.6" 144Hz FHD <font size="1">w/G-SYNC</font></li>
+<li>Intel&reg; Coffee Lake i7-8750H</li>
+<li>NVIDIA&reg; GTX 1070 <font color="#30B800"><strong>VR Ready</strong></font> </li>
+<li>Up to 32GB RAM</li>
+<li>256GB NVMe + 1TB SSHD</li>
+<li>2+ Hours / 5.4 lbs</li>
+</ul>
+</div> </div>
+<div class="holder-product-info">
+<div class="list-links">
+<a href="https://www.xoticpc.com/asus-zephyrus-m-gm501gs-xs74.html?startcustomization=1">Customize</a>
+<a href="https://www.xoticpc.com/asus-zephyrus-m-gm501gs-xs74.html">More info</a>
+</div>
+<div class="price-box">
+<span class="price">$1,999.00</span> </div>
+<div>
+<a class="affirm-as-low-as" id="affirm-promo-11580" data-promo-id="promo_set_default" data-page-type="category" data-amount="199900" href="#"></a>
+</div>
+</div>
+<div class="actions">
+<a title="View Details" class="button btn-details" href="https://www.xoticpc.com/asus-zephyrus-m-gm501gs-xs74.html">View Details</a>
+<ul class="add-to-links">
+<li><a href="https://www.xoticpc.com/wishlist/index/add/product/11580/form_key/P7nYOgdPEncXvonk/" class="link-wishlist"><span>Add to Wishlist</span></a></li>
+ <li><span class="separator">|</span> <a href="https://www.xoticpc.com/catalog/product_compare/add/product/11580/uenc/aHR0cHM6Ly93d3cueG90aWNwYy5jb20vY3VzdG9tLWdhbWluZy1sYXB0b3BzLW5vdGVib29rcy1hc3VzLWxhcHRvcHMtY3QtOTUtNTEtMTYz/form_key/P7nYOgdPEncXvonk/" class="link-compare"><span>Add to Compare</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+</li>
+<li class="item last">
+<div class="item-inner">
+<a href="https://www.xoticpc.com/asus-rog-scar-iii-g731gw-kb71.html" title="Asus ROG Scar III G731GW-KB71" class="product-image">
+<img id="product-collection-image-12700" src="https://www.xoticpc.com/media/catalog/product/cache/1/small_image/210x/9df78eab33525d08d6e5fb8d27136e95/g/5/g531_5.png" alt="Asus ROG Scar III G731GW-KB71" />
+</a>
+<div class="product-info">
+<div class="block-title">
+<strong>
+<h2 class="product-name"><a href="https://www.xoticpc.com/asus-rog-scar-iii-g731gw-kb71.html" title="Asus ROG Scar III G731GW-KB71">Asus ROG Scar III G731GW-KB71</a></h2>
+</strong>
+</div>
+<div class="short-description">
+<div style="max-width:350px;">
+<ul>
+<li style="color: #C32026"><strong>Coming Soon</strong></li>
+<li>17.3" FHD 240Hz <font size="1">IPS-level</font></li>
+<li>Intel® i7-9750H</li>
+<li>NVIDIA® RTX 2070 <font color="#30B800"><strong>VR Ready</strong></font></li>
+<li>Up to 32GB RAM</li>
+<li>1TB SSHD</li>
+<li>TBD Hours / 6.3 lbs</li>
+</ul>
+</div> </div>
+<div class="holder-product-info">
+<div class="list-links">
+<a href="https://www.xoticpc.com/asus-rog-scar-iii-g731gw-kb71.html?startcustomization=1">Customize</a>
+<a href="https://www.xoticpc.com/asus-rog-scar-iii-g731gw-kb71.html">More info</a>
+</div>
+<div class="price-box">
+<span class="price">$1,999.99</span> </div>
+<div>
+<a class="affirm-as-low-as" id="affirm-promo-12700" data-promo-id="promo_set_default" data-page-type="category" data-amount="199999" href="#"></a>
+</div>
+</div>
+<div class="actions">
+<p class="availability out-of-stock"><span>Out of stock</span></p>
+<ul class="add-to-links">
+ <li><a href="https://www.xoticpc.com/wishlist/index/add/product/12700/form_key/P7nYOgdPEncXvonk/" class="link-wishlist"><span>Add to Wishlist</span></a></li>
+<li><span class="separator">|</span> <a href="https://www.xoticpc.com/catalog/product_compare/add/product/12700/uenc/aHR0cHM6Ly93d3cueG90aWNwYy5jb20vY3VzdG9tLWdhbWluZy1sYXB0b3BzLW5vdGVib29rcy1hc3VzLWxhcHRvcHMtY3QtOTUtNTEtMTYz/form_key/P7nYOgdPEncXvonk/" class="link-compare"><span>Add to Compare</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+</li>
+<li class="item last">
+<div class="item-inner">
+<a href="https://www.xoticpc.com/asus-rog-hero-iii-g731gw-xb74.html" title="Asus ROG Hero III G731GW-XB74" class="product-image">
+<img id="product-collection-image-12698" src="https://www.xoticpc.com/media/catalog/product/cache/1/small_image/210x/9df78eab33525d08d6e5fb8d27136e95/g/7/g731gw_1.png" alt="Asus ROG Hero III G731GW-XB74" />
+</a>
+<div class="product-info">
+<div class="block-title">
+<strong>
+<h2 class="product-name"><a href="https://www.xoticpc.com/asus-rog-hero-iii-g731gw-xb74.html" title="Asus ROG Hero III G731GW-XB74">Asus ROG Hero III G731GW-XB74</a></h2>
+</strong>
+</div>
+<div class="short-description">
+<div style="max-width:350px;">
+<ul>
+<li>17.3" FHD 144Hz<font size="1">IPS-level</font></li>
+<li>Intel® i7-9750H</li>
+<li>NVIDIA® RTX 2070 <font color="#30B800"><strong>VR Ready</strong></font></li>
+<li>Up to 32GB RAM</li>
+<li>512GB NVMe SSD</li>
+<li>TBD Hours / 6.3 lbs</li>
+</ul>
+</div> </div>
+<div class="holder-product-info">
+<div class="list-links">
+<a href="https://www.xoticpc.com/asus-rog-hero-iii-g731gw-xb74.html?startcustomization=1">Customize</a>
+<a href="https://www.xoticpc.com/asus-rog-hero-iii-g731gw-xb74.html">More info</a>
+</div>
+<div class="price-box">
+<span class="price">$1,999.99</span> </div>
+<div>
+<a class="affirm-as-low-as" id="affirm-promo-12698" data-promo-id="promo_set_default" data-page-type="category" data-amount="199999" href="#"></a>
+</div>
+</div>
+<div class="actions">
+<a title="View Details" class="button btn-details" href="https://www.xoticpc.com/asus-rog-hero-iii-g731gw-xb74.html">View Details</a>
+<ul class="add-to-links">
+<li><a href="https://www.xoticpc.com/wishlist/index/add/product/12698/form_key/P7nYOgdPEncXvonk/" class="link-wishlist"><span>Add to Wishlist</span></a></li>
+<li><span class="separator">|</span> <a href="https://www.xoticpc.com/catalog/product_compare/add/product/12698/uenc/aHR0cHM6Ly93d3cueG90aWNwYy5jb20vY3VzdG9tLWdhbWluZy1sYXB0b3BzLW5vdGVib29rcy1hc3VzLWxhcHRvcHMtY3QtOTUtNTEtMTYz/form_key/P7nYOgdPEncXvonk/" class="link-compare"><span>Add to Compare</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+</li>
+<li class="item last">
+<div class="item-inner">
+<a href="https://www.xoticpc.com/asus-rog-scar-iii-g531gw-kb71.html" title="Asus ROG Scar III G531GW-KB71" class="product-image">
+<img id="product-collection-image-12706" src="https://www.xoticpc.com/media/catalog/product/cache/1/small_image/210x/9df78eab33525d08d6e5fb8d27136e95/1/_/1_1_4.png" alt="Asus ROG Scar III G531GW-KB71" />
+</a>
+<div class="product-info">
+<div class="block-title">
+<strong>
+<h2 class="product-name"><a href="https://www.xoticpc.com/asus-rog-scar-iii-g531gw-kb71.html" title="Asus ROG Scar III G531GW-KB71">Asus ROG Scar III G531GW-KB71</a></h2>
+</strong>
+</div>
+<div class="short-description">
+<div style="max-width:350px;">
+<ul>
+<li>15.6" FHD 240Hz <font size="1">IPS-level</font></li>
+<li>Intel® i7-9750H</li>
+<li>NVIDIA® RTX 2070 <font color="#30B800"><strong>VR Ready</strong></font></li>
+<li>Up to 64GB RAM</li>
+<li>1TB SSHD</li>
+<li>2+ Hours / 5.7 lbs</li>
+</ul>
+</div> </div>
+<div class="holder-product-info">
+<div class="list-links">
+<a href="https://www.xoticpc.com/asus-rog-scar-iii-g531gw-kb71.html?startcustomization=1">Customize</a>
+<a href="https://www.xoticpc.com/asus-rog-scar-iii-g531gw-kb71.html">More info</a>
+</div>
+<div class="price-box">
+<span class="price">$1,999.99</span> </div>
+<div>
+<a class="affirm-as-low-as" id="affirm-promo-12706" data-promo-id="promo_set_default" data-page-type="category" data-amount="199999" href="#"></a>
+</div>
+ </div>
+<div class="actions">
+<a title="View Details" class="button btn-details" href="https://www.xoticpc.com/asus-rog-scar-iii-g531gw-kb71.html">View Details</a>
+<ul class="add-to-links">
+<li><a href="https://www.xoticpc.com/wishlist/index/add/product/12706/form_key/P7nYOgdPEncXvonk/" class="link-wishlist"><span>Add to Wishlist</span></a></li>
+<li><span class="separator">|</span> <a href="https://www.xoticpc.com/catalog/product_compare/add/product/12706/uenc/aHR0cHM6Ly93d3cueG90aWNwYy5jb20vY3VzdG9tLWdhbWluZy1sYXB0b3BzLW5vdGVib29rcy1hc3VzLWxhcHRvcHMtY3QtOTUtNTEtMTYz/form_key/P7nYOgdPEncXvonk/" class="link-compare"><span>Add to Compare</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+</li>
+<li class="item last">
+<div class="item-inner">
+<a href="https://www.xoticpc.com/asus-rog-hero-iii-g531gw-xb74.html" title="ASUS ROG STRIX HERO III G531GW-XB74" class="product-image">
+<img id="product-collection-image-12704" src="https://www.xoticpc.com/media/catalog/product/cache/1/small_image/210x/9df78eab33525d08d6e5fb8d27136e95/1/_/1_1_4_1.png" alt="ASUS ROG STRIX HERO III G531GW-XB74" />
+</a>
+<div class="product-info">
+<div class="block-title">
+<strong>
+<h2 class="product-name"><a href="https://www.xoticpc.com/asus-rog-hero-iii-g531gw-xb74.html" title="ASUS ROG STRIX HERO III G531GW-XB74">ASUS ROG STRIX HERO III G531GW-XB74</a></h2>
+</strong>
+</div>
+<div class="short-description">
+<div style="max-width:350px;">
+<ul>
+<li>15.6" FHD 144Hz <font size="1">IPS-level</font></li>
+<li>Intel® i7-9750H</li>
+<li>NVIDIA® RTX 2070 <font color="#30B800"><strong>VR Ready</strong></font></li>
+<li>Up to 32GB RAM</li>
+<li>512GB NVMe SSD</li>
+<li>2+ Hours / 5.7 lbs</li>
+</ul>
+</div> </div>
+<div class="holder-product-info">
+<div class="list-links">
+<a href="https://www.xoticpc.com/asus-rog-hero-iii-g531gw-xb74.html?startcustomization=1">Customize</a>
+<a href="https://www.xoticpc.com/asus-rog-hero-iii-g531gw-xb74.html">More info</a>
+</div>
+<div class="price-box">
+<span class="price">$1,999.99</span> </div>
+<div>
+<a class="affirm-as-low-as" id="affirm-promo-12704" data-promo-id="promo_set_default" data-page-type="category" data-amount="199999" href="#"></a>
+</div>
+</div>
+<div class="actions">
+<a title="View Details" class="button btn-details" href="https://www.xoticpc.com/asus-rog-hero-iii-g531gw-xb74.html">View Details</a>
+<ul class="add-to-links">
+<li><a href="https://www.xoticpc.com/wishlist/index/add/product/12704/form_key/P7nYOgdPEncXvonk/" class="link-wishlist"><span>Add to Wishlist</span></a></li>
+<li><span class="separator">|</span> <a href="https://www.xoticpc.com/catalog/product_compare/add/product/12704/uenc/aHR0cHM6Ly93d3cueG90aWNwYy5jb20vY3VzdG9tLWdhbWluZy1sYXB0b3BzLW5vdGVib29rcy1hc3VzLWxhcHRvcHMtY3QtOTUtNTEtMTYz/form_key/P7nYOgdPEncXvonk/" class="link-compare"><span>Add to Compare</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+</li>
+<li class="item last">
+<div class="item-inner">
+<a href="https://www.xoticpc.com/asus-rog-strix-scar-ii-gl504gw-ds74.html" title="ASUS ROG Strix SCAR II GL504GW-DS74" class="product-image">
+<img id="product-collection-image-12346" src="https://www.xoticpc.com/media/catalog/product/cache/1/small_image/210x/9df78eab33525d08d6e5fb8d27136e95/r/o/rog_strix_gl504-5.png" alt="ASUS ROG Strix SCAR II GL504GW-DS74" />
+</a>
+<div class="product-info">
+<div class="block-title">
+<strong>
+<h2 class="product-name"><a href="https://www.xoticpc.com/asus-rog-strix-scar-ii-gl504gw-ds74.html" title="ASUS ROG Strix SCAR II GL504GW-DS74">ASUS ROG Strix SCAR II GL504GW-DS74</a></h2>
+</strong>
+</div>
+<div class="short-description">
+<div style="max-width:350px;">
+<ul>
+<li>15.6" 144Hz FHD <font size="1">IPS-Level</font></li>
+<li>Intel&reg; Coffee Lake i7-8750H</li>
+<li>NVIDIA&reg; RTX 2070 <font color="#30B800"><strong>VR Ready</strong></font> </li>
+<li>Up to 32GB RAM</li>
+<li>512GB NVMe SSD</li>
+<li>2+ Hours / 5.29 lbs</li>
+</ul>
+</center>
+</div> </div>
+<div class="holder-product-info">
+<div class="list-links">
+<a href="https://www.xoticpc.com/asus-rog-strix-scar-ii-gl504gw-ds74.html?startcustomization=1">Customize</a>
+<a href="https://www.xoticpc.com/asus-rog-strix-scar-ii-gl504gw-ds74.html">More info</a>
+</div>
+<div class="price-box">
+<span class="price">$1,999.99</span> </div>
+<div>
+<a class="affirm-as-low-as" id="affirm-promo-12346" data-promo-id="promo_set_default" data-page-type="category" data-amount="199999" href="#"></a>
+</div>
+</div>
+<div class="actions">
+<a title="View Details" class="button btn-details" href="https://www.xoticpc.com/asus-rog-strix-scar-ii-gl504gw-ds74.html">View Details</a>
+<ul class="add-to-links">
+<li><a href="https://www.xoticpc.com/wishlist/index/add/product/12346/form_key/P7nYOgdPEncXvonk/" class="link-wishlist"><span>Add to Wishlist</span></a></li>
+<li><span class="separator">|</span> <a href="https://www.xoticpc.com/catalog/product_compare/add/product/12346/uenc/aHR0cHM6Ly93d3cueG90aWNwYy5jb20vY3VzdG9tLWdhbWluZy1sYXB0b3BzLW5vdGVib29rcy1hc3VzLWxhcHRvcHMtY3QtOTUtNTEtMTYz/form_key/P7nYOgdPEncXvonk/" class="link-compare"><span>Add to Compare</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+</li>
+<li class="item last">
+<div class="item-inner">
+<a href="https://www.xoticpc.com/asus-rog-scar-iii-g531gw-db76.html" title="ASUS ROG STRIX SCAR III G531GW-DB76" class="product-image">
+<img id="product-collection-image-12705" src="https://www.xoticpc.com/media/catalog/product/cache/1/small_image/210x/9df78eab33525d08d6e5fb8d27136e95/1/_/1_1_4_1_1.png" alt="ASUS ROG STRIX SCAR III G531GW-DB76" />
+</a>
+<div class="product-info">
+<div class="block-title">
+<strong>
+<h2 class="product-name"><a href="https://www.xoticpc.com/asus-rog-scar-iii-g531gw-db76.html" title="ASUS ROG STRIX SCAR III G531GW-DB76">ASUS ROG STRIX SCAR III G531GW-DB76</a></h2>
+</strong>
+</div>
+<div class="short-description">
+<div style="max-width:350px;">
+<ul>
+<li>15.6" FHD 240Hz <font size="1">IPS-level</font></li>
+<li>Intel® i7-9750H</li>
+<li>NVIDIA® RTX 2070 <font color="#30B800"><strong>VR Ready</strong></font></li>
+<li>Up to 32GB RAM</li>
+<li>1TB NVMe SSD</li>
+<li>2+ Hours / 5.7 lbs</li>
+</ul>
+</div> </div>
+<div class="holder-product-info">
+<div class="list-links">
+ <a href="https://www.xoticpc.com/asus-rog-scar-iii-g531gw-db76.html?startcustomization=1">Customize</a>
+<a href="https://www.xoticpc.com/asus-rog-scar-iii-g531gw-db76.html">More info</a>
+</div>
+<div class="price-box">
+<span class="price">$2,099.99</span> </div>
+<div>
+<a class="affirm-as-low-as" id="affirm-promo-12705" data-promo-id="promo_set_default" data-page-type="category" data-amount="209999" href="#"></a>
+</div>
+</div>
+<div class="actions">
+<a title="View Details" class="button btn-details" href="https://www.xoticpc.com/asus-rog-scar-iii-g531gw-db76.html">View Details</a>
+<ul class="add-to-links">
+<li><a href="https://www.xoticpc.com/wishlist/index/add/product/12705/form_key/P7nYOgdPEncXvonk/" class="link-wishlist"><span>Add to Wishlist</span></a></li>
+<li><span class="separator">|</span> <a href="https://www.xoticpc.com/catalog/product_compare/add/product/12705/uenc/aHR0cHM6Ly93d3cueG90aWNwYy5jb20vY3VzdG9tLWdhbWluZy1sYXB0b3BzLW5vdGVib29rcy1hc3VzLWxhcHRvcHMtY3QtOTUtNTEtMTYz/form_key/P7nYOgdPEncXvonk/" class="link-compare"><span>Add to Compare</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+</li>
+<li class="item last">
+<div class="item-inner">
+<a href="https://www.xoticpc.com/asus-rog-zephyrus-s-gx701gv-pb74.html" title="Asus ROG Zephyrus S GX701GV-PB74" class="product-image">
+<img id="product-collection-image-12690" src="https://www.xoticpc.com/media/catalog/product/cache/1/small_image/210x/9df78eab33525d08d6e5fb8d27136e95/g/7/g701-main-small.png" alt="Asus ROG Zephyrus S GX701GV-PB74" />
+</a>
+<div class="product-info">
+<div class="block-title">
+<strong>
+<h2 class="product-name"><a href="https://www.xoticpc.com/asus-rog-zephyrus-s-gx701gv-pb74.html" title="Asus ROG Zephyrus S GX701GV-PB74">Asus ROG Zephyrus S GX701GV-PB74</a></h2>
+</strong>
+</div>
+<div class="short-description">
+<div style="max-width:350px;">
+<ul>
+<li>17.3" FHD 144Hz <font size="1">IPS-level</font></li>
+<li>Intel® Coffee Lake HR i7-9750H</li>
+<li>NVIDIA® RTX 2060 <font color="#30B800"><strong>VR Ready</strong></font> </li>
+<li>Up to 32GB RAM</li>
+<li>1TB NVMe SSD</li>
+<li>2+ Hours / 5.7 lbs</li>
+</ul>
+</div> </div>
+<div class="holder-product-info">
+<div class="list-links">
+<a href="https://www.xoticpc.com/asus-rog-zephyrus-s-gx701gv-pb74.html?startcustomization=1">Customize</a>
+<a href="https://www.xoticpc.com/asus-rog-zephyrus-s-gx701gv-pb74.html">More info</a>
+</div>
+<div class="price-box">
+<span class="price">$2,099.99</span> </div>
+<div>
+<a class="affirm-as-low-as" id="affirm-promo-12690" data-promo-id="promo_set_default" data-page-type="category" data-amount="209999" href="#"></a>
+</div>
+</div>
+<div class="actions">
+<a title="View Details" class="button btn-details" href="https://www.xoticpc.com/asus-rog-zephyrus-s-gx701gv-pb74.html">View Details</a>
+<ul class="add-to-links">
+<li><a href="https://www.xoticpc.com/wishlist/index/add/product/12690/form_key/P7nYOgdPEncXvonk/" class="link-wishlist"><span>Add to Wishlist</span></a></li>
+<li><span class="separator">|</span> <a href="https://www.xoticpc.com/catalog/product_compare/add/product/12690/uenc/aHR0cHM6Ly93d3cueG90aWNwYy5jb20vY3VzdG9tLWdhbWluZy1sYXB0b3BzLW5vdGVib29rcy1hc3VzLWxhcHRvcHMtY3QtOTUtNTEtMTYz/form_key/P7nYOgdPEncXvonk/" class="link-compare"><span>Add to Compare</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+</li>
+<li class="item last">
+<div class="item-inner">
+<a href="https://www.xoticpc.com/asus-rog-strix-scar-ii-gl704gw-ds76.html" title="ASUS ROG Strix SCAR II GL704GW-DS76  " class="product-image">
+<img id="product-collection-image-12343" src="https://www.xoticpc.com/media/catalog/product/cache/1/small_image/210x/9df78eab33525d08d6e5fb8d27136e95/2/0/2019-01-09_1_1.png" alt="ASUS ROG Strix SCAR II GL704GW-DS76  " />
+</a>
+<div class="product-info">
+<div class="block-title">
+<strong>
+<h2 class="product-name"><a href="https://www.xoticpc.com/asus-rog-strix-scar-ii-gl704gw-ds76.html" title="ASUS ROG Strix SCAR II GL704GW-DS76  ">ASUS ROG Strix SCAR II GL704GW-DS76 </a></h2>
+</strong>
+</div>
+ <div class="short-description">
+<div style="max-width:350px;">
+<ul>
+<li>17.3" 144Hz FHD <font size="1">IPS-Level</font></li>
+<li>Intel&reg; Coffee Lake i7-8750H</li>
+<li>NVIDIA&reg; RTX 2070 <font color="#30B800"><strong>VR Ready</strong></font> </li>
+<li>Up to 32GB RAM</li>
+<li>512GB NVMe + 1TB HDD</li>
+<li>2+ Hours / 6.5 lbs</li>
+</ul>
+</center>
+</div> </div>
+<div class="holder-product-info">
+<div class="list-links">
+<a href="https://www.xoticpc.com/asus-rog-strix-scar-ii-gl704gw-ds76.html?startcustomization=1">Customize</a>
+<a href="https://www.xoticpc.com/asus-rog-strix-scar-ii-gl704gw-ds76.html">More info</a>
+</div>
+<div class="price-box">
+<span class="price">$2,199.99</span> </div>
+<div>
+<a class="affirm-as-low-as" id="affirm-promo-12343" data-promo-id="promo_set_default" data-page-type="category" data-amount="219999" href="#"></a>
+</div>
+</div>
+<div class="actions">
+<a title="View Details" class="button btn-details" href="https://www.xoticpc.com/asus-rog-strix-scar-ii-gl704gw-ds76.html">View Details</a>
+<ul class="add-to-links">
+<li><a href="https://www.xoticpc.com/wishlist/index/add/product/12343/form_key/P7nYOgdPEncXvonk/" class="link-wishlist"><span>Add to Wishlist</span></a></li>
+<li><span class="separator">|</span> <a href="https://www.xoticpc.com/catalog/product_compare/add/product/12343/uenc/aHR0cHM6Ly93d3cueG90aWNwYy5jb20vY3VzdG9tLWdhbWluZy1sYXB0b3BzLW5vdGVib29rcy1hc3VzLWxhcHRvcHMtY3QtOTUtNTEtMTYz/form_key/P7nYOgdPEncXvonk/" class="link-compare"><span>Add to Compare</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+</li>
+<li class="item last">
+<div class="item-inner">
+<a href="https://www.xoticpc.com/asus-rog-hero-iii-g731gw-db76.html" title="Asus ROG Hero III G731GW-DB76" class="product-image">
+<img id="product-collection-image-12699" src="https://www.xoticpc.com/media/catalog/product/cache/1/small_image/210x/9df78eab33525d08d6e5fb8d27136e95/g/7/g731gw_1_1.png" alt="Asus ROG Hero III G731GW-DB76" />
+</a>
+<div class="product-info">
+<div class="block-title">
+ <strong>
+<h2 class="product-name"><a href="https://www.xoticpc.com/asus-rog-hero-iii-g731gw-db76.html" title="Asus ROG Hero III G731GW-DB76">Asus ROG Hero III G731GW-DB76</a></h2>
+</strong>
+</div>
+<div class="short-description">
+<div style="max-width:350px;">
+<ul>
+<li>17.3" FHD 144Hz<font size="1">IPS-level</font></li>
+<li>Intel® i7-9750H</li>
+<li>NVIDIA® RTX 2070 <font color="#30B800"><strong>VR Ready</strong></font></li>
+<li>Up to 32GB RAM</li>
+<li>512GB NVMe SSD + 1TB SSHD</li>
+<li>TBD Hours / 6.3 lbs</li>
+</ul>
+</div> </div>
+<div class="holder-product-info">
+<div class="list-links">
+<a href="https://www.xoticpc.com/asus-rog-hero-iii-g731gw-db76.html?startcustomization=1">Customize</a>
+<a href="https://www.xoticpc.com/asus-rog-hero-iii-g731gw-db76.html">More info</a>
+</div>
+<div class="price-box">
+<span class="price">$2,199.99</span> </div>
+<div>
+<a class="affirm-as-low-as" id="affirm-promo-12699" data-promo-id="promo_set_default" data-page-type="category" data-amount="219999" href="#"></a>
+</div>
+</div>
+<div class="actions">
+<a title="View Details" class="button btn-details" href="https://www.xoticpc.com/asus-rog-hero-iii-g731gw-db76.html">View Details</a>
+<ul class="add-to-links">
+<li><a href="https://www.xoticpc.com/wishlist/index/add/product/12699/form_key/P7nYOgdPEncXvonk/" class="link-wishlist"><span>Add to Wishlist</span></a></li>
+<li><span class="separator">|</span> <a href="https://www.xoticpc.com/catalog/product_compare/add/product/12699/uenc/aHR0cHM6Ly93d3cueG90aWNwYy5jb20vY3VzdG9tLWdhbWluZy1sYXB0b3BzLW5vdGVib29rcy1hc3VzLWxhcHRvcHMtY3QtOTUtNTEtMTYz/form_key/P7nYOgdPEncXvonk/" class="link-compare"><span>Add to Compare</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+</li>
+<li class="item last">
+<div class="item-inner">
+<a href="https://www.xoticpc.com/asus-zephyrus-gx501gi-xs74-dmg.html" title="Asus Zephyrus GX501GI-XS74" class="product-image">
+<img id="product-collection-image-12474" src="https://www.xoticpc.com/media/catalog/product/cache/1/small_image/210x/9df78eab33525d08d6e5fb8d27136e95/g/x/gx501gi-1_2.png" alt="Asus Zephyrus GX501GI-XS74" />
+</a>
+<div class="product-info">
+<div class="block-title">
+<strong>
+<h2 class="product-name"><a href="https://www.xoticpc.com/asus-zephyrus-gx501gi-xs74-dmg.html" title="Asus Zephyrus GX501GI-XS74">Asus Zephyrus GX501GI-XS74</a></h2>
+</strong>
+</div>
+<div class="short-description">
+<div style="max-width:350px;">
+<ul>
+<li style="color: #C32026"><strong>$500 OFF</strong></li>
+<li>15.6" 144Hz FHD <font size="1">w/G-SYNC</font></li>
+<li>Intel&reg; Coffee Lake i7-8750H</li>
+<li>NVIDIA&reg; 1080 Max Q <font color="#30B800"><strong>VR Ready</strong></font> </li>
+<li>Up to 24GB RAM</li>
+<li>512GB NVMe</li>
+<li>2+ Hours / 5 lbs</li>
+<li>Scratches on A panel and Open box/refurbished</li>
+</ul>
+</div> </div>
+<div class="holder-product-info">
+<div class="list-links">
+<a href="https://www.xoticpc.com/asus-zephyrus-gx501gi-xs74-dmg.html?startcustomization=1">Customize</a>
+<a href="https://www.xoticpc.com/asus-zephyrus-gx501gi-xs74-dmg.html">More info</a>
+</div>
+<div class="price-box">
+<span class="price">$2,399.00</span> </div>
+<div>
+<a class="affirm-as-low-as" id="affirm-promo-12474" data-promo-id="promo_set_default" data-page-type="category" data-amount="239900" href="#"></a>
+</div>
+</div>
+<div class="actions">
+<a title="View Details" class="button btn-details" href="https://www.xoticpc.com/asus-zephyrus-gx501gi-xs74-dmg.html">View Details</a>
+<ul class="add-to-links">
+<li><a href="https://www.xoticpc.com/wishlist/index/add/product/12474/form_key/P7nYOgdPEncXvonk/" class="link-wishlist"><span>Add to Wishlist</span></a></li>
+<li><span class="separator">|</span> <a href="https://www.xoticpc.com/catalog/product_compare/add/product/12474/uenc/aHR0cHM6Ly93d3cueG90aWNwYy5jb20vY3VzdG9tLWdhbWluZy1sYXB0b3BzLW5vdGVib29rcy1hc3VzLWxhcHRvcHMtY3QtOTUtNTEtMTYz/form_key/P7nYOgdPEncXvonk/" class="link-compare"><span>Add to Compare</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+</li>
+<li class="item last">
+ <div class="item-inner">
+<a href="https://www.xoticpc.com/asus-rog-zephyrus-s-gx502gw-xb76.html" title="Asus ROG Zephyrus S GX502GW-XB76" class="product-image">
+<img id="product-collection-image-12693" src="https://www.xoticpc.com/media/catalog/product/cache/1/small_image/210x/9df78eab33525d08d6e5fb8d27136e95/g/x/gx502gw_2.png" alt="Asus ROG Zephyrus S GX502GW-XB76" />
+</a>
+<div class="product-info">
+<div class="block-title">
+<strong>
+<h2 class="product-name"><a href="https://www.xoticpc.com/asus-rog-zephyrus-s-gx502gw-xb76.html" title="Asus ROG Zephyrus S GX502GW-XB76">Asus ROG Zephyrus S GX502GW-XB76</a></h2>
+</strong>
+</div>
+<div class="short-description">
+<div style="max-width:350px;">
+<ul>
+<li>15.6" FHD 240Hz <font size="1">IPS-level</font></li>
+<li>Intel® Coffee Lake HR i7-9750H</li>
+<li>NVIDIA® RTX 2070 <font color="#30B800"><strong>VR Ready</strong></font> </li>
+<li>Up to 32GB RAM</li>
+<li>1TB NVMe SSD</li>
+<li>TBD Hours / TBD lbs</li>
+</ul>
+</div> </div>
+<div class="holder-product-info">
+<div class="list-links">
+<a href="https://www.xoticpc.com/asus-rog-zephyrus-s-gx502gw-xb76.html?startcustomization=1">Customize</a>
+<a href="https://www.xoticpc.com/asus-rog-zephyrus-s-gx502gw-xb76.html">More info</a>
+</div>
+<div class="price-box">
+<span class="price">$2,399.99</span> </div>
+<div>
+<a class="affirm-as-low-as" id="affirm-promo-12693" data-promo-id="promo_set_default" data-page-type="category" data-amount="239999" href="#"></a>
+</div>
+</div>
+<div class="actions">
+<a title="View Details" class="button btn-details" href="https://www.xoticpc.com/asus-rog-zephyrus-s-gx502gw-xb76.html">View Details</a>
+<ul class="add-to-links">
+<li><a href="https://www.xoticpc.com/wishlist/index/add/product/12693/form_key/P7nYOgdPEncXvonk/" class="link-wishlist"><span>Add to Wishlist</span></a></li>
+<li><span class="separator">|</span> <a href="https://www.xoticpc.com/catalog/product_compare/add/product/12693/uenc/aHR0cHM6Ly93d3cueG90aWNwYy5jb20vY3VzdG9tLWdhbWluZy1sYXB0b3BzLW5vdGVib29rcy1hc3VzLWxhcHRvcHMtY3QtOTUtNTEtMTYz/form_key/P7nYOgdPEncXvonk/" class="link-compare"><span>Add to Compare</span></a></li>
+ </ul>
+</div>
+</div>
+</div>
+</li>
+<li class="item last">
+<div class="item-inner">
+<a href="https://www.xoticpc.com/asus-rog-zephyrus-s-gx701gw-db76.html" title="Asus ROG Zephyrus S GX701GW-DB76" class="product-image">
+<img id="product-collection-image-12689" src="https://www.xoticpc.com/media/catalog/product/cache/1/small_image/210x/9df78eab33525d08d6e5fb8d27136e95/g/7/g701-main-small_1.png" alt="Asus ROG Zephyrus S GX701GW-DB76" />
+</a>
+<div class="product-info">
+<div class="block-title">
+<strong>
+<h2 class="product-name"><a href="https://www.xoticpc.com/asus-rog-zephyrus-s-gx701gw-db76.html" title="Asus ROG Zephyrus S GX701GW-DB76">Asus ROG Zephyrus S GX701GW-DB76</a></h2>
+</strong>
+</div>
+<div class="short-description">
+<div style="max-width:350px;">
+<ul>
+<li>17.3" FHD 144Hz <font size="1">IPS-level</font></li>
+<li>Intel® Coffee Lake HR i7-9750H</li>
+<li>NVIDIA® RTX 2070 <font color="#30B800"><strong>VR Ready</strong></font> </li>
+<li>Up to 32GB RAM</li>
+<li>1TB NVMe SSD</li>
+<li>2+ Hours / 5.7 lbs</li>
+</ul>
+</div> </div>
+<div class="holder-product-info">
+<div class="list-links">
+<a href="https://www.xoticpc.com/asus-rog-zephyrus-s-gx701gw-db76.html?startcustomization=1">Customize</a>
+<a href="https://www.xoticpc.com/asus-rog-zephyrus-s-gx701gw-db76.html">More info</a>
+</div>
+<div class="price-box">
+<span class="price">$2,499.99</span> </div>
+<div>
+<a class="affirm-as-low-as" id="affirm-promo-12689" data-promo-id="promo_set_default" data-page-type="category" data-amount="249999" href="#"></a>
+</div>
+</div>
+<div class="actions">
+<a title="View Details" class="button btn-details" href="https://www.xoticpc.com/asus-rog-zephyrus-s-gx701gw-db76.html">View Details</a>
+<ul class="add-to-links">
+<li><a href="https://www.xoticpc.com/wishlist/index/add/product/12689/form_key/P7nYOgdPEncXvonk/" class="link-wishlist"><span>Add to Wishlist</span></a></li>
+ <li><span class="separator">|</span> <a href="https://www.xoticpc.com/catalog/product_compare/add/product/12689/uenc/aHR0cHM6Ly93d3cueG90aWNwYy5jb20vY3VzdG9tLWdhbWluZy1sYXB0b3BzLW5vdGVib29rcy1hc3VzLWxhcHRvcHMtY3QtOTUtNTEtMTYz/form_key/P7nYOgdPEncXvonk/" class="link-compare"><span>Add to Compare</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+</li>
+<li class="item last">
+<div class="item-inner">
+<a href="https://www.xoticpc.com/asus-zephyrus-gx501gi-xs74.html" title="Asus Zephyrus GX501GI-XS74" class="product-image">
+<img id="product-collection-image-11579" src="https://www.xoticpc.com/media/catalog/product/cache/1/small_image/210x/9df78eab33525d08d6e5fb8d27136e95/g/x/gx501gi-1.png" alt="Asus Zephyrus GX501GI-XS74" />
+</a>
+<div class="product-info">
+<div class="block-title">
+<strong>
+<h2 class="product-name"><a href="https://www.xoticpc.com/asus-zephyrus-gx501gi-xs74.html" title="Asus Zephyrus GX501GI-XS74">Asus Zephyrus GX501GI-XS74</a></h2>
+</strong>
+</div>
+<div class="short-description">
+<div style="max-width:350px;">
+<ul>
+<li style="color: #C32026"><strong>$250 OFF</strong></li>
+<li>15.6" 144Hz FHD <font size="1">w/G-SYNC</font></li>
+<li>Intel&reg; Coffee Lake i7-8750H</li>
+<li>NVIDIA&reg; 1080 Max Q <font color="#30B800"><strong>VR Ready</strong></font> </li>
+<li>Up to 24GB RAM</li>
+<li>512GB NVMe</li>
+<li>2+ Hours / 5 lbs</li>
+</ul>
+</div> </div>
+<div class="holder-product-info">
+<div class="list-links">
+<a href="https://www.xoticpc.com/asus-zephyrus-gx501gi-xs74.html?startcustomization=1">Customize</a>
+<a href="https://www.xoticpc.com/asus-zephyrus-gx501gi-xs74.html">More info</a>
+</div>
+<div class="price-box">
+<span class="price">$2,649.00</span> </div>
+<div>
+<a class="affirm-as-low-as" id="affirm-promo-11579" data-promo-id="promo_set_default" data-page-type="category" data-amount="264900" href="#"></a>
+</div>
+</div>
+<div class="actions">
+<a title="View Details" class="button btn-details" href="https://www.xoticpc.com/asus-zephyrus-gx501gi-xs74.html">View Details</a>
+<ul class="add-to-links">
+ <li><a href="https://www.xoticpc.com/wishlist/index/add/product/11579/form_key/P7nYOgdPEncXvonk/" class="link-wishlist"><span>Add to Wishlist</span></a></li>
+<li><span class="separator">|</span> <a href="https://www.xoticpc.com/catalog/product_compare/add/product/11579/uenc/aHR0cHM6Ly93d3cueG90aWNwYy5jb20vY3VzdG9tLWdhbWluZy1sYXB0b3BzLW5vdGVib29rcy1hc3VzLWxhcHRvcHMtY3QtOTUtNTEtMTYz/form_key/P7nYOgdPEncXvonk/" class="link-compare"><span>Add to Compare</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+</li>
+<li class="item last">
+<div class="item-inner">
+<a href="https://www.xoticpc.com/asus-rog-zephyrus-s-gx531gx-xs74.html" title="Asus ROG Zephyrus S GX531GX-XS74" class="product-image">
+<img id="product-collection-image-12340" src="https://www.xoticpc.com/media/catalog/product/cache/1/small_image/210x/9df78eab33525d08d6e5fb8d27136e95/r/o/rog_zephyrus_s_gx531gx_1.png" alt="Asus ROG Zephyrus S GX531GX-XS74" />
+</a>
+<div class="product-info">
+<div class="block-title">
+<strong>
+<h2 class="product-name"><a href="https://www.xoticpc.com/asus-rog-zephyrus-s-gx531gx-xs74.html" title="Asus ROG Zephyrus S GX531GX-XS74">Asus ROG Zephyrus S GX531GX-XS74</a></h2>
+</strong>
+</div>
+<div class="short-description">
+<div style="max-width:350px;">
+<ul>
+<li>15.6" 144Hz FHD <font size="1">IPS-level</font></li>
+<li>Intel&reg; Coffee Lake i7-8750H</li>
+<li>NVIDIA&reg; 2080 Max Q <font color="#30B800"><strong>VR Ready</strong></font> </li>
+<li>Up to 24GB RAM</li>
+<li>512GB NVMe SSD</li>
+<li>2+ Hours / 5.4 lbs</li>
+</ul>
+</div> </div>
+<div class="holder-product-info">
+<div class="list-links">
+<a href="https://www.xoticpc.com/asus-rog-zephyrus-s-gx531gx-xs74.html?startcustomization=1">Customize</a>
+<a href="https://www.xoticpc.com/asus-rog-zephyrus-s-gx531gx-xs74.html">More info</a>
+</div>
+<div class="price-box">
+<span class="price">$2,699.99</span> </div>
+<div>
+<a class="affirm-as-low-as" id="affirm-promo-12340" data-promo-id="promo_set_default" data-page-type="category" data-amount="269999" href="#"></a>
+</div>
+</div>
+ <div class="actions">
+<a title="View Details" class="button btn-details" href="https://www.xoticpc.com/asus-rog-zephyrus-s-gx531gx-xs74.html">View Details</a>
+<ul class="add-to-links">
+<li><a href="https://www.xoticpc.com/wishlist/index/add/product/12340/form_key/P7nYOgdPEncXvonk/" class="link-wishlist"><span>Add to Wishlist</span></a></li>
+<li><span class="separator">|</span> <a href="https://www.xoticpc.com/catalog/product_compare/add/product/12340/uenc/aHR0cHM6Ly93d3cueG90aWNwYy5jb20vY3VzdG9tLWdhbWluZy1sYXB0b3BzLW5vdGVib29rcy1hc3VzLWxhcHRvcHMtY3QtOTUtNTEtMTYz/form_key/P7nYOgdPEncXvonk/" class="link-compare"><span>Add to Compare</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+</li>
+<li class="item last">
+<div class="item-inner">
+<a href="https://www.xoticpc.com/asus-rog-zephyrus-s-gx531gx-xb76.html" title="Asus ROG Zephyrus S GX531GX-XB76" class="product-image">
+<img id="product-collection-image-12703" src="https://www.xoticpc.com/media/catalog/product/cache/1/small_image/210x/9df78eab33525d08d6e5fb8d27136e95/g/x/gx531gx_7_1.png" alt="Asus ROG Zephyrus S GX531GX-XB76" />
+</a>
+<div class="product-info">
+<div class="block-title">
+<strong>
+<h2 class="product-name"><a href="https://www.xoticpc.com/asus-rog-zephyrus-s-gx531gx-xb76.html" title="Asus ROG Zephyrus S GX531GX-XB76">Asus ROG Zephyrus S GX531GX-XB76</a></h2>
+</strong>
+</div>
+<div class="short-description">
+<div style="max-width:350px;">
+<ul>
+<li>15.6" FHD 240Hz <font size="1">IPS-level</font></li>
+<li>Intel® i7-9750H</li>
+<li>NVIDIA® RTX 2080 <font color="#30B800"><strong>VR Ready</strong></font></li>
+<li>Up to 24GB RAM</li>
+<li>1TB NVMe SSD</li>
+<li>2+ Hours / 4.6 lbs</li>
+</ul>
+</div> </div>
+<div class="holder-product-info">
+<div class="list-links">
+<a href="https://www.xoticpc.com/asus-rog-zephyrus-s-gx531gx-xb76.html?startcustomization=1">Customize</a>
+<a href="https://www.xoticpc.com/asus-rog-zephyrus-s-gx531gx-xb76.html">More info</a>
+</div>
+<div class="price-box">
+<span class="price">$2,899.99</span> </div>
+ <div>
+<a class="affirm-as-low-as" id="affirm-promo-12703" data-promo-id="promo_set_default" data-page-type="category" data-amount="289999" href="#"></a>
+</div>
+</div>
+<div class="actions">
+<a title="View Details" class="button btn-details" href="https://www.xoticpc.com/asus-rog-zephyrus-s-gx531gx-xb76.html">View Details</a>
+<ul class="add-to-links">
+<li><a href="https://www.xoticpc.com/wishlist/index/add/product/12703/form_key/P7nYOgdPEncXvonk/" class="link-wishlist"><span>Add to Wishlist</span></a></li>
+<li><span class="separator">|</span> <a href="https://www.xoticpc.com/catalog/product_compare/add/product/12703/uenc/aHR0cHM6Ly93d3cueG90aWNwYy5jb20vY3VzdG9tLWdhbWluZy1sYXB0b3BzLW5vdGVib29rcy1hc3VzLWxhcHRvcHMtY3QtOTUtNTEtMTYz/form_key/P7nYOgdPEncXvonk/" class="link-compare"><span>Add to Compare</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+</li>
+<li class="item last">
+<div class="item-inner">
+<a href="https://www.xoticpc.com/asus-zephyrus-gx701gx-xs76.html" title="Asus ROG Zephyrus GX701GX-XS76" class="product-image">
+<img id="product-collection-image-12338" src="https://www.xoticpc.com/media/catalog/product/cache/1/small_image/210x/9df78eab33525d08d6e5fb8d27136e95/g/x/gx701-wag-2_1.png" alt="Asus ROG Zephyrus GX701GX-XS76" />
+</a>
+<div class="product-info">
+<div class="block-title">
+<strong>
+<h2 class="product-name"><a href="https://www.xoticpc.com/asus-zephyrus-gx701gx-xs76.html" title="Asus ROG Zephyrus GX701GX-XS76">Asus ROG Zephyrus GX701GX-XS76</a></h2>
+</strong>
+</div>
+<div class="short-description">
+<div style="max-width:350px;">
+<ul>
+<li>17.3" 144Hz FHD</li>
+<li>Intel&reg; Coffee Lake i7-8750H</li>
+<li>NVIDIA&reg; 2080 Max Q <font color="#30B800"><strong>VR Ready</strong></font> </li>
+<li>Up to 24GB RAM</li>
+<li>1TB NVMe</li>
+<li>2+ Hours / 5.95 lbs</li>
+</ul>
+</div> </div>
+<div class="holder-product-info">
+<div class="list-links">
+<a href="https://www.xoticpc.com/asus-zephyrus-gx701gx-xs76.html?startcustomization=1">Customize</a>
+<a href="https://www.xoticpc.com/asus-zephyrus-gx701gx-xs76.html">More info</a>
+</div>
+<div class="price-box">
+<span class="price">$2,899.99</span> </div>
+<div>
+<a class="affirm-as-low-as" id="affirm-promo-12338" data-promo-id="promo_set_default" data-page-type="category" data-amount="289999" href="#"></a>
+</div>
+</div>
+<div class="actions">
+<a title="View Details" class="button btn-details" href="https://www.xoticpc.com/asus-zephyrus-gx701gx-xs76.html">View Details</a>
+<ul class="add-to-links">
+<li><a href="https://www.xoticpc.com/wishlist/index/add/product/12338/form_key/P7nYOgdPEncXvonk/" class="link-wishlist"><span>Add to Wishlist</span></a></li>
+<li><span class="separator">|</span> <a href="https://www.xoticpc.com/catalog/product_compare/add/product/12338/uenc/aHR0cHM6Ly93d3cueG90aWNwYy5jb20vY3VzdG9tLWdhbWluZy1sYXB0b3BzLW5vdGVib29rcy1hc3VzLWxhcHRvcHMtY3QtOTUtNTEtMTYz/form_key/P7nYOgdPEncXvonk/" class="link-compare"><span>Add to Compare</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+</li>
+<li class="item last">
+<div class="item-inner">
+<a href="https://www.xoticpc.com/asus-rog-g703gx-xs71.html" title="ASUS ROG G703GX-XS71" class="product-image">
+<img id="product-collection-image-12337" src="https://www.xoticpc.com/media/catalog/product/cache/1/small_image/210x/9df78eab33525d08d6e5fb8d27136e95/r/o/rog_g703gx_12.png" alt="ASUS ROG G703GX-XS71" />
+</a>
+<div class="product-info">
+<div class="block-title">
+<strong>
+<h2 class="product-name"><a href="https://www.xoticpc.com/asus-rog-g703gx-xs71.html" title="ASUS ROG G703GX-XS71">ASUS ROG G703GX-XS71</a></h2>
+</strong>
+</div>
+<div class="short-description">
+<div style="max-width:350px;">
+<ul>
+<li>17.3" 144Hz FHD <font size="1">w/G-SYNC</font></li>
+<li>Intel&reg; Coffee Lake i7-8750H</li>
+<li>NVIDIA&reg; RTX 2080 <font color="#30B800"><strong>VR Ready</strong></font> </li>
+<li>Up to 128GB RAM</li>
+<li>512GB NVMe + 1TB HDD</li>
+<li>2+ Hours / 10.4 lbs</li>
+</ul>
+</div> </div>
+<div class="holder-product-info">
+<div class="list-links">
+<a href="https://www.xoticpc.com/asus-rog-g703gx-xs71.html?startcustomization=1">Customize</a>
+ <a href="https://www.xoticpc.com/asus-rog-g703gx-xs71.html">More info</a>
+</div>
+<div class="price-box">
+<span class="price">$2,999.99</span> </div>
+<div>
+<a class="affirm-as-low-as" id="affirm-promo-12337" data-promo-id="promo_set_default" data-page-type="category" data-amount="299999" href="#"></a>
+</div>
+</div>
+<div class="actions">
+<a title="View Details" class="button btn-details" href="https://www.xoticpc.com/asus-rog-g703gx-xs71.html">View Details</a>
+<ul class="add-to-links">
+<li><a href="https://www.xoticpc.com/wishlist/index/add/product/12337/form_key/P7nYOgdPEncXvonk/" class="link-wishlist"><span>Add to Wishlist</span></a></li>
+<li><span class="separator">|</span> <a href="https://www.xoticpc.com/catalog/product_compare/add/product/12337/uenc/aHR0cHM6Ly93d3cueG90aWNwYy5jb20vY3VzdG9tLWdhbWluZy1sYXB0b3BzLW5vdGVib29rcy1hc3VzLWxhcHRvcHMtY3QtOTUtNTEtMTYz/form_key/P7nYOgdPEncXvonk/" class="link-compare"><span>Add to Compare</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+</li>
+<li class="item last">
+<div class="item-inner">
+<a href="https://www.xoticpc.com/asus-rog-g703gx-xb76.html" title="ASUS ROG G703GX-XB76" class="product-image">
+<img id="product-collection-image-12692" src="https://www.xoticpc.com/media/catalog/product/cache/1/small_image/210x/9df78eab33525d08d6e5fb8d27136e95/r/o/rog_g703gx_12_2_1_1.png" alt="ASUS ROG G703GX-XB76" />
+</a>
+<div class="product-info">
+<div class="block-title">
+<strong>
+<h2 class="product-name"><a href="https://www.xoticpc.com/asus-rog-g703gx-xb76.html" title="ASUS ROG G703GX-XB76">ASUS ROG G703GX-XB76</a></h2>
+</strong>
+</div>
+<div class="short-description">
+<div style="max-width:350px;">
+<ul>
+<li>17.3" FHD 144Hz <font size="1">IPS-level</font></li>
+<li>Intel® Coffee Lake HR i7-9750H</li>
+<li>NVIDIA® RTX 2080 <font color="#30B800"><strong>VR Ready</strong></font> </li>
+<li>Up to 64GB RAM</li>
+<li>512GB NVMe SSD + 1TB SSHD</li>
+<li>2+ Hours / 10.4 lbs</li>
+</ul>
+</div> </div>
+<div class="holder-product-info">
+ <div class="list-links">
+<a href="https://www.xoticpc.com/asus-rog-g703gx-xb76.html?startcustomization=1">Customize</a>
+<a href="https://www.xoticpc.com/asus-rog-g703gx-xb76.html">More info</a>
+</div>
+<div class="price-box">
+<span class="price">$2,999.99</span> </div>
+<div>
+<a class="affirm-as-low-as" id="affirm-promo-12692" data-promo-id="promo_set_default" data-page-type="category" data-amount="299999" href="#"></a>
+</div>
+</div>
+<div class="actions">
+<a title="View Details" class="button btn-details" href="https://www.xoticpc.com/asus-rog-g703gx-xb76.html">View Details</a>
+<ul class="add-to-links">
+<li><a href="https://www.xoticpc.com/wishlist/index/add/product/12692/form_key/P7nYOgdPEncXvonk/" class="link-wishlist"><span>Add to Wishlist</span></a></li>
+<li><span class="separator">|</span> <a href="https://www.xoticpc.com/catalog/product_compare/add/product/12692/uenc/aHR0cHM6Ly93d3cueG90aWNwYy5jb20vY3VzdG9tLWdhbWluZy1sYXB0b3BzLW5vdGVib29rcy1hc3VzLWxhcHRvcHMtY3QtOTUtNTEtMTYz/form_key/P7nYOgdPEncXvonk/" class="link-compare"><span>Add to Compare</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+</li>
+<li class="item last">
+<div class="item-inner">
+<a href="https://www.xoticpc.com/asus-rog-zephyrus-s-limited-edition-gx531gx-xb77.html" title="ASUS ROG Zephyrus S Limited HDR Edition GX531GX-XB77" class="product-image">
+<img id="product-collection-image-12702" src="https://www.xoticpc.com/media/catalog/product/cache/1/small_image/210x/9df78eab33525d08d6e5fb8d27136e95/g/x/gx531gx_7.png" alt="ASUS ROG Zephyrus S Limited HDR Edition GX531GX-XB77" />
+</a>
+<div class="product-info">
+<div class="block-title">
+<strong>
+<h2 class="product-name"><a href="https://www.xoticpc.com/asus-rog-zephyrus-s-limited-edition-gx531gx-xb77.html" title="ASUS ROG Zephyrus S Limited HDR Edition GX531GX-XB77">ASUS ROG Zephyrus S Limited HDR Edition GX531GX-XB77</a></h2>
+</strong>
+</div>
+<div class="short-description">
+<div style="max-width:350px;">
+<ul>
+<li>15.6" FHD 144Hz <font size="1">IPS-level</font></li>
+<li>Intel® i7-9750H</li>
+<li>NVIDIA® RTX 2080 <font color="#30B800"><strong>VR Ready</strong></font></li>
+<li>Up to 40GB RAM</li>
+<li>1TB NVMe SSD</li>
+<li>2+ Hours / 4.6 lbs</li>
+</ul>
+</div> </div>
+<div class="holder-product-info">
+<div class="list-links">
+<a href="https://www.xoticpc.com/asus-rog-zephyrus-s-limited-edition-gx531gx-xb77.html?startcustomization=1">Customize</a>
+<a href="https://www.xoticpc.com/asus-rog-zephyrus-s-limited-edition-gx531gx-xb77.html">More info</a>
+</div>
+<div class="price-box">
+<span class="price">$2,999.99</span> </div>
+<div>
+<a class="affirm-as-low-as" id="affirm-promo-12702" data-promo-id="promo_set_default" data-page-type="category" data-amount="299999" href="#"></a>
+</div>
+</div>
+<div class="actions">
+<a title="View Details" class="button btn-details" href="https://www.xoticpc.com/asus-rog-zephyrus-s-limited-edition-gx531gx-xb77.html">View Details</a>
+<ul class="add-to-links">
+<li><a href="https://www.xoticpc.com/wishlist/index/add/product/12702/form_key/P7nYOgdPEncXvonk/" class="link-wishlist"><span>Add to Wishlist</span></a></li>
+<li><span class="separator">|</span> <a href="https://www.xoticpc.com/catalog/product_compare/add/product/12702/uenc/aHR0cHM6Ly93d3cueG90aWNwYy5jb20vY3VzdG9tLWdhbWluZy1sYXB0b3BzLW5vdGVib29rcy1hc3VzLWxhcHRvcHMtY3QtOTUtNTEtMTYz/form_key/P7nYOgdPEncXvonk/" class="link-compare"><span>Add to Compare</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+</li>
+<li class="item last">
+<div class="item-inner">
+<a href="https://www.xoticpc.com/asus-g703gi-xs74.html" title="Asus G703GI-XS74" class="product-image">
+<img id="product-collection-image-11577" src="https://www.xoticpc.com/media/catalog/product/cache/1/small_image/210x/9df78eab33525d08d6e5fb8d27136e95/g/7/g703gi-1.png" alt="Asus G703GI-XS74" />
+</a>
+<div class="product-info">
+<div class="block-title">
+<strong>
+<h2 class="product-name"><a href="https://www.xoticpc.com/asus-g703gi-xs74.html" title="Asus G703GI-XS74">Asus G703GI-XS74</a></h2>
+</strong>
+ </div>
+<div class="short-description">
+<div style="max-width:350px;">
+<ul>
+<li style="color: #C32026"><strong>$250 OFF</strong></li>
+<li>17.3" 144Hz FHD WV <font size="1">w/G-SYNC</font></li>
+<li>Intel&reg; Coffee Lake i7-8750H</li>
+<li>NVIDIA&reg; GTX 1080 <font color="#30B800"><strong>VR Ready</strong></font> </li>
+<li>Up to 64GB RAM</li>
+<li>2x 256GB NVMe + 1TB SSHD</li>
+<li>2+ Hours / 10.4 lbs</li>
+</ul>
+</div> </div>
+<div class="holder-product-info">
+<div class="list-links">
+<a href="https://www.xoticpc.com/asus-g703gi-xs74.html?startcustomization=1">Customize</a>
+<a href="https://www.xoticpc.com/asus-g703gi-xs74.html">More info</a>
+</div>
+<div class="price-box">
+<span class="price">$3,249.00</span> </div>
+<div>
+<a class="affirm-as-low-as" id="affirm-promo-11577" data-promo-id="promo_set_default" data-page-type="category" data-amount="324900" href="#"></a>
+</div>
+</div>
+<div class="actions">
+<a title="View Details" class="button btn-details" href="https://www.xoticpc.com/asus-g703gi-xs74.html">View Details</a>
+<ul class="add-to-links">
+<li><a href="https://www.xoticpc.com/wishlist/index/add/product/11577/form_key/P7nYOgdPEncXvonk/" class="link-wishlist"><span>Add to Wishlist</span></a></li>
+<li><span class="separator">|</span> <a href="https://www.xoticpc.com/catalog/product_compare/add/product/11577/uenc/aHR0cHM6Ly93d3cueG90aWNwYy5jb20vY3VzdG9tLWdhbWluZy1sYXB0b3BzLW5vdGVib29rcy1hc3VzLWxhcHRvcHMtY3QtOTUtNTEtMTYz/form_key/P7nYOgdPEncXvonk/" class="link-compare"><span>Add to Compare</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+</li>
+<li class="item last">
+<div class="item-inner">
+<a href="https://www.xoticpc.com/asus-rog-zephyrus-s-gx701gx-xb78.html" title="Asus ROG Zephyrus S GX701GX-XB78" class="product-image">
+<img id="product-collection-image-12688" src="https://www.xoticpc.com/media/catalog/product/cache/1/small_image/210x/9df78eab33525d08d6e5fb8d27136e95/g/7/g701-main-small_2.png" alt="Asus ROG Zephyrus S GX701GX-XB78" />
+</a>
+<div class="product-info">
+ <div class="block-title">
+<strong>
+<h2 class="product-name"><a href="https://www.xoticpc.com/asus-rog-zephyrus-s-gx701gx-xb78.html" title="Asus ROG Zephyrus S GX701GX-XB78">Asus ROG Zephyrus S GX701GX-XB78</a></h2>
+</strong>
+</div>
+<div class="short-description">
+<div style="max-width:350px;">
+<ul>
+<li>17.3" FHD 144Hz <font size="1">IPS-level</font></li>
+<li>Intel® Coffee Lake i7-9750H </li>
+<li>NVIDIA® 2080 Max-Q <font color="#30B800"><strong>VR Ready</strong></font> </li>
+<li>Up to 48GB RAM</li>
+<li>1TB NVMe SSD</li>
+<li>2+ Hours / 5.7 lbs</li>
+</ul>
+</div> </div>
+<div class="holder-product-info">
+<div class="list-links">
+<a href="https://www.xoticpc.com/asus-rog-zephyrus-s-gx701gx-xb78.html?startcustomization=1">Customize</a>
+<a href="https://www.xoticpc.com/asus-rog-zephyrus-s-gx701gx-xb78.html">More info</a>
+</div>
+<div class="price-box">
+<span class="price">$3,299.99</span> </div>
+<div>
+<a class="affirm-as-low-as" id="affirm-promo-12688" data-promo-id="promo_set_default" data-page-type="category" data-amount="329999" href="#"></a>
+</div>
+</div>
+<div class="actions">
+<a title="View Details" class="button btn-details" href="https://www.xoticpc.com/asus-rog-zephyrus-s-gx701gx-xb78.html">View Details</a>
+<ul class="add-to-links">
+<li><a href="https://www.xoticpc.com/wishlist/index/add/product/12688/form_key/P7nYOgdPEncXvonk/" class="link-wishlist"><span>Add to Wishlist</span></a></li>
+<li><span class="separator">|</span> <a href="https://www.xoticpc.com/catalog/product_compare/add/product/12688/uenc/aHR0cHM6Ly93d3cueG90aWNwYy5jb20vY3VzdG9tLWdhbWluZy1sYXB0b3BzLW5vdGVib29rcy1hc3VzLWxhcHRvcHMtY3QtOTUtNTEtMTYz/form_key/P7nYOgdPEncXvonk/" class="link-compare"><span>Add to Compare</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+</li>
+<li class="item last">
+<div class="item-inner">
+<a href="https://www.xoticpc.com/asus-g703gi-xs98k.html" title="Asus G703GI-XS98K" class="product-image">
+<img id="product-collection-image-11575" src="https://www.xoticpc.com/media/catalog/product/cache/1/small_image/210x/9df78eab33525d08d6e5fb8d27136e95/g/7/g703gi-1_1.png" alt="Asus G703GI-XS98K" />
+</a>
+<div class="product-info">
+<div class="block-title">
+<strong>
+<h2 class="product-name"><a href="https://www.xoticpc.com/asus-g703gi-xs98k.html" title="Asus G703GI-XS98K">Asus G703GI-XS98K</a></h2>
+</strong>
+</div>
+<div class="short-description">
+<div style="max-width:350px;">
+<ul>
+<li style="color: #C32026"><strong>$350 OFF</strong></li>
+<li>17.3" 144Hz FHD WV <font size="1">w/G-SYNC</font></li>
+<li>Intel&reg; Coffee Lake i9-8950HK</li>
+<li>NVIDIA&reg; GTX 1080 <font color="#30B800"><strong>VR Ready</strong></font> </li>
+<li>Up to 64GB RAM</li>
+<li>2x256GB NVMe + 2TB SSHD</li>
+<li>2+ Hours / 10.4 lbs</li>
+</ul>
+</div> </div>
+<div class="holder-product-info">
+<div class="list-links">
+<a href="https://www.xoticpc.com/asus-g703gi-xs98k.html?startcustomization=1">Customize</a>
+<a href="https://www.xoticpc.com/asus-g703gi-xs98k.html">More info</a>
+</div>
+<div class="price-box">
+<span class="price">$3,449.00</span> </div>
+<div>
+<a class="affirm-as-low-as" id="affirm-promo-11575" data-promo-id="promo_set_default" data-page-type="category" data-amount="344900" href="#"></a>
+</div>
+</div>
+<div class="actions">
+<a title="View Details" class="button btn-details" href="https://www.xoticpc.com/asus-g703gi-xs98k.html">View Details</a>
+<ul class="add-to-links">
+<li><a href="https://www.xoticpc.com/wishlist/index/add/product/11575/form_key/P7nYOgdPEncXvonk/" class="link-wishlist"><span>Add to Wishlist</span></a></li>
+<li><span class="separator">|</span> <a href="https://www.xoticpc.com/catalog/product_compare/add/product/11575/uenc/aHR0cHM6Ly93d3cueG90aWNwYy5jb20vY3VzdG9tLWdhbWluZy1sYXB0b3BzLW5vdGVib29rcy1hc3VzLWxhcHRvcHMtY3QtOTUtNTEtMTYz/form_key/P7nYOgdPEncXvonk/" class="link-compare"><span>Add to Compare</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+</li>
+<li class="item last">
+<div class="item-inner">
+ <a href="https://www.xoticpc.com/asus-rog-g703gx-xb96k.html" title="ASUS ROG G703GX-XB96K" class="product-image">
+<img id="product-collection-image-12691" src="https://www.xoticpc.com/media/catalog/product/cache/1/small_image/210x/9df78eab33525d08d6e5fb8d27136e95/r/o/rog_g703gx_12_2_1.png" alt="ASUS ROG G703GX-XB96K" />
+</a>
+<div class="product-info">
+<div class="block-title">
+<strong>
+<h2 class="product-name"><a href="https://www.xoticpc.com/asus-rog-g703gx-xb96k.html" title="ASUS ROG G703GX-XB96K">ASUS ROG G703GX-XB96K</a></h2>
+</strong>
+</div>
+<div class="short-description">
+<div style="max-width:350px;">
+<ul>
+<li>17.3" FHD 144Hz <font size="1">IPS-level</font></li>
+<li>Intel® Coffee Lake HR i9-9980HK</li>
+<li>NVIDIA® RTX 2080 <font color="#30B800"><strong>VR Ready</strong></font> </li>
+<li>Up to 64GB RAM</li>
+<li>2x 512GB NVMe SSD</li>
+<li>2+ Hours / 10.4 lbs</li>
+</ul>
+</div> </div>
+<div class="holder-product-info">
+<div class="list-links">
+<a href="https://www.xoticpc.com/asus-rog-g703gx-xb96k.html?startcustomization=1">Customize</a>
+<a href="https://www.xoticpc.com/asus-rog-g703gx-xb96k.html">More info</a>
+</div>
+<div class="price-box">
+<span class="price">$3,699.99</span> </div>
+<div>
+<a class="affirm-as-low-as" id="affirm-promo-12691" data-promo-id="promo_set_default" data-page-type="category" data-amount="369999" href="#"></a>
+</div>
+</div>
+<div class="actions">
+<a title="View Details" class="button btn-details" href="https://www.xoticpc.com/asus-rog-g703gx-xb96k.html">View Details</a>
+<ul class="add-to-links">
+<li><a href="https://www.xoticpc.com/wishlist/index/add/product/12691/form_key/P7nYOgdPEncXvonk/" class="link-wishlist"><span>Add to Wishlist</span></a></li>
+<li><span class="separator">|</span> <a href="https://www.xoticpc.com/catalog/product_compare/add/product/12691/uenc/aHR0cHM6Ly93d3cueG90aWNwYy5jb20vY3VzdG9tLWdhbWluZy1sYXB0b3BzLW5vdGVib29rcy1hc3VzLWxhcHRvcHMtY3QtOTUtNTEtMTYz/form_key/P7nYOgdPEncXvonk/" class="link-compare"><span>Add to Compare</span></a></li>
+</ul>
+</div>
+</div>
+ </div>
+</li>
+</ul>
+<script type="text/javascript">decorateGeneric($$('ul.products-grid'), ['odd','even','first','last'])</script>
+<div class="toolbar-bottom">
+<div class="toolbar">
+<div class="pager">
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="adj-nav-progress" style="display:none"><img src="https://www.xoticpc.com/skin/frontend/rwd/default/images/adj-nav-progress.gif" /></div></div>
+<script type="text/javascript">
+//<![CDATA[
+    aitshopassist = new aitshopassist_class();
+    aitshopassist.actionUrl = 'https://www.xoticpc.com/aitshopassist/ajax/';
+//]]>
+</script>
+<script type="text/javascript">
+//<![CDATA[
+    //]]>
+</script>
+
+<div class="block block-list block-compare">
+<div class="block-title">
+<strong><span>Compare Products </span></strong>
+</div>
+<div class="block-content">
+<p class="empty">You have no items to compare.</p>
+</div>
+</div>
+
+<div class="category-content-bottom">
+<h2>Custom ASUS Laptops</h2>
+<p>XOTIC PC may build some of the most highly regarded custom gaming computers in the industry, but our partnerships with top computer component and software companies make us the exclusive online source for hardcore gaming. Since 1989, ASUS&reg; has been driven by innovation and a commitment to quality products for every level of gameplay. We proudly offer a broad selection of ASUS&reg; gaming laptops and notebooks at every price point.</p>
+<p>Monitor sizes range from 12.5 inches to as much as 18.4 inches from corner to corner. Enjoy a spectacular display, unbelievable power, and the versatility to work or play whenever, wherever. Explore our ASUS&reg; laptops selection today to find the PC of your virtual dreams. Take advantage of instant rebates, reduced prices, financing options, and so much more. Our selection of ASUS&reg; custom laptops and notebooks offers a wide variety of features we guarantee you&rsquo;re going to love. Every gaming notebook made by ASUS&reg; delivers uncompromised desktop-like gaming experiences in a lightweight design. Intelligent cooling systems enable graphically-intense gaming sessions with throttling, and additional fan over-boost functions maximize cooling efficiency to ensure stability for multitasking. Premium ASUS&reg; gaming laptops are equipped with NVIDIA&reg; GeForce&reg; GTX 1080 graphics for optimal virtual reality gaming experiences. We also offer an array of ultralight ASUS&reg; laptops that can hold a charge for up to nine hours, which is ideal for travel or work. With the ability to provide non-proprietary systems that utilize cutting-edge technologies, we can meticulously build a state-of-the-art system that will exceed all your expectations. Design one of our ASUS&reg; custom laptops by utilizing our unique personalization services.</p>
+<p>&nbsp;</p>
+<p>Edge-to-edge wrapping services include graphic, stealth, and textured wraps, which are all made of the same highly durable vinyl used in automotive applications. We also offer laser graphic or text etching, painting, and hydro-dipping to give your new laptop or notebook a truly unique look. We know just how expensive hardcore gaming can be, but we offer financing options for anyone gaming on a budget. You can easily apply today for a real-time decision that won&rsquo;t affect your credit score, so you can make quick monthly payments without any hidden fees or surprises. If you have any questions about ASUS&reg; gaming laptops, financing, or shipping, please contact a member of our customer support team for additional information or further assistance. Let us know how we can help you turn your vision into a reality!</p>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "ItemList",
+  "url": "https://www.xoticpc.com/custom-gaming-laptops-notebooks-asus-laptops-ct-95-51-163",
+  "numberOfItems": "54",
+  "itemListElement": {
+      "@type": "Product",
+      "image": "https://www.xoticpc.com/media/catalog/product/cache/1/small_image/210x/9df78eab33525d08d6e5fb8d27136e95/g/l/gl531_2_1.png",
+      "url": "https://www.xoticpc.com/custom-gaming-laptops-notebooks-asus-laptops-ct-95-51-163",
+      "name": "Custom ASUS Laptops"
+ }
+}
+</script> </div>
+</div>
+</div>
+</div>
+</div>
+<div class="footer">
+<div class="footer-container">
+<div class="footer-holder">
+<div class="links">
+</ul>
+</div>
+<div class="links">
+<div class="block-title"><strong> <span>reviews</span></strong></div>
+<ul>
+<li><a href="https://www.xoticpc.com/company-reviews#testimonials" target="_self">Customer Reviews</a></li>
+<li><a href="https://www.xoticpc.com/company-reviews">Press Reviews</a></li>
+<li><a href="http://www.bbb.org/nebraska/business-reviews/computers-dealers/xotic-pc-in-lincoln-ne-300002743" target="_self">BBB Rating</a></li>
+<li><a href="http://www.resellerratings.com/store/Xotic_PC">ResellerRatings.com Reviews</a></li>
+</ul>
+</div>
+<div class="links">
+<div class="block-title"><strong> <span>support</span> </strong></div>
+<ul>
+<li><a href="https://www.xoticpc.com/support">Get Tech Support Now!</a></li>
+<li><a href="https://www.xoticpcforums.com/">XOTIC PC Forums</a></li>
+<li><a href="https://www.xoticpc.com/customer/account">My Account</a></li>
+<li><a href="https://www.xoticpc.com/faqs">FAQ</a></li>
+<li><a href="https://www.xoticpc.com/xotic-pc-laptop-warranty-info">Warranty Details</a></li>
+<li><a href="https://www.xoticpc.com/contact-us">Contact Information</a></li>
+<li><a href="https://www.xoticpc.com/resources">Resources</a></li>
+</ul>
+</div> <div class="twitter-widget">
+<div class="block-title"><strong><span>Follow us</span></strong>
+<ul>
+<li class="twitter"><a href="https://twitter.com/xoticpc" target="_blank"><img alt="twitter" src="https://www.xoticpc.com/skin/frontend/rwd/xoticpc/images/ico-twitter-footer.png" /></a></li>
+<li class="facebook"><a href="https://www.facebook.com/xoticpc" target="_blank"><img alt="facebook" src="https://www.xoticpc.com/skin/frontend/rwd/xoticpc/images/ico-facebook-footer.png" /></a></li>
+<li class="instagram"><a href="http://instagram.com/xoticpc" target="_blank"><img alt="instagram" src="https://www.xoticpc.com/skin/frontend/rwd/xoticpc/images/ico-instagram-footer.png" /></a></li>
+<li class="youtube"><a href="http://www.youtube.com/user/xoticpc#p/u" target="_blank"><img alt="youtube" src="https://www.xoticpc.com/skin/frontend/rwd/xoticpc/images/ico-youtube-footer.png" /></a></li>
+<li class="google"><a href="https://plus.google.com/+xoticpc" target="_blank"><img alt="google" src="https://www.xoticpc.com/skin/frontend/rwd/xoticpc/images/ico-google-footer.png" /></a></li>
+</ul>
+</div>
+<a class="twitter-timeline" href="https://twitter.com/XoticPC" data-widget-id="417719009736265728"><span style="color: #b60000;">Tweets by @XoticPC</span></a>
+<script type="text/javascript">// <![CDATA[
+!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+// ]]></script>
+</div> </div>
+<div class="contact-section">
+<ul>
+<li><a href="https://eepurl.com/B0t21">Newsletter - Get Access to Exclusive Offers</a></li>
+<li><address>XOTIC PC - 4000 Lowell Circle, Lincoln, NE 68502</address></li>
+<li>Email <a href="/cdn-cgi/l/email-protection#c0b3a1aca5b380b8afb4a9a3b0a3eea3afad"><span class="__cf_email__" data-cfemail="4330222f2630033b2c372a2033206d202c2e">[email&#160;protected]</span></a></li>
+<li><a href="javascript:openChat()">Live Chat</a></li>
+</ul> </div>
+</div>
+<div class="footer-frame">
+<div class="footer-container">
+<address class="copyright">Copyright XOTIC PC INC. 2018 | All Rights Reserved.</address>
+<div class="logos-list"><ul class="logos-list">
+<li><a href="http://bit.ly/2cntisF">Send Us Feedback! &gt;</a></li>
+<li class="skip-text resellerratings"><a href="http://www.resellerratings.com/store/survey/Xotic_PC">ResellerRatings</a></li>
+<li class="skip-text bbb"><a href="http://www.bbb.org/nebraska/business-reviews/computers-dealers/xotic-pc-in-lincoln-ne-300002743">BBB</a></li>
+</ul></div>
+</div>
+</div>
+</div>
+
+
+
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/javascript">
+    var gts = gts || [];
+    gts.push(["id", "685261"]);
+    gts.push(["badge_position", "BOTTOM_LEFT"]);
+    gts.push(["locale", "en_US"]);
+        gts.push(["google_base_subaccount_id", "3035172"]);
+    (function()
+    { var gts = document.createElement("script"); gts.type = "text/javascript"; gts.async = true; gts.src = "https://www.googlecommerce.com/trustedstores/api/js"; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(gts, s); }
+        )();
+</script>
+
+<object data="https://www.xoticpc.com/searchanise/async/" width="0" height="0" type="text/html"></object>
+<script type="text/javascript">
+(function() {
+    function riskifiedBeaconLoad() {
+        var session_id = "aj2dg6m9ce7kplsqan19mip951";
+        var store_domain = "xoticpc.com";
+        var version = "1.0.9.4";
+        var url = ('https:' == document.location.protocol ? 'https://' : 'http://') + "beacon.riskified.com?shop="+store_domain+"&sid="+session_id+"&v="+version;
+        var s = document.createElement('script');
+        s.type = 'text/javascript';
+        s.async = true;
+        s.src = url;
+        var x = document.getElementsByTagName('script')[0];
+        x.parentNode.insertBefore(s, x);
+    }
+    window.attachEvent ? window.attachEvent('onload', riskifiedBeaconLoad) : window.addEventListener('load', riskifiedBeaconLoad, false);
+})();
+</script>
+
+<span id="_GUARANTEE_SealSpan"></span>
+<img style="display:none;" src="//nsg.symantec.com/Web/Seal/AltSealInfo.aspx?S=Large&T=M&Elem=ImgTagSeal&HASH=%2BXrePqnlMJK%2FFgGjPmH2SG5kEji4ZEKgWMm%2FrYu0Q2NHOBqpk78ALkhAGkLj2wAXXb1Dyd6tf1C%2FvpiX7Sspow%3D%3D&CBF=AB&AB=1&DP=fn=;src=ImgTagSeal;grt=true" />
+<script type="text/javascript" src="//nsg.symantec.com/Web/Seal/gjs.aspx?sn=954331094"></script>
+<script type="text/javascript">
+    if (window._GUARANTEE && _GUARANTEE.Loaded) {
+        _GUARANTEE.Hash = '%2BXrePqnlMJK%2FFgGjPmH2SG5kEji4ZEKgWMm%2FrYu0Q2NHOBqpk78ALkhAGkLj2wAXXb1Dyd6tf1C%2FvpiX7Sspow%3D%3D';
+        _GUARANTEE.WriteSeal("_GUARANTEE_SealSpan", "GuaranteedSeal");
+    }
+</script>
+
+
+
+<script type="text/javascript">
+var $zoho=$zoho || {};$zoho.salesiq = $zoho.salesiq || {widgetcode:"e1d048cff5ea0880776481945a396fdfaf30928eab772a3b819101db263b9831", values:{},ready:function(){}};var d=document;s=d.createElement("script");s.type="text/javascript";s.id="zsiqscript";s.defer=true;s.src="https://salesiq.zoho.com/widget";t=d.getElementsByTagName("script")[0];t.parentNode.insertBefore(s,t);d.write("<div id='zsiqwidget'></div>");
+</script><script>var $zs = $zoho.salesiq || $zoho.livedesk;$zs.ready=function() {  $zs.visitor.name("");  $zs.visitor.email("");}</script>
+
+<div>
+<script type="text/javascript">
+qcdata = {} || qcdata;
+    (function () {
+        var elem = document.createElement('script');
+        elem.src = (document.location.protocol == "https:" ? "https://secure" : "https://pixel") + ".quantserve.com/aquant.js?a=p-G7dTeDeCafaQK";
+        elem.async = true;
+        elem.type = "text/javascript";
+        var scpt = document.getElementsByTagName('script')[0];
+        scpt.parentNode.insertBefore(elem, scpt);
+    }());
+    var qcdata = {qacct: 'p-G7dTeDeCafaQK',
+        orderid: '',
+        revenue: ''
+    };
+</script>
+<noscript>
+<img src="//pixel.quantserve.com/pixel/p-G7dTeDeCafaQK.gif?labels=_fp.event.Default" style="display: none;" border="0"
+     height="1" width="1" alt="Quantcast"/>
+</noscript>
+<script type="text/javascript">
+adroll_adv_id = "WCESJE63SVD3FEFTCUMJFC";
+adroll_pix_id = "O4HH5ESEPVAHNGVO7YTMJ6";
+(function () {
+var _onload = function(){
+if (document.readyState && !/loaded|complete/.test(document.readyState)){setTimeout(_onload, 10);return}
+if (!window.__adroll_loaded){__adroll_loaded=true;setTimeout(_onload, 50);return}
+var scr = document.createElement("script");
+var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "http://a.adroll.com");
+scr.setAttribute('async', 'true');
+scr.type = "text/javascript";
+scr.src = host + "/j/roundtrip.js";
+((document.getElementsByTagName('head') || [null])[0] ||
+document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
+};
+if (window.addEventListener) {window.addEventListener('load', _onload, false);}
+else {window.attachEvent('onload', _onload)}
+}());
+</script>
+</div>
+<script type="text/javascript" src="//static.criteo.net/js/ld/ld.js" async="true"></script>
+<script type="text/javascript">
+    window.criteo_q = window.criteo_q || [];
+    window.criteo_q.push(
+        { event: "setAccount", account: 26646 },
+        { event: "setHashedEmail", email: '' },
+        { event: "setSiteType", type: getCriteoDeviceType() },
+        { event: "viewList", item: ["9116","703275","9119"]}
+    );
+</script>
+<script>
+    (function () {
+        var functionNames = ['adj_nav_show_products'];
+        functionNames.each(function (functionName) {
+            if (window[functionName]) {
+                var parent = window[functionName];
+                window[functionName] = function (transport) {
+                    parent(transport);
+                    var data = $j.parseJSON(transport.responseText);
+                    if (data.criteo) {
+                        window.criteo_q.push(
+                               { event: "setAccount", account: 26646 },
+                               { event: "setHashedEmail", email: '' },
+                               { event: "setSiteType", type: getCriteoDeviceType() },
+                               { event: "viewList", item: $j.parseJSON(data.criteo)}
+                           );
+                    }
+                }
+            }
+        });
+    })();
+</script>
+
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_tag_params = {
+	ecomm_pagetype: "category",
+	ecomm_category: "ASUS Laptops"
+};
+var google_conversion_id = 1036946411;
+var google_conversion_label = "EKKSCODFllcQ65e67gM";
+var google_custom_params = google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/1036946411/?value=0&amp;label=EKKSCODFllcQ65e67gM&amp;guid=ON&amp;script=0&amp;data=ecomm_pagetype%3Dcategory%3Becomm_category%3DASUS+Laptops"/>
+</div>
+</noscript>
+
+</div>
+</div>
+<script>
+!function(e,n,u,a){e.twq||(a=e.twq=function(){a.exe?a.exe.apply(a,arguments):
+a.queue.push(arguments);},a.version='1',a.queue=[],t=n.createElement(u),
+t.async=!0,t.src='//static.ads-twitter.com/uwt.js',s=n.getElementsByTagName(u)[0],s.parentNode.insertBefore(t,s))}(window,document,'script');
+twq('init','nviy9');
+twq('track','PageView');
+</script>
+
+
+<script>(function(w,d,t,r,u){var f,n,i;w[u]=w[u]||[],f=function(){var o={ti:"5612623"};o.q=w[u],w[u]=new UET(o),w[u].push("pageLoad")},n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function(){var s=this.readyState;s&&s!=="loaded"&&s!=="complete"||(f(),n.onload=n.onreadystatechange=null)},i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)})(window,document,"script","//bat.bing.com/bat.js","uetq");</script><noscript><img src="//bat.bing.com/action/0?ti=5612623&Ver=2" height="0" width="0" style="display:none; visibility: hidden;" /></noscript>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"1ca4ea1895","applicationID":"42193938","transactionName":"YAFRN0tWWEYEAUJQW1lLcgBNXllbSgFXTVVbC1RMWlZCUAINREAbQQ1WFA==","queueTime":0,"applicationTime":1764,"atts":"TEZSQQNMS0g=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>
